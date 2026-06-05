@@ -30,7 +30,7 @@ const AboutUs = () => {
       <VisionMission />
       <WhatWeDo />
       {/* <LeaderShip /> */}
-      <OurPeopleOurBrand />
+      {/* <OurPeopleOurBrand /> */}
       <TechSupport />
       <CTASection
         leading_title={"Power Up Your Workflow "}
