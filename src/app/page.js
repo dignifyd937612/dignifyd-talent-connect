@@ -13,40 +13,43 @@ import banner_bg from "../assets/images/home/banner/banner-img.png";
 import { hrFAQs } from "@/data/faqs";
 import Schema from "@/components/common/seo/Schema";
 import { homeSchema } from "@/data/schemas/homeSchema";
-export const metadata = {
-  title: "Dignifyd Talent Connect | AI Recruitment Platform",
-  description:
-    "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
+import { Suspense } from "react";
 
-  alternates: {
-    canonical: "https://dignifydtalentconnect.com/",
-  },
+import RemoveIssParam from "@/components/home/RemoveIssParam";
+// export const metadata = {
+//   title: "Dignifyd Talent Connect | AI Recruitment Platform",
+//   description:
+//     "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
 
-  openGraph: {
-    title: "Dignifyd Talent Connect | AI Recruitment Platform",
-    description:
-      "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
-    url: "https://dignifydtalentconnect.com/",
-    type: "website",
-    images: [
-      {
-        url: "logo",
-        width: 1200,
-        height: 630,
-        alt: "Dignifyd Talent Connect",
-      },
-    ],
-  },
+//   alternates: {
+//     canonical: "https://dignifydtalentconnect.com/",
+//   },
 
-  twitter: {
-    card: "summary",
-    site: "",
-    title: "Dignifyd Talent Connect | AI Recruitment Platform",
-    description:
-      "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
-    images: [""],
-  },
-};
+//   openGraph: {
+//     title: "Dignifyd Talent Connect | AI Recruitment Platform",
+//     description:
+//       "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
+//     url: "https://dignifydtalentconnect.com/",
+//     type: "website",
+//     images: [
+//       {
+//         url: "logo",
+//         width: 1200,
+//         height: 630,
+//         alt: "Dignifyd Talent Connect",
+//       },
+//     ],
+//   },
+
+//   twitter: {
+//     card: "summary",
+//     site: "",
+//     title: "Dignifyd Talent Connect | AI Recruitment Platform",
+//     description:
+//       "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
+//     images: [""],
+//   },
+// };
 
 export default function Home() {
   return (
@@ -58,6 +61,10 @@ export default function Home() {
           data={schema}
         />
       ))}
+
+      <Suspense fallback={null}>
+        <RemoveIssParam />
+      </Suspense>
 
       <main className="bg-black text-white">
         <Banner

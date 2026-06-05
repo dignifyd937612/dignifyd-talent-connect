@@ -1,37 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
 import SectionHeader from "../common/SectionHeader";
-import { socket } from "@/utils/soket";
 import { useForm } from "react-hook-form";
 
 export default function Newsletter() {
   const { register, handleSubmit, reset } = useForm();
 
-  useEffect(() => {
-    socket.connect();
-    socket.emit("join_room", "room123", (res) => {
-      console.log(res);
-    });
-  }, []);
-
-  const sendMessage = (data) => {
-    socket.emit(
-      "send_message",
-      {
-        roomId: "room123",
-        messageId: "msg123",
-        message: data?.message,
-        sender: "Sumit",
-      },
-      ({ status }) => {
-        console.log(status);
-        if (status) alert("message sent");
-      },
-    );
-
-    reset({ message: "" });
-  };
   return (
     <section className="w-full bg-black py-24">
       <div className="mx-auto max-w-3xl px-4 text-center">
@@ -43,7 +17,7 @@ export default function Newsletter() {
           }
         />
         <div className="mx-auto mt-10 flex max-w-xl flex-col gap-3 rounded-full border border-white/10 bg-[#0b0615] p-2 backdrop-blur-xl md:flex-row md:items-center">
-          <form onSubmit={handleSubmit(sendMessage)}>
+          <form onSubmit={handleSubmit()}>
             <input
               type="text"
               {...register("message")}
