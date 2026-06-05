@@ -105,7 +105,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="mb-5 text-sm tracking-wider text-gray-300 uppercase">
               Get In Touch With Us
             </h3>
@@ -133,7 +133,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-5 pb-10 md:flex-row">
