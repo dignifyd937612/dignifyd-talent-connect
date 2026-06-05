@@ -55,7 +55,6 @@ export const recruitmentLinks = [
   { name: "IT Support", href: "#" },
   { name: "Application Process", href: "#" },
   { name: "Job Openings", href: "/careers", hash: "#jobs" },
-  { name: "FInternship ProgramsAQ", href: "#" },
 ];
 
 export const getInTouchLinks = [
