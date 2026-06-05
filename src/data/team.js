@@ -56,16 +56,6 @@ export const ourBrandTeam = [
     role: "Team Lead Talent Acquisition",
   },
   {
-    img: uday,
-    name: "Udaytanshu Aggarwal",
-    role: "Business Dev. Executive",
-  },
-  {
-    img: utsav,
-    name: "Utsav Tyagi",
-    role: "Talent Acquisition Executive",
-  },
-  {
     img: muskan,
     name: "Muskan Shah",
     role: "Sr. Talent Acquisition",
