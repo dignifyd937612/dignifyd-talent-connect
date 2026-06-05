@@ -12,19 +12,6 @@ export default function Banner({
   description,
   btn_text,
 }) {
-  const loginWithGoogle = () => {
-    const url =
-      "https://accounts.google.com/o/oauth2/v2/auth?" +
-      "client_id=" +
-      "994775511948-fh2m0kvf2ampim371anav8000q5365dn.apps.googleusercontent.com" +
-      "&redirect_uri=" +
-      "http://localhost:3000" +
-      "&response_type=code" +
-      "&scope=email profile" +
-      "&access_type=offline";
-
-    window.location.href = url;
-  };
   return (
     <section className="relative flex w-full items-center justify-center overflow-hidden py-20 mt-15">
       {banner_bg && (
@@ -63,10 +50,7 @@ export default function Banner({
         {btn_text && (
           <Magnetic>
             <div className="mt-8">
-              <button
-                onClick={() => loginWithGoogle()}
-                className="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white cursor-pointer"
-              >
+              <button className="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white cursor-pointer">
                 {btn_text}
               </button>
             </div>
