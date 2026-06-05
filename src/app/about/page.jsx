@@ -29,7 +29,7 @@ const AboutUs = () => {
       <Certifications />
       <VisionMission />
       <WhatWeDo />
-      <LeaderShip />
+      {/* <LeaderShip /> */}
       <OurPeopleOurBrand />
       <TechSupport />
       <CTASection
