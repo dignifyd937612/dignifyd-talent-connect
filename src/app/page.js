@@ -16,40 +16,40 @@ import { homeSchema } from "@/data/schemas/homeSchema";
 import { Suspense } from "react";
 
 import RemoveIssParam from "@/components/home/RemoveIssParam";
-// export const metadata = {
-//   title: "Dignifyd Talent Connect | AI Recruitment Platform",
-//   description:
-//     "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
+export const metadata = {
+  title: "Dignifyd Talent Connect | AI Recruitment Platform",
+  description:
+    "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
 
-//   alternates: {
-//     canonical: "https://dignifydtalentconnect.com/",
-//   },
+  alternates: {
+    canonical: "https://dignifydtalentconnect.com/",
+  },
 
-//   openGraph: {
-//     title: "Dignifyd Talent Connect | AI Recruitment Platform",
-//     description:
-//       "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
-//     url: "https://dignifydtalentconnect.com/",
-//     type: "website",
-//     images: [
-//       {
-//         url: "logo",
-//         width: 1200,
-//         height: 630,
-//         alt: "Dignifyd Talent Connect",
-//       },
-//     ],
-//   },
+  openGraph: {
+    title: "Dignifyd Talent Connect | AI Recruitment Platform",
+    description:
+      "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
+    url: "https://dignifydtalentconnect.com/",
+    type: "website",
+    images: [
+      {
+        url: "logo",
+        width: 1200,
+        height: 630,
+        alt: "Dignifyd Talent Connect",
+      },
+    ],
+  },
 
-//   twitter: {
-//     card: "summary",
-//     site: "",
-//     title: "Dignifyd Talent Connect | AI Recruitment Platform",
-//     description:
-//       "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
-//     images: [""],
-//   },
-// };
+  twitter: {
+    card: "summary",
+    site: "",
+    title: "Dignifyd Talent Connect | AI Recruitment Platform",
+    description:
+      "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
+    images: [""],
+  },
+};
 
 export default function Home() {
   return (
