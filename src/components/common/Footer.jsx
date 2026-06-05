@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer className="w-full border-t border-white/5 bg-black px-6 pt-20 text-white">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 md:grid-cols-5">
+        <div className="grid gap-30 md:grid-cols-4">
           <div className="space-y-6">
             <Link href="/" className="flex items-center">
               <Image
