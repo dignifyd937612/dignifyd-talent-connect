@@ -20,7 +20,6 @@ import radical_minds from "../assets/images/home/logos/radical_minds.png";
 import collabera from "../assets/images/home/logos/collabera.png";
 import cognizant from "../assets/images/home/logos/cognizant.png";
 import radius from "../assets/images/home/logos/radius.png";
-import imz from "../assets/images/home/logos/imz.png";
 
 export const collaborations = [
   starlink_qatar,
@@ -43,7 +42,6 @@ export const collaborations = [
   combay_solutions,
   Kpmg,
   indigo,
-  imz,
   radical_minds,
   radius,
 ];
@@ -69,7 +67,6 @@ export const partnersLogos = [
   combay_solutions,
   Kpmg,
   indigo,
-  imz,
   radical_minds,
   radius,
 ];
@@ -95,7 +92,6 @@ export const techSupportLogos = [
   combay_solutions,
   Kpmg,
   indigo,
-  imz,
   radical_minds,
   radius,
 ];
