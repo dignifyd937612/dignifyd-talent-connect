@@ -21,7 +21,7 @@ import cognizant from "../assets/images/home/logos/cognizant.png";
 import radius from "../assets/images/home/logos/radius.png";
 import imz_2 from "../assets/images/home/logos/imz_2.png";
 import intense from "../assets/images/home/logos/intense.png";
-import igt_2 from "../assets/images/home/logos/igt.png";
+import igt_2 from "../assets/images/home/logos/igt_2.png";
 
 export const collaborations = [
   starlink_qatar,
