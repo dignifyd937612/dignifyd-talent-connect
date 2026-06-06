@@ -1,0 +1,185 @@
+.serviceSection {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 0 150;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 620px;
+  gap: 80px;
+  align-items: center;
+}
+
+.content {
+  max-width: 700px;
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 5rem);
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: white;
+
+    span {
+      color: var(--primary);
+    }
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    color: rgb(169, 154, 154);
+    opacity: 0.8;
+  }
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  border-radius: 999px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  padding: 6px;
+
+  span {
+    padding: 0 28px;
+    font-weight: 600;
+  }
+
+  &:hover .arrow {
+    transform: translateX(4px);
+  }
+}
+
+.arrow {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: white;
+  color: var(--primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+}
+
+.imageArea {
+  position: relative;
+  height: 900px;
+  overflow: hidden;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.columnDown,
+.columnUp {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columnDown {
+  animation: scrollDown 25s linear infinite;
+}
+
+.columnUp {
+  animation: scrollUp 25s linear infinite;
+}
+
+.imageCard {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.fadeTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  z-index: 5;
+  pointer-events: none;
+
+  background: linear-gradient(to bottom, var(--background), transparent);
+}
+
+.fadeBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px;
+  z-index: 5;
+  pointer-events: none;
+
+  background: linear-gradient(to top, var(--background), transparent);
+}
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-66.66%);
+  }
+}
+
+@keyframes scrollDown {
+  from {
+    transform: translateY(-66.66%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .imageArea {
+    height: 700px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceSection {
+    padding: 80px 0;
+  }
+
+  .columns {
+    gap: 16px;
+  }
+
+  .imageArea {
+    height: 550px;
+  }
+
+  .imageCard {
+    height: 240px;
+    border-radius: 20px;
+  }
+}

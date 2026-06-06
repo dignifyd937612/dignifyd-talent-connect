@@ -11,6 +11,11 @@ import hr_consulting2 from "../assets/images/services/features/hr-consulting/hr-
 import rpo_solutions1 from "../assets/images/services/features/rpo-solutions/rpo-solutions1.png";
 import rpo_solutions2 from "../assets/images/services/features/rpo-solutions/rpo-solutions2.png";
 import onboarding_support1 from "../assets/images/services/features/onboarding-support/onboarding-support1.jpg";
+import serviveimg_1 from "../assets/images/services/global-talent-sourcing-payrolling/service1.jpg";
+import serviveimg_2 from "../assets/images/services/global-talent-sourcing-payrolling/service-2.jpg";
+import serviveimg_3 from "../assets/images/services/global-talent-sourcing-payrolling/service-3.jpg";
+import serviveimg_4 from "../assets/images/services/global-talent-sourcing-payrolling/service-4.jpg";
+import serviveimg_5 from "../assets/images/services/global-talent-sourcing-payrolling/service-5.jpg";
 
 export const servicesData = [
   {
@@ -180,4 +185,12 @@ export const servicesData = [
     },
     galleryImages: [hr_consulting1, onboarding_support1],
   },
+];
+
+export const ServiceImages = [
+  serviveimg_1,
+  serviveimg_2,
+  serviveimg_3,
+  serviveimg_4,
+  serviveimg_5,
 ];

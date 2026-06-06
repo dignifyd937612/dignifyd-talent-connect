@@ -1,8 +1,76 @@
+import {
+  Globe,
+  Users,
+  Briefcase,
+  GraduationCap,
+  Building2,
+  Factory,
+  Network,
+  ShieldCheck,
+} from "lucide-react";
+
 export const NAV_LINKS = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/about" },
   { label: "Careers", path: "/careers" },
-  { label: "Services", path: "/services" },
+
+  {
+    label: "Services",
+    path: "/services",
+    megaMenu: [
+      {
+        title: "Global Talent",
+        items: [
+          {
+            label: "Global Talent Sourcing & Payrolling",
+            icon: Globe,
+            link: "/global-talent-sourcing-payrolling",
+          },
+          {
+            label: "Vendor Management & Operations",
+            icon: Users,
+            link: "#",
+          },
+          {
+            label: "Recruitment Process Outsourcing",
+            icon: Briefcase,
+            link: "#",
+          },
+          {
+            label: "Upskilling Academy",
+            icon: GraduationCap,
+            link: "#",
+          },
+          {
+            label: "BPO (Business Process Outsourcing)",
+            icon: Building2,
+            link: "#",
+          },
+        ],
+      },
+      {
+        title: "Engagement Model",
+        items: [
+          {
+            label: "BOT/BOOT",
+            icon: Factory,
+            link: "#",
+          },
+          {
+            label: "GCC Services",
+            icon: Network,
+            link: "#",
+          },
+          {
+            label: "Managed Service Provider",
+            icon: ShieldCheck,
+            link: "#",
+          },
+        ],
+      },
+    ],
+  },
+
   { label: "Contact", path: "/contact" },
   // { label: "FAQs", path: "/FAQs" },
 ];
@@ -14,7 +82,7 @@ export const tabs = [
     slug: "global-recruitment",
     href: "/services/global-recruitment",
     brief:
-      "Our programs help organizations cultivate agile, competent, and resilient teams. Through structured development frameworks, targeted performance strategies, and cross-functional collaboration initiatives, we ensure employees are aligned with corporate objectives and empowered to contribute meaningfully. Continuous learning support and strategic guidance enable teams to thrive in an ever-evolving global business environment.",
+      "Our programs  help organizations cultivate agile, competent, and resilient teams. Through structured development frameworks, targeted performance strategies, and cross-functional collaboration initiatives, we ensure employees are aligned with corporate objectives and empowered to contribute meaningfully. Continuous learning support and strategic guidance enable teams to thrive in an ever-evolving global business environment.",
   },
   {
     Id: 1,
