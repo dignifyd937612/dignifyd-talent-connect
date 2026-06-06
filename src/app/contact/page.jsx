@@ -13,7 +13,7 @@ const ContactUs = () => {
   return (
     <>
       <ContactSection />
-      <ContactInfoSection />
+      {/* <ContactInfoSection /> */}
       <OurPresence />
       <Newsletter />
     </>

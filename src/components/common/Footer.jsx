@@ -138,9 +138,9 @@ export default function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-5 pb-10 md:flex-row">
           <div>
-            <h3 className="mb-2 text-lg text-white">
+            {/* <h3 className="mb-2 text-lg text-white">
               Get free note-taking workflows
-            </h3>
+            </h3> */}
             <p className="text-sm text-white/50">
               Copyright © 2026 Dignityd Talent Connect. All rights reserved.
             </p>

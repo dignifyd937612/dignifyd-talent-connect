@@ -4,7 +4,7 @@ export const NAV_LINKS = [
   { label: "Careers", path: "/careers" },
   { label: "Services", path: "/services" },
   { label: "Contact", path: "/contact" },
-  { label: "FAQs", path: "/FAQs" },
+  // { label: "FAQs", path: "/FAQs" },
 ];
 
 export const tabs = [

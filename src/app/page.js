@@ -83,13 +83,13 @@ export default function Home() {
         <Industry />
         <Collaboration />
         <Services />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contact />
-        <FAQs
+        {/* <FAQs
           FAQs={hrFAQs}
           badge={"Your FAQ Hub"}
           title={"Explore Our HR Service FAQs"}
-        />
+        /> */}
         <Jobs />
       </main>
     </>

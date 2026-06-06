@@ -24,8 +24,8 @@ export const Ourpresence = [
   {
     index: 2,
     name: "Canada",
-    location: "246 Stewart Green St. Calgary,T3H 3C8",
-    contact: "+1-877-735-0397",
+    location: "ON, Toronto - First Canadian Place 100 King Street West Suite 5600 Toronto Ontario M5X 1C9",
+    contact: "+14374765631",
     shortForm: "CAN",
     image: canada,
   },
@@ -40,7 +40,7 @@ export const Ourpresence = [
   {
     index: 4,
     name: "India",
-    location: "C-64, Upper Ground Floor,Sector-2, Noida, Delhi NCR",
+    location: "C-64, Upper Ground Floor,Sector-2, Noida",
     contact: "+91-120-450-6748",
     shortForm: "IND",
     image: india,
