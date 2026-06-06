@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import contactImg from "../../assets/images/contactUs/contact-us.jpg";
+import contactImg from "../../assets/images/contactUs/contact.png";
 import SectionHeader from "../common/SectionHeader";
 import { useForm } from "react-hook-form";
 
@@ -16,15 +16,15 @@ export default function ContactSection() {
         <div className="rounded-[20px] border border-white/10 bg-[#0b0615] p-6 md:p-10">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="h-full w-full">
-              <div className="relative h-[380px] w-full overflow-hidden rounded-[16px] md:h-[420px]">
+              <div className="relative  w-full overflow-hidden rounded-[16px] md:h-[420px]">
                 <Image
                   src={contactImg}
                   alt="team"
                   fill
                   priority
-                  fetchPriority="high"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
+                  
+                 
+                  className="object-fill"
                 />
               </div>
             </div>
