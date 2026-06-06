@@ -45,6 +45,7 @@ export const collaborations = [
   radical_minds,
   radius,
   imz_2,
+  intense,
 ];
 
 export const partnersLogos = [
@@ -70,6 +71,7 @@ export const partnersLogos = [
   radical_minds,
   radius,
   imz_2,
+  intense,
 ];
 
 export const techSupportLogos = [
@@ -95,4 +97,5 @@ export const techSupportLogos = [
   radical_minds,
   radius,
   imz_2,
+  intense,
 ];
