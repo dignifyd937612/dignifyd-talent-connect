@@ -16,11 +16,11 @@ import state_of_texas from "../assets/images/home/logos/state_of_texas.png";
 import combay_solutions from "../assets/images/home/logos/combay_solutions.png";
 import Kpmg from "../assets/images/home/logos/kpmg.png";
 import indigo from "../assets/images/home/logos/indigo.png";
-import imz from "../assets/images/home/logos/imz.png";
 import radical_minds from "../assets/images/home/logos/radical_minds.png";
 import collabera from "../assets/images/home/logos/collabera.png";
 import cognizant from "../assets/images/home/logos/cognizant.png";
 import radius from "../assets/images/home/logos/radius.png";
+import imz from "../assets/images/home/logos/imz.png";
 
 export const collaborations = [
   starlink_qatar,
