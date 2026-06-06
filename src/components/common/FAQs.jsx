@@ -10,13 +10,6 @@ function FAQs({ FAQs, badge, title }) {
     setActive((prev) => (prev === i ? null : i));
   };
 
-  const getOutput = () => {
-    const arr1 = [1, 2, 3];
-    const arr2 = [3, 4, 5];
-    const result = []
-   
-  };
-
   return (
     <section className="w-full bg-black py-24">
       <div className="mx-auto max-w-5xl">
@@ -52,9 +45,6 @@ function FAQs({ FAQs, badge, title }) {
               </div>
             );
           })}
-          <button style={{ color: "white" }} onClick={() => getOutput()}>
-            Get Output
-          </button>
         </div>
       </div>
     </section>
