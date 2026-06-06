@@ -13,7 +13,7 @@ import hipl from "../assets/images/home/logos/hipl.png";
 import state_of_california from "../assets/images/home/logos/state_of_california.png";
 import state_of_texas from "../assets/images/home/logos/state_of_texas.png";
 import combay_solutions from "../assets/images/home/logos/combay_solutions.png";
-import Kpmg from "../assets/images/home/logos/kpmg.png";
+import kpmg from "../assets/images/home/logos/kpmg.png";
 import indigo from "../assets/images/home/logos/indigo.png";
 import radical_minds from "../assets/images/home/logos/radical_minds.png";
 import collabera from "../assets/images/home/logos/collabera.png";
@@ -38,7 +38,7 @@ export const collaborations = [
   state_of_california,
   state_of_texas,
   combay_solutions,
-  Kpmg,
+  kpmg,
   indigo,
   radical_minds,
   radius,
@@ -62,7 +62,7 @@ export const partnersLogos = [
   state_of_california,
   state_of_texas,
   combay_solutions,
-  Kpmg,
+  kpmg,
   indigo,
   radical_minds,
   radius,
@@ -86,7 +86,7 @@ export const techSupportLogos = [
   state_of_california,
   state_of_texas,
   combay_solutions,
-  Kpmg,
+  kpmg,
   indigo,
   radical_minds,
   radius,
