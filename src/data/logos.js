@@ -7,7 +7,7 @@ import material from "../assets/images/home/logos/material.png";
 import compunel from "../assets/images/home/logos/compunel.png";
 import amerprise from "../assets/images/home/logos/amerprise.png";
 import rbc from "../assets/images/home/logos/rbc.png";
-import ibm from "../assets/images/home/logos/ibm.png";
+import ibm_2 from "../assets/images/home/logos/ibm_2.png";
 import bank_of_montreal from "../assets/images/home/logos/bank_of_montreal.png";
 import hipl from "../assets/images/home/logos/hipl.png";
 import state_of_california from "../assets/images/home/logos/state_of_california.png";
@@ -31,7 +31,7 @@ export const collaborations = [
   collabera,
   amerprise,
   rbc,
-  ibm,
+  ibm_2,
   cognizant,
   bank_of_montreal,
   hipl,
@@ -55,7 +55,7 @@ export const partnersLogos = [
   collabera,
   amerprise,
   rbc,
-  ibm,
+  ibm_2,
   cognizant,
   bank_of_montreal,
   hipl,
@@ -79,7 +79,7 @@ export const techSupportLogos = [
   collabera,
   amerprise,
   rbc,
-  ibm,
+  ibm_2,
   cognizant,
   bank_of_montreal,
   hipl,
