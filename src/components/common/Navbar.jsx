@@ -34,19 +34,55 @@ export default function Navbar() {
             const isActive = pathname === link.path;
 
             return (
-              <Link
-                key={link.path}
-                href={link.path}
-                className={`text-sm transition ${isActive ? "text-purple-500" : "text-gray-300 hover:text-white"}`}
-              >
-                {link.label}
-              </Link>
+              <div key={link.path} className="group relative">
+                <Link
+                  href={link.path}
+                  className={`text-sm transition ${isActive ? "text-purple-500" : "text-gray-300 hover:text-white"}`}
+                >
+                  {link.label}
+                </Link>
+
+                {link.megaMenu && (
+                  <div className="invisible absolute top-full left-1/2 z-50 mt-4 w-max -translate-x-1/2 rounded-xl border border-white/10 bg-black/95 p-8 opacity-0 shadow-2xl backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:opacity-100">
+                    <div className="grid auto-cols-max grid-flow-col gap-16">
+                      {link.megaMenu.map((section) => (
+                        <div key={section.title}>
+                          <h3 className="mb-5 text-sm font-semibold text-purple-500">
+                            {section.title}
+                          </h3>
+
+                          <ul className="space-y-4">
+                            {section.items.map((item) => {
+                              const Icon = item.icon;
+
+                              return (
+                                <Link
+                                  key={item.label}
+                                  href={item?.link}
+                                  className="flex cursor-pointer items-center gap-3 text-sm text-gray-300 transition hover:text-white"
+                                >
+                                  <Icon
+                                    size={18}
+                                    className="text-purple-500 flex-shrink-0"
+                                  />
+
+                                  <span>{item.label}</span>
+                                </Link>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             );
           })}
         </nav>
 
         <div className="hidden lg:block">
-          <button className="relative rounded-full px-5 py-2 text-sm text-white cursor-pointer">
+          <button className="relative cursor-pointer rounded-full px-5 py-2 text-sm text-white">
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></span>
             <span className="absolute inset-[1px] rounded-full bg-black"></span>
             <span className="relative z-10">Work With Us</span>
@@ -103,7 +139,7 @@ export default function Navbar() {
             );
           })}
 
-          <button className="relative mt-6 rounded-full px-5 py-3 text-sm text-white cursor-pointer bg-red">
+          <button className="bg-red relative mt-6 cursor-pointer rounded-full px-5 py-3 text-sm text-white">
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></span>
             <span className="absolute inset-[1px] rounded-full bg-black"></span>
             <span className="relative z-10">Work With Us</span>
