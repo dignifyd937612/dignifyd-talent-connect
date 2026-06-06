@@ -21,6 +21,7 @@ import cognizant from "../assets/images/home/logos/cognizant.png";
 import radius from "../assets/images/home/logos/radius.png";
 import imz_2 from "../assets/images/home/logos/imz_2.png";
 import intense from "../assets/images/home/logos/intense.png";
+import igt_2 from "../assets/images/home/logos/igt.png";
 
 export const collaborations = [
   starlink_qatar,
@@ -46,6 +47,7 @@ export const collaborations = [
   radius,
   imz_2,
   intense,
+  igt_2,
 ];
 
 export const partnersLogos = [
@@ -72,6 +74,7 @@ export const partnersLogos = [
   radius,
   imz_2,
   intense,
+  igt_2,
 ];
 
 export const techSupportLogos = [
@@ -98,4 +101,5 @@ export const techSupportLogos = [
   radius,
   imz_2,
   intense,
+  igt_2,
 ];
