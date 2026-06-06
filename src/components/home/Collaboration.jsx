@@ -20,6 +20,7 @@ export default function Collaboration() {
           <div className="overflow-hidden rounded-[28px] border border-white/10 bg-black/80 backdrop-blur-2xl md:rounded-[32px]">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
               {collaborations.map((logo, i) => (
+                // 
                 <div
                   key={i}
                   className="group flex h-[100px] items-center justify-center border border-white/5 sm:h-[110px] md:h-[140px]"
