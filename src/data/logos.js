@@ -46,6 +46,7 @@ export const collaborations = [
   imz,
   radical_minds,
   radius,
+  
 ];
 
 export const partnersLogos = [
