@@ -27,7 +27,7 @@ export default function Collaboration() {
                   <div className="relative flex h-16 w-28 items-center justify-center rounded-xl bg-gradient-to-b _rgba(168,85,247,0.6)] sm:h-20 sm:w-32 sm:p-3 md:h-24 md:w-44 md:rounded-2xl md:group-hover:scale-110">
                     <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/0 via-purple-500/20 to-pink-500/0 opacity-0 blur-xl transition duration-500 group-hover:opacity-100 md:rounded-2xl" />
 
-                    <div className="relative flex h-12 w-25 items-center justify-center">
+                    <div className="relative flex h-17 w-25 items-center justify-center">
                       <Image
                         src={logo}
                         alt="logo"

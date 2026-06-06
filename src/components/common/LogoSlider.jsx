@@ -10,14 +10,13 @@ const LogoSlider = ({ logos }) => {
       <div className={styles.track}>
         {[...logos, ...logos].map((logo, index) => (
           <div key={index} className={styles.logoItem}>
-            <div className="relative flex h-12 w-24 items-center justify-center rounded-xl border border-black/10 p-3 shadow-sm transition-all duration-300 hover:scale-105 md:h-16 md:w-32">
-              <Image
-                src={logo}
-                alt="company logo"
-                fill
-                className="object-contain"
-              />
-            </div>
+            <Image
+              src={logo}
+              alt="company logo"
+              width={180}
+              height={70}
+              className="object-contain"
+            />
           </div>
         ))}
       </div>

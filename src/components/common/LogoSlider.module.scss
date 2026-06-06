@@ -2,18 +2,34 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  padding: 20px 0;
 }
 
 .track {
   display: flex;
   align-items: center;
-  gap: 60px;
-  width: fit-content;
-  animation: scroll 50s linear infinite;
+  gap: 100px;
+  width: max-content;
+  animation: scroll 40s linear infinite;
 }
 
 .logoItem {
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: auto;
+    height: 80px;
+    max-width: 150px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.08);
+  }
 }
 
 .fadeLeft,
@@ -21,7 +37,7 @@
   position: absolute;
   top: 0;
   height: 100%;
-  width: 120px;
+  width: 150px;
   z-index: 10;
   pointer-events: none;
 }
@@ -41,11 +57,27 @@
 }
 
 @keyframes scroll {
-  0% {
+  from {
     transform: translateX(0);
   }
 
-  100% {
+  to {
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .track {
+    gap: 50px;
+  }
+
+  .logoItem img {
+    height: 50px;
+    max-width: 120px;
+  }
+
+  .fadeLeft,
+  .fadeRight {
+    width: 80px;
   }
 }
