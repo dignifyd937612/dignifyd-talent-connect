@@ -1,7 +1,6 @@
 import bajaj_finserv from "../assets/images/home/logos/bajaj_finserv.png";
 import aminu from "../assets/images/home/logos/aminu.png";
 import starlink_qatar from "../assets/images/home/logos/starlink_qatar.png";
-import igt from "../assets/images/home/logos/igt.png";
 import calsoft from "../assets/images/home/logos/calsoft.png";
 import bajaj_tech from "../assets/images/home/logos/bajaj_tech.png";
 import material from "../assets/images/home/logos/material.png";
@@ -25,7 +24,6 @@ export const collaborations = [
   starlink_qatar,
   bajaj_finserv,
   aminu,
-  igt,
   calsoft,
   bajaj_tech,
   material,
@@ -50,7 +48,6 @@ export const partnersLogos = [
   starlink_qatar,
   bajaj_finserv,
   aminu,
-  igt,
   calsoft,
   bajaj_tech,
   material,
@@ -75,7 +72,6 @@ export const techSupportLogos = [
   starlink_qatar,
   bajaj_finserv,
   aminu,
-  igt,
   calsoft,
   bajaj_tech,
   material,
