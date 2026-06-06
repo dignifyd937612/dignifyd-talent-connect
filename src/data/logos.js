@@ -16,7 +16,7 @@ import SOT from "../assets/images/home/logos/state_of_texas.png";
 import combay_solutions from "../assets/images/home/logos/kombay_soltiuon.png";
 import Kpmg from "../assets/images/home/logos/kpmg.png";
 import indigo from "../assets/images/home/logos/indigo.png";
-import imz from "../assets/images/home/logos/imz.png";
+import imz from "../assets/images/home/logos/IMZ.png";
 import radical_minds from "../assets/images/home/logos/radical__minds.png";
 import collabera from "../assets/images/home/logos/collabera.png";
 import cognizant from "../assets/images/home/logos/cognizant.png";
