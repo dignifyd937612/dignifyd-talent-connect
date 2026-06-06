@@ -46,11 +46,13 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
+          <Link href="/contact">
           <button className="relative rounded-full px-5 py-2 text-sm text-white cursor-pointer">
             <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></span>
             <span className="absolute inset-[1px] rounded-full bg-black"></span>
             <span className="relative z-10">Work With Us</span>
           </button>
+          </Link>
         </div>
 
         <button
