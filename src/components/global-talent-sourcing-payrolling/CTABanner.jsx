@@ -4,7 +4,7 @@ import Link from "next/link";
 const CTABanner = () => {
   return (
     <section className="py-24">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-xl">
           <div className="absolute -left-32 top-0 h-80 w-80 rounded-full bg-[#e12afb]/30 blur-[120px]" />
           <div className="absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-[#e12afb]/20 blur-[120px]" />

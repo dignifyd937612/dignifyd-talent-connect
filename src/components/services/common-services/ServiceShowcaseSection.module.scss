@@ -1,7 +1,7 @@
 .serviceSection {
   position: relative;
   overflow: hidden;
-  padding: 120px 0 0 150;
+  padding: 120px 0 0 0px;
 }
 
 .wrapper {
@@ -15,7 +15,7 @@
   max-width: 700px;
 
   h2 {
-    font-size: clamp(2rem, 4vw, 5rem);
+    font-size: clamp(2rem, 3.5vw, 6rem);
     line-height: 1.1;
     font-weight: 700;
     margin-bottom: 32px;
@@ -24,14 +24,6 @@
     span {
       color: var(--primary);
     }
-  }
-
-  p {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    margin-bottom: 28px;
-    color: rgb(169, 154, 154);
-    opacity: 0.8;
   }
 }
 

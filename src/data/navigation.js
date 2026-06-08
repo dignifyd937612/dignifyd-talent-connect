@@ -29,7 +29,7 @@ export const NAV_LINKS = [
           {
             label: "Vendor Management & Operations",
             icon: Users,
-            link: "#",
+            link: "/vendor-management-operations",
           },
           {
             label: "Recruitment Process Outsourcing",

@@ -1,40 +1,26 @@
 import Image from "next/image";
-import styles from "./Serviceinfo.module.scss";
+import styles from "./ServiceShowcaseSection.module.scss";
 import { ServiceImages } from "@/data/servicesData";
 import Link from "next/link";
 
 const duplicatedImages = [...ServiceImages, ...ServiceImages, ...ServiceImages];
 
-const ServiceInfo = () => {
+const ServiceShowcaseSection = ({ children, heading, supportingHeading }) => {
   return (
     <section className={styles.serviceSection}>
       <div className="container">
         <div className={styles.wrapper}>
           <div className={styles.content}>
             <h2>
-              Sourcing <span>Global Talent Payrolling</span>
+              {heading} <span>{supportingHeading}</span>
             </h2>
-
-            <p>
-              Global Talent Sourcing & Payrolling offers end-to-end solutions
-              for sourcing and managing talent across borders. This sub-solution
-              simplifies hiring, ensures compliance with local regulations, and
-              provides seamless payroll management for global teams.
-            </p>
-
-            <p>
-              By handling these critical workforce management functions,
-              businesses can focus on their core objectives while ensuring
-              operational efficiency and cost-effectiveness.
-            </p>
-
+            {children}
             <Link href={"/contact"} className={styles.ctaBtn}>
               <span>Connect With Us</span>
 
               <div className={styles.arrow}>→</div>
             </Link>
           </div>
-
           <div className={styles.imageArea}>
             <div className={styles.fadeTop} />
             <div className={styles.fadeBottom} />
@@ -75,4 +61,4 @@ const ServiceInfo = () => {
   );
 };
 
-export default ServiceInfo;
+export default ServiceShowcaseSection;

@@ -1,12 +1,12 @@
 import FAQs from "@/components/common/FAQs";
 import CTABanner from "@/components/global-talent-sourcing-payrolling/CTABanner";
-import ProcessSection from "@/components/global-talent-sourcing-payrolling/ProcessSection";
-import GlobalTalentPayrollingSection from "@/components/global-talent-sourcing-payrolling/GlobalTalentPayrollingSection";
 import Banner from "@/components/home/Banner";
-import Stats from "@/components/home/Stats";
+import VendorManagementOperationsInfo from "@/components/vendor-management-operations/VendorManagementOperations";
+import WhyVMO from "@/components/vendor-management-operations/WhyVMO";
+import WorkforceChallenges from "@/components/vendor-management-operations/WorkForceChallanges";
 import { hrFAQs } from "@/data/faqs";
 
-const GlobalTalentSourcingPayroll = () => {
+const VendorManagementOperations = () => {
   return (
     <>
       <Banner
@@ -16,9 +16,9 @@ const GlobalTalentSourcingPayroll = () => {
         description={"Accelerate delivery, and drive measurable results."}
         btn_text={"Get Started Now"}
       />
-      <GlobalTalentPayrollingSection />
-      <Stats />
-      <ProcessSection />
+      <VendorManagementOperationsInfo />
+      <WorkforceChallenges />
+      <WhyVMO />
       <FAQs
         FAQs={hrFAQs}
         badge={"Global Talent Sourcing FAQs"}
@@ -31,4 +31,4 @@ const GlobalTalentSourcingPayroll = () => {
   );
 };
 
-export default GlobalTalentSourcingPayroll;
+export default VendorManagementOperations;
