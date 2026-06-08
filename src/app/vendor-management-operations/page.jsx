@@ -26,7 +26,7 @@ const VendorManagementOperations = () => {
           "Streamline your global workforce operations & unlock new growth opportunities."
         }
       />
-      <CTABanner />
+      <CTABanner title={"Vendor Management Operations"} />
     </>
   );
 };

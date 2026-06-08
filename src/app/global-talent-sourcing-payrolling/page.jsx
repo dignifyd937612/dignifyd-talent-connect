@@ -26,7 +26,7 @@ const GlobalTalentSourcingPayroll = () => {
           "Streamline your global workforce operations & unlock new growth opportunities."
         }
       />
-      <CTABanner />
+      <CTABanner title={"Global Talent Sourcing & Payrolling"} />
     </>
   );
 };

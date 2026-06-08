@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-const CTABanner = () => {
+const CTABanner = ({ title }) => {
   return (
     <section className="py-24">
       <div className="container mx-auto">
@@ -22,7 +22,7 @@ const CTABanner = () => {
             <div className="mb-8 inline-flex items-center rounded-full border border-[#e12afb]/30 bg-[#e12afb]/10 px-5 py-2 backdrop-blur-md">
               <span className="h-2 w-2 rounded-full bg-[#e12afb]" />
               <span className="ml-2 text-sm font-medium text-[#e12afb]">
-                Global Workforce Solutions
+                {title}
               </span>
             </div>
 
@@ -35,9 +35,8 @@ const CTABanner = () => {
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/70">
-              Explore how Global Talent Sourcing & Payrolling can streamline
-              your global operations and help your organization scale faster
-              with complete workforce compliance.
+              Explore how {title} can streamline your global operations and help
+              your organization scale faster with complete workforce compliance.
             </p>
 
             <div className="mt-10">
