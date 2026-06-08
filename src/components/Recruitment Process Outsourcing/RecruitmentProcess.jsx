@@ -1,24 +1,25 @@
 import { Check } from "lucide-react";
 import ServiceShowcaseSection from "../services/common-services/ServiceShowcaseSection";
 const features = [
-  "Global Workforce Coordination",
-  "Centralized Vendor Governance",
-  "Contingent Workforce Visibility",
-  "Scalable Workforce Operations",
+  "Talent Shortages",
+  "Slow Hiring Cycles",
+  "Workforce Scalability",
+  "Compliance Complexity",
 ];
-const VendorManagementOperationsInfo = () => {
+const RecruitmentProcess = () => {
   return (
     <>
       <ServiceShowcaseSection
-        heading={"Optimizing Workforce Ecosystems"}
-        supportingHeading={"Through Strategic Governance"}
+        heading={"Modern Recruitment Challenges"}
+        supportingHeading={"Demand Smarter Hiring Strategies"}
       >
         <div className="max-w-3xl">
           <p className="mb-8 text-lg leading-[1.8] text-[#a99a9a]/80">
-            E-Solutions helps enterprises optimize contingent workforce
-            ecosystems through centralized vendor governance, workforce
-            visibility, supplier performance management, and scalable workforce
-            operations across global business environments.
+            Organizations today face increasing hiring pressure driven by talent
+            shortages, recruitment inefficiencies, scalability demands,
+            compliance complexity, and inconsistent candidate quality - making
+            modern, agile, and technology-driven recruitment operations
+            essential for sustainable workforce growth.
           </p>
 
           <ul className="space-y-4 mb-10">
@@ -40,4 +41,4 @@ const VendorManagementOperationsInfo = () => {
   );
 };
 
-export default VendorManagementOperationsInfo;
+export default RecruitmentProcess;

@@ -5,6 +5,7 @@ import VendorManagementOperationsInfo from "@/components/vendor-management-opera
 import WhyVMO from "@/components/vendor-management-operations/WhyVMO";
 import WorkforceChallenges from "@/components/vendor-management-operations/WorkForceChallanges";
 import { hrFAQs } from "@/data/faqs";
+import { challenges } from "@/data/services/vendor-management-operations/challenges";
 
 const VendorManagementOperations = () => {
   return (
@@ -17,7 +18,13 @@ const VendorManagementOperations = () => {
         btn_text={"Get Started Now"}
       />
       <VendorManagementOperationsInfo />
-      <WorkforceChallenges />
+      <WorkforceChallenges
+        data={challenges}
+        badge="Enterprise Workforce"
+        title="Enterprise Workforce Challenges Are Growing Increasingly Complex"
+        highlightedText="Enterprise Workforce"
+        description="As organizations expand across regions and suppliers, managing workforce operations becomes increasingly challenging. Limited visibility, fragmented vendor networks, and compliance risks can hinder efficiency, scalability, and business growth."
+      />
       <WhyVMO />
       <FAQs
         FAQs={hrFAQs}

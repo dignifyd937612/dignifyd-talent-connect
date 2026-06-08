@@ -13,7 +13,6 @@ export const NAV_LINKS = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/about" },
   { label: "Careers", path: "/careers" },
-
   {
     label: "Services",
     path: "/services",
@@ -34,7 +33,7 @@ export const NAV_LINKS = [
           {
             label: "Recruitment Process Outsourcing",
             icon: Briefcase,
-            link: "#",
+            link: "/recruitment-process-outsourcing",
           },
           {
             label: "Upskilling Academy",
@@ -70,7 +69,6 @@ export const NAV_LINKS = [
       },
     ],
   },
-
   { label: "Contact", path: "/contact" },
   // { label: "FAQs", path: "/FAQs" },
 ];

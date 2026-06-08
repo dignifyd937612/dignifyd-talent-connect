@@ -5,6 +5,7 @@ import GlobalTalentPayrollingSection from "@/components/global-talent-sourcing-p
 import Banner from "@/components/home/Banner";
 import Stats from "@/components/home/Stats";
 import { hrFAQs } from "@/data/faqs";
+import { processSteps } from "@/data/services/global-talent-sourcing-payrolling/processSteps";
 
 const GlobalTalentSourcingPayroll = () => {
   return (
@@ -18,7 +19,11 @@ const GlobalTalentSourcingPayroll = () => {
       />
       <GlobalTalentPayrollingSection />
       <Stats />
-      <ProcessSection />
+      <ProcessSection
+        data={processSteps}
+        heading={"Operational Advantages"}
+        supportingHeading={"That Strengthen Workforce Programs"}
+      />
       <FAQs
         FAQs={hrFAQs}
         badge={"Global Talent Sourcing FAQs"}

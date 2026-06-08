@@ -1,30 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-const processSteps = [
-  {
-    number: "01",
-    title: "Centralized Workforce Governance",
-  },
-  {
-    number: "02",
-    title: "Real-Time Workforce Visibility",
-  },
-  {
-    number: "03",
-    title: "Standardized Vendor Operations",
-  },
-  {
-    number: "04",
-    title: "AI-Enabled Workforce Reporting",
-  },
-  {
-    number: "05",
-    title: "Streamlined Supplier Coordination",
-  },
-];
-
-const ProcessSection = () => {
+const ProcessSection = ({ data, heading, supportingHeading }) => {
   return (
     <section className="py-24">
       <div className="container mx-auto px-4">
@@ -35,8 +12,8 @@ const ProcessSection = () => {
             </div>
 
             <h2 className="max-w-5xl text-4xl font-semibold leading-tight text-white md:text-6xl">
-              <span className="text-[#e12afb]">Operational Advantages</span>{" "}
-              That Strengthen Workforce Programs
+              <span className="text-[#e12afb]">{heading} </span>
+              {supportingHeading}
             </h2>
           </div>
 
@@ -55,7 +32,7 @@ const ProcessSection = () => {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-          {processSteps.map((item) => (
+          {data.map((item) => (
             <div
               key={item.number}
               className="group relative overflow-hidden rounded-[28px] border border-[#e12afb]/20 bg-gradient-to-br from-[#e12afb] to-[#c019d8] p-6 shadow-[0_10px_40px_rgba(225,42,251,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(225,42,251,0.35)]"

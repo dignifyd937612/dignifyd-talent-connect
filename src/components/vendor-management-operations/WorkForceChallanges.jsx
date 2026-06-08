@@ -1,43 +1,11 @@
-import { Users, Eye, ShieldAlert, Globe2 } from "lucide-react";
 import SectionHeader from "../common/SectionHeader";
 
-const challenges = [
-  {
-    icon: Users,
-    title: "Fragmented Vendor Ecosystems",
-    description:
-      "Managing multiple workforce suppliers creates operational inefficiencies.",
-  },
-  {
-    icon: Eye,
-    title: "Limited Workforce Visibility",
-    description:
-      "Disconnected systems reduce workforce transparency and reporting.",
-  },
-  {
-    icon: ShieldAlert,
-    title: "Compliance & Governance Risks",
-    description:
-      "Inconsistent processes increase workforce compliance vulnerabilities significantly.",
-  },
-  {
-    icon: Globe2,
-    title: "Global Hiring Support",
-    description:
-      "Rapid workforce expansion complicates vendor coordination efforts.",
-  },
-];
-
-const WorkforceChallenges = () => {
+const WorkforceChallenges = ({ data, badge, title, description }) => {
   return (
-    <section className="py-20 mt-10">
-      <SectionHeader
-        badge="Enterprise Workforce"
-        title={"Challenges Are Growing Increasingly Complex"}
-        description="As organizations expand across regions and suppliers, managing workforce operations becomes increasingly challenging. Limited visibility, fragmented vendor networks, and compliance risks can hinder efficiency, scalability, and business growth."
-      />
+    <section className="mt-10 py-20">
+      <SectionHeader badge={badge} title={title} description={description} />
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        {challenges.map((item, index) => {
+        {data.map((item, index) => {
           const Icon = item.icon;
 
           return (
