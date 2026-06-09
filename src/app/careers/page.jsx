@@ -33,7 +33,7 @@ const Careers = async () => {
         badge={"Your FAQ Hub"}
         title={"Explore Our HR Service FAQs"}
       />
-      <Testimonials />
+      {/* <Testimonials /> */}
     </>
   );
 };
