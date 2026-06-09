@@ -43,7 +43,7 @@ export const NAV_LINKS = [
           {
             label: "BPO (Business Process Outsourcing)",
             icon: Building2,
-            link: "#",
+            link: "/bpo-business-process-outsourcing",
           },
         ],
       },
