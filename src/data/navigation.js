@@ -38,7 +38,7 @@ export const NAV_LINKS = [
           {
             label: "Upskilling Academy",
             icon: GraduationCap,
-            link: "#",
+            link: "/upskilling-academy",
           },
           {
             label: "BPO (Business Process Outsourcing)",

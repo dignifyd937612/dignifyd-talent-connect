@@ -8,6 +8,7 @@ import WorkforceChallenges from "@/components/vendor-management-operations/WorkF
 import { hrFAQs } from "@/data/faqs";
 import { benefits } from "@/data/services/recruitment-process-outsourcing/benefits";
 import { recruitmentFramework } from "@/data/services/recruitment-process-outsourcing/RecritmentsProcess";
+import { caseStudies } from "@/data/services/recruitment-process-outsourcing/recruitmentCaseStudies";
 
 const RecruitmentProcessOutsourcing = () => {
   return (
@@ -25,7 +26,7 @@ const RecruitmentProcessOutsourcing = () => {
         heading={"Our Recruitment"}
         supportingHeading={"Delivery Framework"}
       />
-      <CaseStudies />
+      <CaseStudies data={caseStudies} />
       <WorkforceChallenges
         data={benefits}
         badge="Why Modern RPO"

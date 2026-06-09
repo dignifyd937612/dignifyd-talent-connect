@@ -4,7 +4,7 @@ import Link from "next/link";
 const ProcessSection = ({ data, heading, supportingHeading }) => {
   return (
     <section className="py-24">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <div className="mb-6 inline-flex rounded-full border border-[#e12afb]/30 bg-[#e12afb]/10 px-5 py-2 text-sm font-medium text-[#e12afb] backdrop-blur-sm">
