@@ -53,12 +53,12 @@ export const NAV_LINKS = [
           {
             label: "BOT/BOOT",
             icon: Factory,
-            link: "#",
+            link: "/build-operate-transfer",
           },
           {
             label: "GCC Services",
             icon: Network,
-            link: "#",
+            link: "/gcc-services",
           },
           {
             label: "Managed Service Provider",

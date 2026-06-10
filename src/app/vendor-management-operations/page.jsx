@@ -11,11 +11,11 @@ const VendorManagementOperations = () => {
   return (
     <>
       <Banner
-        badge={"Create Your Impact"}
-        leading_text={"Global Talent Sourcing & Payrolling"}
-        supporting_text={"Work with Innovation"}
-        description={"Accelerate delivery, and drive measurable results."}
-        btn_text={"Get Started Now"}
+        badge="Enterprise Workforce Solutions"
+        leading_text="Vendor Management"
+        supporting_text="& Operations"
+        description="Gain greater control over your workforce ecosystem with centralized vendor governance, real-time visibility, compliance management, and scalable operational support."
+        btn_text="Connect With Us"
       />
       <VendorManagementOperationsInfo />
       <WorkforceChallenges
