@@ -63,7 +63,7 @@ export const NAV_LINKS = [
           {
             label: "Managed Service Provider",
             icon: ShieldCheck,
-            link: "#",
+            link: "/managed-service-provider",
           },
         ],
       },

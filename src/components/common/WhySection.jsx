@@ -1,46 +1,17 @@
 import Image from "next/image";
-import { Eye, ShieldCheck, Gauge, ClipboardCheck } from "lucide-react";
 
-import vmoImage from "../../assets/images/services/vendor-management-operations/whyVMO.jpg";
-import SectionHeader from "../common/SectionHeader";
+import SectionHeader from "./SectionHeader";
 
-const features = [
-  {
-    icon: Eye,
-    title: "Workforce Visibility",
-    description:
-      "Centralized insights across contingent workforce operations globally.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Supplier Governance",
-    description:
-      "Standardized governance improves supplier accountability and consistency.",
-  },
-  {
-    icon: Gauge,
-    title: "Operational Efficiency",
-    description:
-      "Streamlined workflows accelerate workforce operations across regions.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Compliance & Risk Management",
-    description:
-      "Strengthened oversight reduces workforce compliance and operational risks.",
-  },
-];
-
-const WhyVMO = () => {
+const WhySection = ({ badge, title, description, features, whyImg }) => {
   return (
     <section className="py-24">
       <div className="container mx-auto">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
             <SectionHeader
-              badge="Why VMO"
-              title="Redefining Enterprise Workforce Vendor Management"
-              description="Gain complete control over your contingent workforce ecosystem with centralized visibility, supplier governance, compliance oversight, and operational excellence."
+              badge={badge}
+              title={title}
+              description={description}
               center={false}
             />
 
@@ -81,7 +52,7 @@ const WhyVMO = () => {
 
             <div className="relative h-[700px] overflow-hidden rounded-[40px] border border-white/10">
               <Image
-                src={vmoImage}
+                src={whyImg}
                 alt="Vendor Management Operations"
                 fill
                 className="object-cover object-center"
@@ -95,4 +66,4 @@ const WhyVMO = () => {
   );
 };
 
-export default WhyVMO;
+export default WhySection;

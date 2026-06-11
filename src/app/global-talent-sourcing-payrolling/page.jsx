@@ -11,11 +11,11 @@ const GlobalTalentSourcingPayroll = () => {
   return (
     <>
       <Banner
-        badge={"Create Your Impact"}
-        leading_text={"Global Talent Sourcing & Payrolling"}
-        supporting_text={"Work with Innovation"}
-        description={"Accelerate delivery, and drive measurable results."}
-        btn_text={"Get Started Now"}
+        badge="Global Workforce Solutions"
+        leading_text="Global Talent Sourcing & Payrolling"
+        supporting_text="Hire Globally. Manage Seamlessly."
+        description="Simplify international hiring, payroll administration, and workforce compliance with scalable solutions designed for growing global organizations."
+        btn_text="Connect With Us"
       />
       <GlobalTalentPayrollingSection />
       <Stats />
