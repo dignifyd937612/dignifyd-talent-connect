@@ -13,7 +13,7 @@ const BOTOverviewSection = ({
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div className="max-w-xl">
             <SectionHeader badge={badge} title={title} center={false} />
-            <p className="mt-8 text-lg leading-8 text-white/65">
+            <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
               {description}
             </p>
           </div>

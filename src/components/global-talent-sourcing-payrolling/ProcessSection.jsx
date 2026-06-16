@@ -11,8 +11,10 @@ const ProcessSection = ({ data, heading, supportingHeading }) => {
               Our Process
             </div>
 
-            <h2 className="max-w-5xl text-4xl font-semibold leading-tight text-white md:text-6xl">
-              <span className="text-[#e12afb]">{heading} </span>
+            <h2 className="max-w-5xl text-4xl leading-tight font-semibold text-[#1f1f1f] md:text-6xl dark:text-white">
+              <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+                {heading}
+              </span>{" "}
               {supportingHeading}
             </h2>
           </div>
@@ -21,7 +23,7 @@ const ProcessSection = ({ data, heading, supportingHeading }) => {
             href={"/contact"}
             className="group inline-flex w-fit items-center rounded-full border border-[#e12afb]/40 bg-white/5 p-1 backdrop-blur-xl transition-all duration-300 hover:border-[#e12afb]"
           >
-            <span className="px-6 text-sm font-medium text-white">
+            <span className="px-6 text-sm font-medium text-[#e12afb] dark:text-white">
               Contact Us
             </span>
 
@@ -37,13 +39,13 @@ const ProcessSection = ({ data, heading, supportingHeading }) => {
               key={item.number}
               className="group relative overflow-hidden rounded-[28px] border border-[#e12afb]/20 bg-gradient-to-br from-[#e12afb] to-[#c019d8] p-6 shadow-[0_10px_40px_rgba(225,42,251,0.15)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(225,42,251,0.35)]"
             >
-              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/10 transition-transform duration-500 group-hover:scale-125" />
+              <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-white/10 transition-transform duration-500 group-hover:scale-125" />
 
-              <div className="mb-6 text-6xl font-bold leading-none text-white/30">
+              <div className="mb-6 text-6xl leading-none font-bold text-white/30">
                 {item.number}
               </div>
 
-              <h3 className="relative z-10 text-xl font-semibold leading-snug text-white">
+              <h3 className="relative z-10 text-xl leading-snug font-semibold text-white">
                 {item.title}
               </h3>
             </div>

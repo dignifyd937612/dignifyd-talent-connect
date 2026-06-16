@@ -10,7 +10,36 @@ import { processSteps } from "@/data/services/managed-service-provider/processSt
 import CaseStudies from "@/components/Recruitment Process Outsourcing/CaseStudies";
 import { caseStudies } from "@/data/services/managed-service-provider/caseStudies";
 import CTABanner from "@/components/global-talent-sourcing-payrolling/CTABanner";
+export const metadata = {
+  title: "Managed Service Provider (MSP) Solutions | Dignifyd",
 
+  description:
+    "Scale contingent workforce programs with end-to-end MSP solutions that improve supplier governance, workforce visibility, compliance, and operational efficiency.",
+
+  keywords: [
+    "managed service provider",
+    "MSP solutions",
+    "workforce management",
+    "contingent workforce",
+    "supplier governance",
+    "workforce compliance",
+    "vendor management",
+    "staffing program management",
+    "workforce optimization",
+    "Dignifyd",
+  ],
+
+  alternates: {
+    canonical: "https://www.dignifyd.com/managed-service-provider",
+  },
+
+  openGraph: {
+    title: "Managed Service Provider (MSP) Solutions | Dignifyd",
+    description:
+      "Streamline workforce programs with MSP services focused on supplier management, compliance, workforce intelligence, and scalable operations.",
+    type: "website",
+  },
+};
 const ManagedServiceProvider = () => {
   return (
     <>

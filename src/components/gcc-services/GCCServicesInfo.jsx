@@ -7,7 +7,7 @@ const GCCServicesInfo = () => {
         heading="GCC"
         supportingHeading="Services"
       >
-        <p className="mb-7 text-lg leading-[1.8] text-[#a99a9a]/80">
+        <p className="mb-7 text-lg leading-[1.8] text-black/70 dark:text-white/60">
           In a dynamic business landscape, GCC Services' Flexible Service
           Delivery Model offers customizable engagement to meet your specific
           needs. Whether you require dedicated teams, project-based solutions,
@@ -15,7 +15,7 @@ const GCCServicesInfo = () => {
           operations.
         </p>
 
-        <p className="mb-7 text-lg leading-[1.8] text-[#a99a9a]/80">
+        <p className="mb-7 text-lg leading-[1.8] text-black/70 dark:text-white/60">
           We provide global reach, cost optimization, and access to resources
           across multiple geographies. Our approach is centered on quality,
           efficiency, and scalability, allowing you to stay agile while

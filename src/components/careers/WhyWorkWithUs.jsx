@@ -5,7 +5,7 @@ import SectionHeader from "../common/SectionHeader";
 const WhyWorkWithUs = () => {
   return (
     <>
-      <div className="w-full bg-black py-20" id="jobs">
+      <div className="w-full bg-white py-20 dark:bg-black" id="jobs">
         <SectionHeader
           badge={"Why Work With Us"}
           title={"Flexible And Healthy Work-life Balance"}

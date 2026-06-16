@@ -22,7 +22,7 @@ const WhySection = ({ badge, title, description, features, whyImg }) => {
                 return (
                   <div
                     key={index}
-                    className="group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] p-7 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#c61df2]/40 hover:bg-white/[0.05]"
+                    className="group relative overflow-hidden rounded-[28px] border border-[#c61df2]/50 bg-white/[0.03] p-7 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#c61df2]/40 hover:bg-white/[0.05]"
                   >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(198,29,242,0.12),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
@@ -31,11 +31,11 @@ const WhySection = ({ badge, title, description, features, whyImg }) => {
                         <Icon size={24} />
                       </div>
 
-                      <h3 className="mb-3 text-2xl font-semibold text-white">
+                      <h3 className="mb-3 text-2xl font-semibold text-black dark:text-white">
                         {item.title}
                       </h3>
 
-                      <p className="leading-7 text-white/65">
+                      <p className="leading-7 text-black/65 dark:text-white/65">
                         {item.description}
                       </p>
                     </div>
@@ -48,7 +48,7 @@ const WhySection = ({ badge, title, description, features, whyImg }) => {
           </div>
 
           <div className="relative">
-            <div className="absolute -right-10 top-1/2 h-[320px] w-[320px] -translate-y-1/2 rounded-full bg-[#c61df2]/20 blur-[120px]" />
+            <div className="absolute top-1/2 -right-10 h-[320px] w-[320px] -translate-y-1/2 rounded-full bg-[#c61df2]/20 blur-[120px]" />
 
             <div className="relative h-[700px] overflow-hidden rounded-[40px] border border-white/10">
               <Image

@@ -7,6 +7,36 @@ import { caseStudies } from "@/data/services/gcc-services/caseStudies";
 import { keyBenefits } from "@/data/services/gcc-services/keyBenefits";
 import { processPhases } from "@/data/services/gcc-services/processPhases";
 
+export const metadata = {
+  title: "Global Capability Center (GCC) Services | Dignifyd",
+
+  description:
+    "Establish, scale, and optimize Global Capability Centers with flexible delivery models, skilled talent, and operational excellence designed for sustainable business growth.",
+
+  keywords: [
+    "GCC services",
+    "global capability center",
+    "global business support",
+    "offshore delivery center",
+    "shared services center",
+    "global operations",
+    "business scalability",
+    "workforce solutions",
+    "global talent",
+    "Dignifyd",
+  ],
+
+  alternates: {
+    canonical: "https://www.dignifyd.com/gcc-services",
+  },
+
+  openGraph: {
+    title: "Global Capability Center (GCC) Services | Dignifyd",
+    description:
+      "Build and scale Global Capability Centers with customized engagement models, global talent access, and operational excellence.",
+    type: "website",
+  },
+};
 const GCCServices = () => {
   return (
     <>

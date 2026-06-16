@@ -4,7 +4,7 @@ const UpskillingAcademyInfo = () => {
   return (
     <>
       <ServiceShowcaseSection heading="Upskilling" supportingHeading="Academy">
-        <p className="mb-7 text-lg leading-[1.8] text-[#a99a9a]/80">
+        <p className="mb-7 text-lg leading-[1.8] text-black/70 dark:text-white/60">
           In a fast-changing world, keeping your workforce ahead of the curve is
           essential. At E-Solutions, we provide customized upskilling solutions
           that equip your team with the latest technical and soft skills. Our
@@ -12,7 +12,7 @@ const UpskillingAcademyInfo = () => {
           trained specifically for your business needs.
         </p>
 
-        <p className="mb-7 text-lg leading-[1.8] text-[#a99a9a]/80">
+        <p className="mb-7 text-lg leading-[1.8] text-black/70 dark:text-white/60">
           With upskilling programs ranging from mastering technologies such as
           Java, Data Science, SAP, and Cybersecurity, to developing leadership
           and communication skills, our Upskilling Academy is designed to boost

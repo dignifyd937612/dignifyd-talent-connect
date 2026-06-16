@@ -12,9 +12,9 @@ const ServiceShowcaseSection = ({ heading, supportingHeading, children }) => {
       <div className="container mx-auto">
         <div className="grid items-center gap-20 xl:grid-cols-[1fr_620px]">
           <div className="max-w-[700px]">
-            <h2 className="mb-8 text-[clamp(2rem,3.5vw,6rem)] font-bold leading-[1.1] text-white">
+            <h2 className="mb-8 text-[clamp(2rem,3.5vw,6rem)] leading-[1.1] font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent dark:text-white">
               {heading}{" "}
-              <span className="text-[#e12afb]">{supportingHeading}</span>
+              <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">{supportingHeading}</span>
             </h2>
 
             {children}
@@ -32,8 +32,9 @@ const ServiceShowcaseSection = ({ heading, supportingHeading, children }) => {
           </div>
 
           <div className="relative h-[900px] overflow-hidden">
-            <div className={styles.fadeTop} />
-            <div className={styles.fadeBottom} />
+            <div className="pointer-events-none absolute top-0 right-0 left-0 z-10 h-[180px] bg-gradient-to-b from-white to-transparent dark:from-black" />
+
+            <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-[180px] bg-gradient-to-t from-white to-transparent dark:from-black" />
 
             <div className="grid grid-cols-2 gap-6">
               <div className={`${styles.animateDown} flex flex-col gap-6`}>

@@ -7,7 +7,7 @@ const BuildOperatorTransferInfo = () => {
         heading="Business"
         supportingHeading="Process Outsourcing"
       >
-        <p className="mb-7 text-lg leading-[1.8] text-[#a99a9a]/80">
+        <p className="mb-7 text-lg leading-[1.8] text-black/70 dark:text-white/60">
           In today’s fast-paced business world, setting up new operations can be
           complex and resource-intensive. E-Solutions' Build Operate Transfer
           (BOT) Model offers a structured approach to establish, run, and
@@ -16,7 +16,7 @@ const BuildOperatorTransferInfo = () => {
           quality from day one.
         </p>
 
-        <p className="mb-7 text-lg leading-[1.8] text-[#a99a9a]/80">
+        <p className="mb-7 text-lg leading-[1.8] text-black/70 dark:text-white/60">
           Once operations are optimized, we transfer ownership to your team -
           reducing risk and accelerating your time-to-market. This model allows
           you to scale confidently while focusing on your core business goals.

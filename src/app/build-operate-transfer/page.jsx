@@ -8,7 +8,36 @@ import { caseStudies } from "@/data/services/build-operate-transfer/caseStudies"
 import { keyBenefits } from "@/data/services/build-operate-transfer/keyBenefits";
 import { processPhases } from "@/data/services/build-operate-transfer/processphase";
 import botImage from "../../assets/images/services/build-operate-transfer/build-operate-transfer_1.jpg";
+export const metadata = {
+  title: "Build Operate Transfer (BOT) Model | Dignifyd",
 
+  description:
+    "Accelerate growth with Dignifyd’s Build Operate Transfer model. Launch, manage, and seamlessly transition operations with reduced risk, faster execution, and long-term scalability.",
+
+  keywords: [
+    "build operate transfer",
+    "BOT model",
+    "business expansion",
+    "operational setup",
+    "managed operations",
+    "business transition",
+    "scalable growth",
+    "offshore operations",
+    "global workforce solutions",
+    "Dignifyd",
+  ],
+
+  alternates: {
+    canonical: "https://www.dignifyd.com/build-operate-transfer",
+  },
+
+  openGraph: {
+    title: "Build Operate Transfer (BOT) Model | Dignifyd",
+    description:
+      "Launch, operate, and transfer business operations with a proven BOT framework designed for efficiency, scalability, and seamless ownership transition.",
+    type: "website",
+  },
+};
 const BuildOperatorTransfer = () => {
   return (
     <>

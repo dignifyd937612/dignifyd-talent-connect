@@ -12,7 +12,7 @@ const WorkforceChallenges = ({ data, badge, title, description }) => {
             return (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#c61df2]/40 hover:bg-white/[0.05]"
+                className="group relative overflow-hidden rounded-[32px] border border-gray-200 bg-white p-8 shadow-sm backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#c61df2]/40 hover:shadow-lg dark:border-white/10 dark:bg-white/[0.03] dark:hover:bg-white/[0.05]"
               >
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(198,29,242,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
@@ -21,11 +21,13 @@ const WorkforceChallenges = ({ data, badge, title, description }) => {
                     <Icon size={28} strokeWidth={2} />
                   </div>
 
-                  <h3 className="mb-4 text-2xl leading-snug font-semibold text-white">
+                  <h3 className="mb-4 text-2xl leading-snug font-semibold text-gray-900 dark:text-white">
                     {item.title}
                   </h3>
 
-                  <p className="leading-8 text-white/65">{item.description}</p>
+                  <p className="leading-8 text-gray-600 dark:text-white/65">
+                    {item.description}
+                  </p>
                 </div>
 
                 <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-[#c61df2] to-[#e12afb] transition-all duration-500 group-hover:w-full" />

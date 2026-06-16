@@ -26,15 +26,18 @@ const CTABanner = ({ title }) => {
               </span>
             </div>
 
-            <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-white md:text-6xl">
-              Simplify Workforce
+            <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-tight md:text-6xl">
+              <span className="text-gray-900 dark:text-white">
+                Simplify Workforce
+              </span>
+
               <span className="bg-gradient-to-r from-[#e12afb] to-[#ff7ce8] bg-clip-text text-transparent">
                 {" "}
                 Management
               </span>
             </h2>
 
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/70">
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-black/70 dark:text-white/70">
               Explore how {title} can streamline your global operations and help
               your organization scale faster with complete workforce compliance.
             </p>

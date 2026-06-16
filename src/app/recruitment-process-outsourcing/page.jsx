@@ -9,7 +9,36 @@ import { hrFAQs } from "@/data/faqs";
 import { benefits } from "@/data/services/recruitment-process-outsourcing/benefits";
 import { recruitmentFramework } from "@/data/services/recruitment-process-outsourcing/RecritmentsProcess";
 import { caseStudies } from "@/data/services/recruitment-process-outsourcing/recruitmentCaseStudies";
+export const metadata = {
+  title: "Recruitment Process Outsourcing (RPO) | Dignifyd",
 
+  description:
+    "Accelerate hiring with Recruitment Process Outsourcing solutions that combine talent sourcing, screening, onboarding, and workforce scalability to support business growth.",
+
+  keywords: [
+    "recruitment process outsourcing",
+    "RPO services",
+    "talent acquisition",
+    "recruitment outsourcing",
+    "hiring solutions",
+    "workforce scalability",
+    "candidate sourcing",
+    "global recruitment",
+    "staffing solutions",
+    "Dignifyd",
+  ],
+
+  alternates: {
+    canonical: "https://www.dignifyd.com/recruitment-process-outsourcing",
+  },
+
+  openGraph: {
+    title: "Recruitment Process Outsourcing (RPO) | Dignifyd",
+    description:
+      "Streamline recruitment with scalable RPO solutions for talent sourcing, screening, onboarding, and workforce growth.",
+    type: "website",
+  },
+};
 const RecruitmentProcessOutsourcing = () => {
   return (
     <>

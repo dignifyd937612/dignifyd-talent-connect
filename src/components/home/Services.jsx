@@ -10,7 +10,7 @@ import {
 
 export default function Services() {
   return (
-    <section className="w-full bg-black py-24">
+    <section className="w-full bg-white py-24 dark:bg-black">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           badge={"Our Expertise"}
@@ -86,15 +86,16 @@ export default function Services() {
 
 function Card({ title, desc, icon }) {
   return (
-    <div className="rounded-2xl border border-purple-500/20 bg-white/5 p-6 backdrop-blur-xl">
+    <div className="rounded-2xl border border-purple-500/20 bg-white p-6 shadow-sm backdrop-blur-xl dark:bg-white/5 dark:shadow-none">
       <div className="mb-3 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-purple-500/30 bg-black">
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-purple-500/30 bg-purple-50 dark:bg-black">
           <span className="text-purple-500">{icon}</span>
         </div>
-        <h3 className="font-semibold text-white">{title}</h3>
+
+        <h3 className="font-semibold text-gray-900 dark:text-white">{title}</h3>
       </div>
 
-      <p className="text-sm text-gray-400">{desc}</p>
+      <p className="text-sm text-gray-600 dark:text-gray-400">{desc}</p>
     </div>
   );
 }

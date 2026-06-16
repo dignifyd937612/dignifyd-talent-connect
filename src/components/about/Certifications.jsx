@@ -18,7 +18,7 @@ const certificatesLogos = [
 
 export default function Certifications() {
   return (
-    <section className="w-full bg-black py-24">
+    <section className="w-full bg-white py-24 dark:bg-black">
       <div className="mx-auto max-w-7xl text-center">
         <SectionHeader
           badge={"Empowering Global Success"}
@@ -29,8 +29,10 @@ export default function Certifications() {
           {certificatesLogos.map((item, i) => (
             <div
               key={i}
-              className="group relative flex h-40 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-xl transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_0_35px_rgba(168,85,247,0.25)]"
+              className="group relative flex h-40 items-center justify-center rounded-2xl border border-purple-100 bg-gradient-to-b from-white to-purple-50/40 shadow-lg shadow-purple-500/5 backdrop-blur-xl transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_0_35px_rgba(168,85,247,0.15)] dark:border-white/10 dark:bg-[#0b0615] dark:from-transparent dark:to-transparent dark:shadow-none dark:hover:border-purple-500/40 dark:hover:shadow-[0_0_35px_rgba(168,85,247,0.25)]"
             >
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:hidden" />
+
               <div className="relative h-24 w-24 overflow-hidden rounded-full md:h-32 md:w-32">
                 <Image
                   src={item.logo}
@@ -41,8 +43,8 @@ export default function Certifications() {
                 />
               </div>
 
-              <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black/70 opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:opacity-100">
-                <p className="px-3 text-center text-sm font-semibold text-white">
+              <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-white/90 opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:opacity-100 dark:bg-black/70">
+                <p className="px-3 text-center text-sm font-semibold text-gray-900 dark:text-white">
                   {item.name}
                 </p>
               </div>

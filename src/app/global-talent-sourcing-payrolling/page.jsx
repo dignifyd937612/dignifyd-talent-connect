@@ -6,7 +6,37 @@ import Banner from "@/components/home/Banner";
 import Stats from "@/components/home/Stats";
 import { hrFAQs } from "@/data/faqs";
 import { processSteps } from "@/data/services/global-talent-sourcing-payrolling/processSteps";
+export const metadata = {
+  title: "Global Talent Sourcing & Payrolling | Dignifyd",
 
+  description:
+    "Simplify international hiring, payroll administration, and workforce compliance with scalable Global Talent Sourcing & Payrolling solutions designed for growing organizations.",
+
+  keywords: [
+    "global talent sourcing",
+    "payrolling services",
+    "international hiring",
+    "global workforce management",
+    "payroll administration",
+    "workforce compliance",
+    "global recruitment",
+    "remote workforce solutions",
+    "talent acquisition",
+    "Dignifyd",
+  ],
+
+  alternates: {
+    canonical:
+      "https://www.dignifyd.com/global-talent-sourcing-payrolling",
+  },
+
+  openGraph: {
+    title: "Global Talent Sourcing & Payrolling | Dignifyd",
+    description:
+      "Hire globally, manage seamlessly. End-to-end talent sourcing, payroll support, and workforce compliance solutions.",
+    type: "website",
+  },
+};
 const GlobalTalentSourcingPayroll = () => {
   return (
     <>

@@ -12,6 +12,36 @@ import CaseStudies from "@/components/Recruitment Process Outsourcing/CaseStudie
 import FAQs from "@/components/common/FAQs";
 import { hrFAQs } from "@/data/faqs";
 import CTABanner from "@/components/global-talent-sourcing-payrolling/CTABanner";
+export const metadata = {
+  title: "Upskilling Academy | Dignifyd",
+
+  description:
+    "Empower your workforce with customized upskilling, reskilling, bootcamp training, and deployment-ready learning solutions designed for future business success.",
+
+  keywords: [
+    "upskilling academy",
+    "workforce training",
+    "employee upskilling",
+    "reskilling programs",
+    "corporate learning",
+    "bootcamp training",
+    "talent development",
+    "workforce readiness",
+    "learning solutions",
+    "Dignifyd",
+  ],
+
+  alternates: {
+    canonical: "https://www.dignifyd.com/upskilling-academy",
+  },
+
+  openGraph: {
+    title: "Upskilling Academy | Dignifyd",
+    description:
+      "Build future-ready teams through customized learning paths, reskilling initiatives, and deployment-focused training programs.",
+    type: "website",
+  },
+};
 const UpSkillsAcademy = () => {
   return (
     <>
@@ -38,12 +68,12 @@ const UpSkillsAcademy = () => {
         background
         variant="primary"
       >
-        <p className="mb-6 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           Our Hire, Train & Deploy model simplifies hiring by delivering
           professionals trained to meet your specific needs.
         </p>
 
-        <p className="mb-10 text-lg leading-8 text-white/65">
+        <p className="mb-10 text-lg leading-8 text-gray-700 dark:text-white/65">
           Candidates are trained in both technical competencies and essential
           soft skills, ensuring they can integrate smoothly into your projects.
         </p>
@@ -55,14 +85,14 @@ const UpSkillsAcademy = () => {
         image={evolvingSkills}
         reverse={true}
       >
-        <p className="mb-6 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           Our Women Back to Work program is designed to support women returning
           to their careers after a break. We provide specialized training,
           mentorship, and job placement assistance to help them re-enter the
           workforce with confidence and updated skills.
         </p>
 
-        <p className="mb-10 text-lg leading-8 text-white/65">
+        <p className="mb-10 text-lg leading-8 text-gray-700 dark:text-white/65">
           This program not only empowers individuals but also helps
           organizations build diverse, inclusive, and high-performing teams.
         </p>
@@ -74,7 +104,7 @@ const UpSkillsAcademy = () => {
         image={empoweringWomen}
         background
       >
-        <p className="mb-6 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           Equip your team to adapt to evolving business needs with our
           Upskilling & Reskilling programs. Whether it’s learning new
           technologies, enhancing existing skills, or pivoting into entirely new
@@ -82,7 +112,7 @@ const UpSkillsAcademy = () => {
           your workforce.
         </p>
 
-        <p className="mb-10 text-lg leading-8 text-white/65">
+        <p className="mb-10 text-lg leading-8 text-gray-700 dark:text-white/65">
           From technical expertise in areas like AI, Cloud Computing, and
           Cybersecurity to soft skills such as collaboration and critical
           thinking, our programs ensure your employees are equipped to thrive in
@@ -98,7 +128,7 @@ const UpSkillsAcademy = () => {
         image={bootCamps}
         reverse={true}
       >
-        <p className="mb-6 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           Our Boot Camps are intensive, short-term training programs designed to
           equip your workforce with in-demand skills quickly and effectively.
           Covering areas like Full-Stack Development, Data Analytics, DevOps,
@@ -106,7 +136,7 @@ const UpSkillsAcademy = () => {
           practical problem-solving.
         </p>
 
-        <p className="mb-10 text-lg leading-8 text-white/65">
+        <p className="mb-10 text-lg leading-8 text-gray-700 dark:text-white/65">
           By the end of the program, participants are job-ready and prepared to
           make an immediate impact. Our Boot Camps are perfect for upskilling
           current employees or preparing new hires for critical roles within

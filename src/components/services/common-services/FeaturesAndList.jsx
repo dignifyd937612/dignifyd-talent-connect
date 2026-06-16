@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 export default function FeaturesAndList({ features, featuredImages }) {
   return (
-    <section className="w-full bg-black">
+    <section className="w-full bg-white dark:bg-black">
       <div className="mx-auto grid max-w-7xl items-start gap-12 md:grid-cols-2">
         <div>
           <div className="mb-10 flex flex-col gap-6 md:flex-row md:flex-nowrap">
@@ -31,11 +31,16 @@ export default function FeaturesAndList({ features, featuredImages }) {
           <div className="space-y-5">
             {features.map((item, i) => (
               <div key={i} className="flex items-start gap-4">
-                <div className="flex h-[28px] min-w-[28px] items-center justify-center rounded-full border border-purple-500">
-                  <Check size={16} className="text-white" />
+                <div className="flex h-[28px] min-w-[28px] items-center justify-center rounded-full border border-purple-500 bg-purple-50 dark:bg-transparent">
+                  <Check
+                    size={16}
+                    className="text-purple-600 dark:text-white"
+                  />
                 </div>
 
-                <p className="text-sm leading-relaxed text-gray-300">{item}</p>
+                <p className="text-base leading-relaxed text-gray-700 dark:text-gray-400">
+                  {item}
+                </p>
               </div>
             ))}
           </div>

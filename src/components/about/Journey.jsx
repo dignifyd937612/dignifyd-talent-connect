@@ -25,7 +25,7 @@ const timelineData = [
 
 export default function Journey() {
   return (
-    <section className="w-full bg-black py-24">
+    <section className="w-full bg-white py-24 dark:bg-black">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           badge={"From a Vision to a Global Talent Powerhouse"}
@@ -51,17 +51,17 @@ export default function Journey() {
                 <div
                   className={`w-full md:w-[45%] ${item.align === "left" ? "md:pr-10 md:text-right" : "md:pl-10 md:text-left"} pl-16 text-left md:pl-0`}
                 >
-                  <h3 className="mb-2 text-lg font-semibold text-white">
+                  <h3 className="mb-2 text-lg font-semibold text-black dark:text-white">
                     {item.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-gray-400">
+                  <p className="text-sm leading-relaxed text-gray-400 dark:text-gray-400">
                     {item.desc}
                   </p>
                 </div>
 
                 <div className="absolute left-4 -translate-x-1/2 md:left-1/2 md:-translate-x-1/2">
                   <div className="animate-glow flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 text-sm font-semibold text-white shadow-[0_0_25px_rgba(168,85,247,0.5)] md:h-12 md:w-12">
-                     <Timer />
+                    <Timer />
                   </div>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import globalRecruitment from "../assets/images/home/globalPresence/presence-frame.png";
+import light_globalRecruitment from "../assets/images/home/globalPresence/presence-frame-light.png";
 import rpo_solution from "../assets/images/services/banner/rpo-solutions/rpoSolutions.jpg";
 import employer_branding from "../assets/images/services/banner/employer-branding/employer-branding.jpg";
 import hr_Consulting from "../assets/images/services/banner/hr-consulting/hr-consulting.jpg";
@@ -24,6 +25,7 @@ export const servicesData = [
     badge: "Global Hiring Experts",
     title: "Global Recruitment",
     heroImage: globalRecruitment,
+    lightHeroImage: light_globalRecruitment,
 
     highlightTitle1: "Global Recruitment Excellence.",
     highlightDes1: `Our programs help organizations cultivate agile, competent, and resilient teams. Through structured development frameworks, targeted performance strategies, and cross-functional collaboration initiatives, we ensure employees are aligned with corporate objectives and empowered to contribute meaningfully. Continuous learning support and strategic guidance enable teams to thrive in an ever-evolving global business environment.`,
@@ -55,7 +57,7 @@ export const servicesData = [
     badge: "Smart RPO Services",
     title: "RPO Solutions",
     heroImage: rpo_solution,
-
+    lightHeroImage: rpo_solution,
     highlightTitle1: "Leadership Development",
     highlightDes1:
       "At Dignifyd Talent Connect, our RPO Solutions go beyond hiring — we help organizations build future-ready leaders who can drive business transformation. Our leadership development framework strengthens core competencies, enhances decision-making abilities, and empowers teams to perform at their highest potential. Through customized training pathways and strategic talent guidance, we ensure your leaders are equipped to inspire, innovate, and achieve sustainable growth.",
@@ -88,7 +90,7 @@ export const servicesData = [
     badge: "Talent Brand Identity",
     title: "Employer Branding",
     heroImage: employer_branding,
-
+    lightHeroImage: employer_branding,
     highlightTitle1: "Employer Branding",
     highlightDes1:
       "A strong employer brand is more than just how your company looks — it’s how people experience it. Our Employer Branding solutions help organizations attract, engage, and retain top talent by showcasing what makes them unique. We align your culture, values, and vision into a compelling narrative that resonates with today’s workforce and sets you apart in a competitive talent market.We combine research-driven insights with strategic storytelling to define your EVP (Employee Value Proposition), strengthen your reputation, and create consistent brand experiences across every candidate and employee touchpoint.",
@@ -121,7 +123,7 @@ export const servicesData = [
     badge: "Smart Consulting Services",
     title: "HR Consulting",
     heroImage: hr_Consulting,
-
+    lightHeroImage: hr_Consulting,
     highlightTitle1: "HR Consulting",
     highlightDes1:
       "A strong people strategy is the foundation of a thriving organization. Our HR Consulting services are designed to help businesses build scalable, compliant, and people-centric HR frameworks that support growth, improve employee experience, and strengthen organizational culture. We work closely with leadership teams to identify gaps, streamline HR processes, and design custom solutions tailored to your unique business needs.From talent management to compliance, performance optimization, and culture development, we provide the expertise that enables organizations to attract the right talent, engage employees effectively, and operate with clarity and confidence.",
@@ -153,7 +155,7 @@ export const servicesData = [
     badge: "Seamless Onboarding for a Confident Start",
     title: "Onboarding Support",
     heroImage: onboarding_support,
-
+    lightHeroImage: onboarding_support,
     highlightTitle1: "Onboarding Support",
     highlightDes1:
       "A smooth onboarding experience sets the foundation for long-term employee success. Our onboarding solutions are designed to make every new hire feel welcomed, informed, and fully prepared for their role from day one. We manage essential steps such as documentation, compliance, IT setup, team introductions, and policy orientation to eliminate confusion and delays. Through structured guidance and continuous support, we ensure new employees adapt quickly, understand expectations clearly, and feel confident in their new environment. This streamlined approach helps organizations boost engagement, strengthen retention, and build a more efficient and connected workforce.",

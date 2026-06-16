@@ -15,7 +15,7 @@ export default function Contact() {
     console.log("Form Data:", data);
   };
   return (
-    <section className="w-full bg-black py-24">
+    <section className="w-full bg-white py-24 dark:bg-black">
       <div className="mx-auto grid max-w-7xl items-center gap-16 md:grid-cols-2">
         <SectionHeader
           title={"Let’s Connect"}
@@ -26,7 +26,9 @@ export default function Contact() {
         <div className={`rounded-3xl p-8 ${styles.formCard}`}>
           <form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
             <div>
-              <label className="mb-2 block text-xs text-gray-300">Name</label>
+              <label className="mb-2 block text-xs text-gray-700 dark:text-gray-300">
+                Name
+              </label>
 
               <input
                 type="text"
@@ -51,7 +53,9 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="mb-2 block text-xs text-gray-300">Email*</label>
+              <label className="mb-2 block text-xs text-gray-700 dark:text-gray-300">
+                Email*
+              </label>
 
               <input
                 type="email"
@@ -74,7 +78,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="mb-2 block text-xs text-gray-300">
+              <label className="mb-2 block text-xs text-gray-700 dark:text-gray-300">
                 Mobile Number*
               </label>
 
@@ -106,7 +110,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="mb-2 block text-xs text-gray-300">
+              <label className="mb-2 block text-xs text-gray-700 dark:text-gray-300">
                 Choose Types of Services
               </label>
 
@@ -137,7 +141,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="mb-2 block text-xs text-gray-300">
+              <label className="mb-2 block text-xs text-gray-700 dark:text-gray-300">
                 Message
               </label>
 

@@ -1,21 +1,21 @@
 "use client";
 import Image from "next/image";
-import bottomVisual from "../../../assets/images/services/other/glow.gif"
+import bottomVisual from "../../../assets/images/services/other/glow.gif";
 
 export default function DetailSection({ subSection }) {
   return (
-    <section className="w-full bg-black py-15">
+    <section className="w-full bg-white py-15 dark:bg-black">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="max-w-xl">
-          <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl font-semibold text-black leading-tight mb-6 dark:text-white">
             {subSection?.title}
           </h2>
 
-          <p className="text-gray-400 text-sm leading-relaxed mb-4">
+          <p className="text-base leading-relaxed text-gray-600 dark:text-gray-400">
             {subSection?.para1}
           </p>
 
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-base leading-relaxed text-gray-600 dark:text-gray-400">
             {subSection?.para2}
           </p>
         </div>

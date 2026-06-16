@@ -31,7 +31,10 @@ const ServiceDetails = () => {
         activeService={activeService}
         handleFunc={handleserviceNavigation}
       />
-      <ServiceBanner banner_img={activeService?.heroImage} />
+      <ServiceBanner
+        darkBanner={activeService?.heroImage}
+        lightBanner={activeService?.lightHeroImage}
+      />
       <DetailandForm data={activeService} />
       <FeaturesAndList
         features={activeService?.features}

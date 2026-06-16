@@ -31,7 +31,7 @@ const AboutUs = () => {
       <WhatWeDo />
       {/* <LeaderShip /> */}
       {/* <OurPeopleOurBrand /> */}
-      <TechSupport />
+      {/* <TechSupport /> */}
       <CTASection
         leading_title={"Power Up Your Workflow "}
         supporting_title={"with Smart Jobs"}

@@ -8,7 +8,36 @@ import { hrFAQs } from "@/data/faqs";
 import { challenges } from "@/data/services/vendor-management-operations/challenges";
 import whyImg from "../../assets/images/services/vendor-management-operations/whyVMO.jpg";
 import { features } from "@/data/services/vendor-management-operations/features";
+export const metadata = {
+  title: "Vendor Management & Operations | Dignifyd",
 
+  description:
+    "Optimize workforce operations through centralized vendor governance, workforce visibility, compliance management, and scalable operational support.",
+
+  keywords: [
+    "vendor management",
+    "vendor operations",
+    "workforce governance",
+    "supplier management",
+    "workforce visibility",
+    "compliance management",
+    "contingent workforce",
+    "enterprise workforce solutions",
+    "vendor compliance",
+    "Dignifyd",
+  ],
+
+  alternates: {
+    canonical: "https://www.dignifyd.com/vendor-management-operations",
+  },
+
+  openGraph: {
+    title: "Vendor Management & Operations | Dignifyd",
+    description:
+      "Streamline vendor management with centralized governance, compliance oversight, workforce visibility, and operational efficiency.",
+    type: "website",
+  },
+};
 const VendorManagementOperations = () => {
   return (
     <>

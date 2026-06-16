@@ -5,17 +5,15 @@ import GlobalPresence from "@/components/home/GlobalPresence";
 import Industry from "@/components/home/Industry";
 import Stats from "@/components/home/Stats";
 import Services from "@/components/home/Services";
-import Testimonials from "@/components/common/Testimonials";
 import Contact from "@/components/home/Contact";
-import FAQs from "@/components/common/FAQs";
 import Jobs from "@/components/home/Jobs";
-import banner_bg from "../assets/images/home/banner/banner-img.png";
-import { hrFAQs } from "@/data/faqs";
+import dark_banner_bg from "../assets/images/home/banner/banner-img.png";
+import light_banner_bg from "../assets/images/home/banner/light_banner_bg.png";
 import Schema from "@/components/common/seo/Schema";
 import { homeSchema } from "@/data/schemas/homeSchema";
 import { Suspense } from "react";
-
 import RemoveIssParam from "@/components/home/RemoveIssParam";
+
 export const metadata = {
   title: "Dignifyd Talent Connect | AI Recruitment Platform",
   description:
@@ -50,7 +48,6 @@ export const metadata = {
     images: [""],
   },
 };
-
 export default function Home() {
   return (
     <>
@@ -66,32 +63,31 @@ export default function Home() {
         <RemoveIssParam />
       </Suspense>
 
-      <main className="bg-black text-white">
-        <Banner
-          banner_bg={banner_bg}
-          badge={"Discover, Engage, Power"}
-          leading_text={"Empowering Organizations With"}
-          supporting_text={"Smarter Talent Solutions"}
-          description={
-            "Discover a hiring experience built for modern businesses. From recruitment to employee growth, we help you attract the right talent, nurture strong teams, and drive long-term success."
-          }
-          btn_text={"Hire a Talent"}
-        />
-        <Partners />
-        <Stats />
-        <GlobalPresence />
-        <Industry />
-        <Collaboration />
-        <Services />
-        {/* <Testimonials /> */}
-        <Contact />
-        {/* <FAQs
+      <Banner
+        banner_bg={dark_banner_bg}
+        white_banner_bg={light_banner_bg}
+        badge={"Discover, Engage, Power"}
+        leading_text={"Empowering Organizations With"}
+        supporting_text={"Smarter Talent Solutions"}
+        description={
+          "Discover a hiring experience built for modern businesses. From recruitment to employee growth, we help you attract the right talent, nurture strong teams, and drive long-term success."
+        }
+        btn_text={"Hire a Talent"}
+      />
+      <Partners />
+      <Stats />
+      <GlobalPresence />
+      <Industry />
+      <Collaboration />
+      <Services />
+      {/* <Testimonials /> */}
+      <Contact />
+      {/* <FAQs
           FAQs={hrFAQs}
           badge={"Your FAQ Hub"}
           title={"Explore Our HR Service FAQs"}
         /> */}
-        <Jobs />
-      </main>
+      <Jobs />
     </>
   );
 }

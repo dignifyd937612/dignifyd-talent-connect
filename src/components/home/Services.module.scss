@@ -60,15 +60,24 @@
   height: clamp(40px, 10%, 40px);
 
   border-radius: 999px;
-  background: #0f0f0f;
-  border: 1px solid rgba(168, 85, 247, 0.4);
+
+  /* LIGHT MODE */
+  background: #ffffff;
+  border: 1px solid rgba(168, 85, 247, 0.25);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
   transition: transform 0.3s ease;
+}
+
+/* DARK MODE */
+:global(.dark) .orbitIcon {
+  background: #0f0f0f;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
 }
 
 .iconOuter1 {

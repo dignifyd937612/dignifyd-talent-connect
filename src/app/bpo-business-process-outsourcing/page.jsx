@@ -14,6 +14,36 @@ import { caseStudies } from "@/data/services/bpo-business-process-outsourcing/ca
 import FAQs from "@/components/common/FAQs";
 import { hrFAQs } from "@/data/faqs";
 import CTABanner from "@/components/global-talent-sourcing-payrolling/CTABanner";
+export const metadata = {
+  title: "Business Process Outsourcing (BPO) Services | Dignifyd",
+
+  description:
+    "Drive efficiency and business growth with scalable Business Process Outsourcing services, including healthcare, finance, customer support, IT, marketing, and recruitment operations.",
+
+  keywords: [
+    "business process outsourcing",
+    "BPO services",
+    "outsourcing solutions",
+    "healthcare BPO",
+    "finance and accounting services",
+    "customer support services",
+    "IT services outsourcing",
+    "marketing support",
+    "recruitment process outsourcing",
+    "Dignifyd",
+  ],
+
+  alternates: {
+    canonical: "https://www.dignifyd.com/business-process-outsourcing",
+  },
+
+  openGraph: {
+    title: "Business Process Outsourcing (BPO) Services | Dignifyd",
+    description:
+      "Optimize operations with end-to-end BPO solutions across healthcare, finance, customer support, IT, marketing, and recruitment functions.",
+    type: "website",
+  },
+};
 const BPOProcessingOutsourcing = () => {
   return (
     <>
@@ -40,7 +70,7 @@ const BPOProcessingOutsourcing = () => {
         background
         variant="primary"
       >
-        <p className="mb-6 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           Healthcare is a demanding field, and we’re here to make it easier. Our
           healthcare BPO services are designed to reduce administrative burdens,
           improve compliance, and ensure better patient outcomes. From medical
@@ -48,7 +78,7 @@ const BPOProcessingOutsourcing = () => {
           critical tasks with precision and care.
         </p>
 
-        <p className="mb-10 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           Our focus is on enhancing your operational efficiency while allowing
           you to dedicate more time to delivering exceptional patient care. With
           E-Solutions, you gain a trusted partner committed to navigating the
@@ -63,7 +93,7 @@ const BPOProcessingOutsourcing = () => {
         variant="primary"
         reverse
       >
-        <p className="mb-6 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           Managing finances isn’t just about crunching numbers - it’s about
           making smarter decisions that drive growth. Our Finance and Accounting
           BPO services simplify processes like accounts payable, payroll, and
@@ -72,7 +102,7 @@ const BPOProcessingOutsourcing = () => {
           compliant, and optimize resources.
         </p>
 
-        <p className="mb-10 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           With E-Solutions, you gain more than operational efficiency - you gain
           the confidence to make informed, future-ready financial decisions
         </p>
@@ -85,14 +115,14 @@ const BPOProcessingOutsourcing = () => {
         variant="primary"
         background
       >
-        <p className="mb-6 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           Customer relationships are the backbone of any successful business.
           With E-Solutions’ customer support services, you can deliver
           exceptional, 24/7 assistance that meets your customers where they are
           - via phone, email, or chat.
         </p>
 
-        <p className="mb-10 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           Our team combines empathy and expertise to ensure every interaction is
           meaningful and every issue is resolved promptly. By choosing us, you
           can elevate customer satisfaction, build loyalty, and make every
@@ -107,13 +137,13 @@ const BPOProcessingOutsourcing = () => {
         variant="primary"
         reverse
       >
-        <p className="mb-6 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           Technology can be complex but managing it doesn’t have to be. Our IT
           BPO services handle everything from infrastructure management to
           cybersecurity, ensuring your operations stay secure and efficient.
         </p>
 
-        <p className="mb-10 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           We implement proactive monitoring and cloud solutions that minimize
           downtime and maximize productivity. Let us handle the technical
           complexities so you can focus on driving your business forward.
@@ -127,7 +157,7 @@ const BPOProcessingOutsourcing = () => {
         variant="primary"
         background
       >
-        <p className="mb-6 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           Building your brand and driving sales can be challenging, but we make
           it simpler. Our marketing and sales support services combine
           creativity and data-driven strategies to maximize your market impact.
@@ -135,7 +165,7 @@ const BPOProcessingOutsourcing = () => {
           engagement, we align with your goals to deliver tangible results.
         </p>
 
-        <p className="mb-10 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           With E-Solutions as your partner, you can focus on scaling your
           business while we handle the details.
         </p>
@@ -148,7 +178,7 @@ const BPOProcessingOutsourcing = () => {
         variant="primary"
         reverse
       >
-        <p className="mb-6 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           Building the right team takes time and effort - let us simplify the
           process for you. Our HR and Recruitment Process Outsourcing (RPO)
           services streamline everything from sourcing and screening to
@@ -156,7 +186,7 @@ const BPOProcessingOutsourcing = () => {
           you attract top talent while ensuring compliance and efficiency.
         </p>
 
-        <p className="mb-10 text-lg leading-8 text-white/65">
+        <p className="mb-6 text-lg leading-8 text-gray-700 dark:text-white/65">
           With E-Solutions, you gain a strategic partner dedicated to helping
           you build and manage a workforce that drives success.
         </p>

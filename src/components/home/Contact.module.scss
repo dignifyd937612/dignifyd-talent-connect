@@ -1,25 +1,55 @@
 .formCard {
   background: linear-gradient(
     180deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(248, 250, 252, 0.95) 100%
+  );
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.08);
+}
+
+:global(.dark) .formCard {
+  background: linear-gradient(
+    180deg,
     rgba(88, 28, 135, 0.35) 0%,
     rgba(0, 0, 0, 0.9) 100%
   );
   border: 1px solid rgba(168, 85, 247, 0.2);
-  backdrop-filter: blur(20px);
+  box-shadow: none;
 }
 
 .input {
   width: 100%;
   padding: 14px 18px;
   border-radius: 999px;
-  background: rgba(88, 28, 135, 0.25);
-  border: 1px solid rgba(168, 85, 247, 0.2);
-  color: #fff;
+
+  background: rgba(168, 85, 247, 0.05);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+
+  color: #111827;
   outline: none;
   font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.15);
 }
 
 .input::placeholder {
+  color: #6b7280;
+}
+
+:global(.dark) .input {
+  background: rgba(88, 28, 135, 0.25);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  color: #ffffff;
+}
+
+:global(.dark) .input::placeholder {
   color: #9ca3af;
 }
 
@@ -48,29 +78,25 @@
     padding: 0.75rem 2.5rem 0.75rem 1rem;
     border-radius: 0.75rem;
 
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #d1d5db;
+    background: #ffffff;
+    border: 1px solid rgba(168, 85, 247, 0.15);
+
+    color: #374151;
 
     backdrop-filter: blur(10px);
     appearance: none;
 
     transition: all 0.3s ease;
 
-    &:hover {
-      background: rgba(255, 255, 255, 0.08);
-    }
-
     &:focus {
       outline: none;
       border-color: #a855f7;
-      box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3);
-      color: white;
+      box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
     }
 
     option {
-      background: #0f0f0f;
-      color: #fff;
+      background: white;
+      color: #111827;
     }
   }
 
@@ -93,6 +119,27 @@
   &:focus-within {
     .arrow {
       transform: translateY(-50%) rotate(225deg);
+    }
+  }
+}
+
+:global(.dark) .selectWrapper {
+  .select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d1d5db;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    &:focus {
+      color: white;
+    }
+
+    option {
+      background: #0f0f0f;
+      color: #ffffff;
     }
   }
 }

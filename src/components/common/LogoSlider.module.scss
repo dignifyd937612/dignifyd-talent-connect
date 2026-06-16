@@ -42,14 +42,26 @@
   pointer-events: none;
 }
 
+/* Light Mode */
 .fadeLeft {
   left: 0;
-  background: linear-gradient(to right, #000, transparent);
+  background: linear-gradient(to right, #ffffff, transparent);
 }
 
 .fadeRight {
   right: 0;
-  background: linear-gradient(to left, #000, transparent);
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+/* Dark Mode */
+:global(.dark) {
+  .fadeLeft {
+    background: linear-gradient(to right, #000000, transparent);
+  }
+
+  .fadeRight {
+    background: linear-gradient(to left, #000000, transparent);
+  }
 }
 
 .container:hover .track {

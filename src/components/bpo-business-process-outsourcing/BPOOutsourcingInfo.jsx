@@ -7,7 +7,7 @@ const BPOOutsourcingInfo = () => {
         heading="Business"
         supportingHeading="Process Outsourcing"
       >
-        <p className="mb-7 text-lg leading-[1.8] text-[#a99a9a]/80">
+        <p className="mb-7 text-lg leading-[1.8] text-black/70 dark:text-white/60">
           At E-Solutions, we understand the challenges businesses face when
           managing complex, non-core operations. That’s why our Business Process
           Outsourcing (BPO) services are designed to take the weight off your
@@ -18,7 +18,7 @@ const BPOOutsourcingInfo = () => {
           reduce costs.
         </p>
 
-        <p className="mb-7 text-lg leading-[1.8] text-[#a99a9a]/80">
+        <p className="mb-7 text-lg leading-[1.8] text-black/70 dark:text-white/60">
           From healthcare and finance to IT and customer support, our expertise
           spans multiple industries, ensuring your operations are in good hands.
           Let us help you achieve operational excellence with solutions that are
