@@ -10,12 +10,10 @@ export default function WhatWeDo() {
       <div className="mx-auto grid max-w-7xl items-center gap-16 md:grid-cols-2">
         <div className="relative h-[420px] w-full overflow-hidden rounded-[28px] border border-purple-100 shadow-[0_20px_60px_rgba(168,85,247,0.12)] md:h-[500px] dark:border-purple-500/20 dark:shadow-none">
           <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 via-transparent to-pink-500/10 dark:hidden"></div>
-
           <Image
             src={team}
             alt="team"
             fill
-            quality={70}
             loading="eager"
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"

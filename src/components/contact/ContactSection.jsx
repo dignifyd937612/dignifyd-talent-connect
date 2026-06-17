@@ -30,6 +30,7 @@ export default function ContactSection() {
                   alt="contact"
                   fill
                   priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>

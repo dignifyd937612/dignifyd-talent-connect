@@ -23,6 +23,7 @@ export default function Footer() {
                 alt="Dignifyd Logo"
                 fill
                 priority
+                sizes="170px"
                 className="object-contain dark:hidden"
               />
 
@@ -31,6 +32,7 @@ export default function Footer() {
                 alt="Dignifyd Logo"
                 fill
                 priority
+                sizes="170px"
                 className="hidden object-contain dark:block"
               />
             </Link>
@@ -71,7 +73,7 @@ export default function Footer() {
 
                     <Image
                       src={item.dark}
-                      alt="social icon"
+                      alt="social icon" 
                       width={15}
                       height={15}
                       className="hidden h-auto w-auto dark:block"

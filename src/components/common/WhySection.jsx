@@ -53,10 +53,11 @@ const WhySection = ({ badge, title, description, features, whyImg }) => {
             <div className="relative h-[700px] overflow-hidden rounded-[40px] border border-white/10">
               <Image
                 src={whyImg}
-                alt="Vendor Management Operations"
+                alt="why us"
                 fill
-                className="object-cover object-center"
                 priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 45vw"
+                className="object-cover object-center"
               />
             </div>
           </div>

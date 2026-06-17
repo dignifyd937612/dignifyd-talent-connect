@@ -17,6 +17,23 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
+  const toggleTheme = async (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+
+    document.documentElement.style.setProperty("--x", `${x}px`);
+    document.documentElement.style.setProperty("--y", `${y}px`);
+
+    if (!document.startViewTransition) {
+      setTheme(resolvedTheme === "dark" ? "light" : "dark");
+      return;
+    }
+
+    document.startViewTransition(() => {
+      setTheme(resolvedTheme === "dark" ? "light" : "dark");
+    });
+  };
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -34,6 +51,7 @@ export default function Navbar() {
             alt="Dignifyd Logo"
             fill
             priority
+            sizes="150px"
             className="object-contain dark:hidden"
           />
 
@@ -42,6 +60,7 @@ export default function Navbar() {
             alt="Dignifyd Logo"
             fill
             priority
+            sizes="150px"
             className="hidden object-contain dark:block"
           />
         </Link>
@@ -109,8 +128,11 @@ export default function Navbar() {
           </Link>
 
           <button
-            onClick={() =>
-              setTheme(resolvedTheme === "dark" ? "light" : "dark")
+            onClick={toggleTheme}
+            aria-label={
+              resolvedTheme === "dark"
+                ? "Switch to light mode"
+                : "Switch to dark mode"
             }
             className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-gray-100 text-gray-900 transition-all duration-300 hover:bg-gray-200 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
           >
@@ -141,6 +163,7 @@ export default function Navbar() {
               src={light_logo}
               alt="logo"
               fill
+              sizes="140px"
               className="object-contain dark:hidden"
             />
 
@@ -148,6 +171,7 @@ export default function Navbar() {
               src={dark_logo}
               alt="logo"
               fill
+              sizes="140px"
               className="hidden object-contain dark:block"
             />
           </div>
@@ -192,12 +216,14 @@ export default function Navbar() {
 
                   <ChevronDown
                     size={18}
-                    className={`transition-transform ${openDropdown === item.label ? "rotate-180" : ""}`}
+                    className={`transition-all duration-300 ${openDropdown === item.label ? "rotate-180 text-purple-500" : "rotate-0"}`}
                   />
                 </button>
 
-                {openDropdown === item.label && (
-                  <div className="mt-4 ml-4 space-y-5 border-l border-gray-200 pl-4 dark:border-white/10">
+                <div
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === item.label ? "mt-4 max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}
+                >
+                  <div className="ml-4 space-y-5 border-l border-gray-200 pl-4 dark:border-white/10">
                     {item.megaMenu.map((section) => (
                       <div key={section.title}>
                         <h4 className="mb-2 text-xs font-semibold text-purple-500 uppercase">
@@ -213,7 +239,7 @@ export default function Navbar() {
                                 key={subItem.label}
                                 href={subItem.link}
                                 onClick={() => setOpen(false)}
-                                className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400"
+                                className="flex translate-x-0 items-center gap-2 text-sm text-gray-600 transition-all duration-300 hover:translate-x-1 hover:text-purple-500 dark:text-gray-400 dark:hover:text-purple-400"
                               >
                                 <Icon size={16} className="text-purple-500" />
                                 {subItem.label}
@@ -224,7 +250,7 @@ export default function Navbar() {
                       </div>
                     ))}
                   </div>
-                )}
+                </div>
               </div>
             );
           })}
@@ -240,6 +266,11 @@ export default function Navbar() {
           <button
             onClick={() =>
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
+            }
+            aria-label={
+              resolvedTheme === "dark"
+                ? "Switch to light mode"
+                : "Switch to dark mode"
             }
             className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-gray-100 text-gray-900 transition-all duration-300 hover:bg-gray-200 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
           >

@@ -18,3 +18,36 @@ body {
   color: var(--foreground);
   font-family: var(--font-figtree), sans-serif;
 }
+
+/* View Transitions */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 1200ms;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
+.dark::view-transition-new(root) {
+  animation: circle-reveal 1400ms ease-out forwards;
+}
+
+:not(.dark)::view-transition-new(root) {
+  animation: circle-reveal 1000ms ease-out forwards;
+}
+
+@keyframes circle-reveal {
+  from {
+    clip-path: circle(0 at var(--x) var(--y));
+  }
+
+  to {
+    clip-path: circle(150vmax at var(--x) var(--y));
+  }
+}

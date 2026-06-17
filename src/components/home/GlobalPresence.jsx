@@ -18,14 +18,17 @@ export default function GlobalPresence() {
             alt="global presence"
             fill
             priority
-            className="object-cover block dark:hidden"
+            sizes="(max-width: 768px) 100vw, 1280px"
+            className="block object-cover dark:hidden"
           />
+
           <Image
             src={presence_dark}
             alt="global presence"
             fill
             priority
-            className="object-cover hidden dark:block"
+            sizes="(max-width: 768px) 100vw, 1280px"
+            className="hidden object-cover dark:block"
           />
         </div>
       </div>

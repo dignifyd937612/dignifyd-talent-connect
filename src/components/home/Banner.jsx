@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import banner_img from "../../assets/images/aboutUs/banner/banner-bg.png";
 import banner_light from "../../assets/images/aboutUs/banner/banner_light.png";
@@ -24,16 +22,16 @@ export default function Banner({
             src={white_banner_bg}
             alt="background"
             fill
-            sizes="100vw"
             priority
+            sizes="(max-width: 768px) 100vw, 100vw"
             className="object-cover dark:hidden"
           />
           <Image
             src={banner_bg}
             alt="background"
             fill
-            sizes="100vw"
             priority
+            sizes="(max-width: 768px) 100vw, 100vw"
             className="hidden object-cover dark:block"
           />
         </>
