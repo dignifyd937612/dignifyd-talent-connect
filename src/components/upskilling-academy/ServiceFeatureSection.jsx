@@ -17,11 +17,9 @@ const ServiceFeatureSection = ({
     >
       {background && (
         <>
-          {/* Light Mode Glow */}
           <div className="absolute top-0 left-0 h-[450px] w-[450px] rounded-full bg-purple-500/10 blur-[180px] dark:hidden" />
           <div className="absolute right-0 bottom-0 h-[450px] w-[450px] rounded-full bg-pink-500/10 blur-[180px] dark:hidden" />
 
-          {/* Dark Mode Glow */}
           <div className="absolute top-0 left-0 hidden h-[450px] w-[450px] rounded-full bg-[#c61df2]/10 blur-[160px] dark:block" />
           <div className="absolute right-0 bottom-0 hidden h-[450px] w-[450px] rounded-full bg-[#e12afb]/5 blur-[160px] dark:block" />
         </>
@@ -29,7 +27,6 @@ const ServiceFeatureSection = ({
 
       <div className="relative z-10 container mx-auto">
         <div className="grid items-center gap-16 lg:grid-cols-[1fr_700px]">
-          {/* Content */}
           <div className={reverse ? "lg:order-2" : ""}>
             <div className="mb-6 inline-flex items-center rounded-full border border-purple-300 bg-white/80 px-5 py-2 text-sm font-medium text-purple-600 shadow-[0_10px_30px_rgba(168,85,247,0.08)] backdrop-blur-xl dark:border-purple-500/20 dark:bg-white/[0.03] dark:text-purple-300">
               Premium Workforce Solutions
@@ -48,7 +45,6 @@ const ServiceFeatureSection = ({
               </h3>
             )}
 
-            {/* Children */}
             <div className="space-y-5 text-[17px] leading-8">{children}</div>
 
             <Link
@@ -67,7 +63,6 @@ const ServiceFeatureSection = ({
             </Link>
           </div>
 
-          {/* Image */}
           <div
             className={`flex items-center justify-center ${reverse ? "lg:order-1" : ""}`}
           >

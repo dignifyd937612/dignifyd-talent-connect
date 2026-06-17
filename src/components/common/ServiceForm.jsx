@@ -9,7 +9,6 @@ const ServiceForm = () => {
 
   return (
     <div className="relative overflow-hidden rounded-[32px] border border-purple-200/70 bg-gradient-to-br from-white via-[#fcfaff] to-[#f5edff] p-4 shadow-[0_25px_80px_rgba(168,85,247,0.12)] md:p-8 dark:border-white/10 dark:bg-[#0b0615] dark:bg-none dark:shadow-[0_0_40px_rgba(168,85,247,0.08)]">
-      {/* Light Mode Decorative Glow */}
       <div className="absolute -top-24 -left-24 h-60 w-60 rounded-full bg-purple-300/20 blur-3xl dark:hidden" />
 
       <div className="absolute -right-24 -bottom-24 h-60 w-60 rounded-full bg-pink-300/20 blur-3xl dark:hidden" />

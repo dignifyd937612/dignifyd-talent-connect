@@ -24,40 +24,10 @@ const CaseStudies = ({ data }) => {
           {data.map((item) => (
             <div
               key={item.id}
-              className="
-                group relative overflow-hidden rounded-[32px]
-
-                border border-purple-200/70
-                bg-gradient-to-br
-                from-white
-                via-[#fcfaff]
-                to-[#f5efff]
-
-                p-10
-
-                shadow-[0_20px_60px_rgba(168,85,247,0.08)]
-                backdrop-blur-xl
-
-                transition-all duration-500
-
-                hover:-translate-y-1
-                hover:border-purple-300
-                hover:shadow-[0_25px_80px_rgba(168,85,247,0.15)]
-
-                dark:border-white/10
-                dark:bg-gradient-to-br
-                dark:from-[#140a24]
-                dark:via-[#120a1f]
-                dark:to-[#0b0615]
-
-                dark:hover:border-[#c61df2]/40
-                dark:hover:shadow-[0_0_40px_rgba(198,29,242,0.15)]
-              "
+              className="group relative overflow-hidden rounded-[32px] border border-purple-200/70 bg-gradient-to-br from-white via-[#fcfaff] to-[#f5efff] p-10 shadow-[0_20px_60px_rgba(168,85,247,0.08)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-purple-300 hover:shadow-[0_25px_80px_rgba(168,85,247,0.15)] dark:border-white/10 dark:bg-gradient-to-br dark:from-[#140a24] dark:via-[#120a1f] dark:to-[#0b0615] dark:hover:border-[#c61df2]/40 dark:hover:shadow-[0_0_40px_rgba(198,29,242,0.15)]"
             >
-              {/* Light Mode Glow */}
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(198,29,242,0.08),transparent_60%)] dark:hidden" />
 
-              {/* Dark Mode Glow */}
               <div className="absolute inset-0 hidden bg-[radial-gradient(circle_at_top_left,rgba(198,29,242,0.12),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:block" />
 
               <div className="relative z-10">
@@ -71,7 +41,7 @@ const CaseStudies = ({ data }) => {
                   </span>
                 </div>
 
-                <h3 className="mb-6 text-4xl font-semibold leading-tight text-gray-900 dark:text-white">
+                <h3 className="mb-6 text-4xl leading-tight font-semibold text-gray-900 dark:text-white">
                   {item.title}
                 </h3>
 
@@ -88,11 +58,7 @@ const CaseStudies = ({ data }) => {
                 </p>
 
                 <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    expanded === item.id
-                      ? "mt-8 max-h-[1500px] opacity-100"
-                      : "max-h-0 opacity-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${expanded === item.id ? "mt-8 max-h-[1500px] opacity-100" : "max-h-0 opacity-0"}`}
                 >
                   <div className="border-t border-purple-200/70 pt-8 dark:border-white/10">
                     <div className="mb-8">
