@@ -173,7 +173,7 @@ export default function Footer() {
               Get free note-taking workflows
             </h3> */}
             <p className="text-sm text-gray-500 dark:text-white/50">
-              Copyright © 2026 Dignityd Talent Connect. All rights reserved.
+              Copyright © 2026 Dignifyd Talent Connect. All rights reserved.
             </p>
           </div>
 
