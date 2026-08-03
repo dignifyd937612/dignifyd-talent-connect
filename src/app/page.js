@@ -1,7 +1,6 @@
 import Partners from "@/components/home/Partners";
 import Banner from "@/components/home/Banner";
 import Collaboration from "@/components/home/Collaboration";
-import GlobalPresence from "@/components/home/GlobalPresence";
 import Industry from "@/components/home/Industry";
 import Stats from "@/components/home/Stats";
 import Services from "@/components/home/Services";
@@ -13,6 +12,7 @@ import Schema from "@/components/common/seo/Schema";
 import { homeSchema } from "@/data/schemas/homeSchema";
 import { Suspense } from "react";
 import RemoveIssParam from "@/components/home/RemoveIssParam";
+import { GlobalPresence } from "@/components/home/GlobalPresence";
 
 export const metadata = {
   title: "Dignifyd Talent Connect | AI Recruitment Platform",
@@ -40,7 +40,7 @@ export const metadata = {
   },
 
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     site: "",
     title: "Dignifyd Talent Connect | AI Recruitment Platform",
     description:

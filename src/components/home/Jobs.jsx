@@ -1,31 +1,8 @@
 import SectionHeader from "@/components/common/SectionHeader";
 import { Building2, MapPinHouse } from "lucide-react";
 import Link from "next/link";
-import uiUX from "../../assets/images/home/jobs/UI-UX.jpg";
-import developer_img from "../../assets/images/home/jobs/frontEnd-Developer.jpg";
-import graphic_designer from "../../assets/images/home/jobs/graphic-designer.jpg";
 import Image from "next/image";
-
-const jobs = [
-  {
-    title: "UI/UX Designer",
-    company: "Dignifyd Digital",
-    location: "Delhi / Remote",
-    img: uiUX,
-  },
-  {
-    title: "Frontend Developer",
-    company: "TechNova Solutions",
-    location: "Bangalore / Remote",
-    img: developer_img,
-  },
-  {
-    title: "Graphic Designer",
-    company: "Creative Studio Co.",
-    location: "Delhi / Onsite",
-    img: graphic_designer,
-  },
-];
+import { jobs } from "@/data/jobData";
 
 export default function Jobs() {
   return (
@@ -37,9 +14,7 @@ export default function Jobs() {
         />
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">
-          {jobs.map((job, i) => (
-            <JobCard key={i} job={job} />
-          ))}
+          {jobs.map((job, i) => i <= 2 && <JobCard key={i} job={job} />)}
         </div>
 
         <div className="mt-14">
@@ -97,7 +72,7 @@ function JobCard({ job }) {
 
         <div className="mt-6 flex justify-end">
           <Link
-            href={"/careers/1"}
+            href={`/careers/${job.id}`}
             className="text-sm text-purple-500 transition hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-300"
           >
             Apply Now →

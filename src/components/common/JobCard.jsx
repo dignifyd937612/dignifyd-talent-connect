@@ -2,7 +2,7 @@ import { Clock, MapPin, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { memo } from "react";
 
-const JobCard = ({ title, description, type, location }) => {
+const JobCard = ({ title, description, type, location, id }) => {
   return (
     <div className="group relative flex h-full w-full max-w-xl flex-col overflow-hidden rounded-[28px] border border-purple-200/60 bg-gradient-to-br from-white via-[#faf7ff] to-[#f2e8ff] p-8 shadow-[0_20px_60px_rgba(168,85,247,0.12)] backdrop-blur-xl transition-all duration-500 hover:border-purple-400/40 hover:shadow-[0_25px_80px_rgba(168,85,247,0.18)] md:p-10 dark:border-white/10 dark:bg-gradient-to-br dark:from-[#140a24] dark:via-[#120a1f] dark:to-[#0b0615] dark:shadow-none dark:hover:border-purple-500/30 dark:hover:shadow-[0_0_60px_rgba(168,85,247,0.25)]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(168,85,247,0.12),transparent_60%)] dark:hidden" />
@@ -39,7 +39,7 @@ const JobCard = ({ title, description, type, location }) => {
         </div>
 
         <Link
-          href="/careers/1"
+          href={`/careers/${id}`}
           className="mt-auto inline-flex self-start items-center gap-2 rounded-full border border-purple-300 bg-white/80 px-6 py-3 text-sm font-medium text-purple-700 shadow-[0_8px_25px_rgba(168,85,247,0.12)] transition-all duration-300 hover:border-purple-500 hover:bg-purple-500 hover:text-white hover:shadow-[0_12px_35px_rgba(168,85,247,0.25)] dark:border-purple-500/40 dark:bg-transparent dark:text-gray-300 dark:hover:border-purple-400 dark:hover:bg-purple-500/10 dark:hover:text-white"
         >
           Apply Now

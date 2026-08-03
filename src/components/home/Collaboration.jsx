@@ -30,15 +30,15 @@ export default function Collaboration() {
 
                     <div className="relative flex h-17 w-25 items-center justify-center">
                       <Image
-                        src={logo}
-                        alt="logo"
+                        src={logo?.src}
+                        alt={logo?.alt}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
                         className="scale-110 object-contain transition duration-500 sm:scale-125 md:scale-150 dark:grayscale dark:group-hover:grayscale-0 block dark:hidden"
                       />
                       <Image
-                        src={collaborations[i]}
-                        alt="logo"
+                        src={collaborations[i]?.src}
+                        alt={collaborations[i]?.alt}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
                         className="scale-110 object-contain transition duration-500 sm:scale-125 md:scale-150 dark:grayscale dark:group-hover:grayscale-0 hidden dark:block"

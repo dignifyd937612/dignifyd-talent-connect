@@ -169,7 +169,7 @@ export default function ServicesSection() {
                   <Unplug size={20} className="text-purple-500" />
                 </div>
 
-                <h3 className="mb-3 text-xl font-semibold text-white">
+                <h3 className="mb-3 text-xl font-semibold text-white dark:text-white">
                   {activeService?.label}
                 </h3>
 

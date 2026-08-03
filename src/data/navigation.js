@@ -117,9 +117,7 @@ export const tabs = [
 ];
 
 export const recruitmentLinks = [
-  { name: "Help Desk", href: "#" },
-  { name: "IT Support", href: "#" },
-  { name: "Application Process", href: "#" },
+  { name: "Help Desk", href: "/helpdesk" },
   { name: "Job Openings", href: "/careers", hash: "#jobs" },
 ];
 

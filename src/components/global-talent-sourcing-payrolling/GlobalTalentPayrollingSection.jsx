@@ -1,5 +1,22 @@
 import ServiceShowcaseSection from "../services/common-services/ServiceShowcaseSection";
 const ServiceInfo = () => {
+  const obj = {
+    name: "Sumit",
+    age: 24,
+    address: {
+      city: "Delhi",
+      state: "Delhi",
+      pincode: 110001,
+    },
+    skills: {
+      frontend: {
+        react: "React",
+        js: "JavaScript",
+      },
+      backend: "Node",
+    },
+  };
+
   return (
     <>
       <ServiceShowcaseSection

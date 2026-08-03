@@ -11,15 +11,15 @@ const LogoSlider = ({ darkLogo, lightLogo }) => {
         {[...lightLogo, ...lightLogo].map((logo, index) => (
           <div key={index} className={styles.logoItem}>
             <Image
-              src={logo}
-              alt="company logo"
+              src={logo.src}
+              alt={logo.alt}
               width={180}
               height={70}
               className="object-contain dark:hidden"
             />
             <Image
-              src={darkLogo[index % darkLogo.length]}
-              alt="company logo"
+              src={darkLogo[index % darkLogo.length].src}
+              alt={darkLogo[index % darkLogo.length].alt}
               width={180}
               height={70}
               className="hidden object-contain dark:block"

@@ -8,10 +8,10 @@ export const generateMetadata = async () => {
   };
 };
 
-const JobDetailpage = () => {
+const JobDetailpage = async ({ params }) => {
   return (
     <>
-      <JobDetails />
+      <JobDetails params={await params} />
       <ApplyJobForm />
     </>
   );

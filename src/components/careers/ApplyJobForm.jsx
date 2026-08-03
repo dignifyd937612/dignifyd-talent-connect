@@ -2,19 +2,11 @@
 
 import { useState } from "react";
 import SectionHeader from "../common/SectionHeader";
-import {
-  Upload,
-  User,
-  Mail,
-  Phone,
-  Briefcase,
-  MessageSquare,
-} from "lucide-react";
+import { Upload, User, Mail, Phone, Briefcase } from "lucide-react";
 import { useDropzone } from "react-dropzone";
 
 export default function ApplyJobForm() {
   const [fileName, setFileName] = useState("No file chosen");
-
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop: (acceptedFiles) => {
       if (acceptedFiles.length > 0) {
@@ -29,13 +21,11 @@ export default function ApplyJobForm() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader badge={"Apply Now"} title={"Apply For This Job"} />
 
-        <div className="relative overflow-hidden rounded-[32px] border border-purple-200 bg-gradient-to-br from-white via-[#fcfaff] to-[#f5edff] p-8 shadow-[0_25px_80px_rgba(168,85,247,0.12)] md:p-12 dark:border-purple-500/10 dark:bg-[#0b0615] dark:shadow-[0_0_40px_rgba(168,85,247,0.08)] dark:border-purple-500/10 dark:bg-[#0b0615] dark:bg-none dark:from-transparent dark:via-transparent dark:to-transparent dark:shadow-[0_0_40px_rgba(168,85,247,0.08)]">
-          {/* Glow */}
+        <div className="relative overflow-hidden rounded-[32px] border border-purple-200 bg-gradient-to-br from-white via-[#fcfaff] to-[#f5edff] p-8 shadow-[0_25px_80px_rgba(168,85,247,0.12)] md:p-12 dark:border-purple-500/10 dark:bg-[#0b0615] dark:bg-none dark:from-transparent dark:via-transparent dark:to-transparent dark:shadow-[0_0_40px_rgba(168,85,247,0.08)]">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.12),transparent_35%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.08),transparent_35%)]" />
 
           <div className="relative">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              {/* Name */}
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                   Your Name*
@@ -55,7 +45,6 @@ export default function ApplyJobForm() {
                 </div>
               </div>
 
-              {/* Email */}
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                   Email Address*
@@ -75,7 +64,6 @@ export default function ApplyJobForm() {
                 </div>
               </div>
 
-              {/* Mobile */}
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">
                   Mobile Number*

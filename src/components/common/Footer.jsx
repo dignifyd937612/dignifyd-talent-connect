@@ -73,7 +73,7 @@ export default function Footer() {
 
                     <Image
                       src={item.dark}
-                      alt="social icon" 
+                      alt="social icon"
                       width={15}
                       height={15}
                       className="hidden h-auto w-auto dark:block"

@@ -31,6 +31,7 @@ const ServiceDetails = () => {
         activeService={activeService}
         handleFunc={handleserviceNavigation}
       />
+
       <ServiceBanner
         darkBanner={activeService?.heroImage}
         lightBanner={activeService?.lightHeroImage}

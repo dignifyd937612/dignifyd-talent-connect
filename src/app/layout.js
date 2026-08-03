@@ -5,6 +5,7 @@ import "../styles/globals.css";
 
 import { ThemeProvider } from "next-themes";
 import { Figtree } from "next/font/google";
+import Script from "next/script";
 
 export const figtree = Figtree({
   subsets: ["latin"],
@@ -28,6 +29,18 @@ export default function RootLayout({ children }) {
           <Footer />
         </ThemeProvider>
       </body>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-43P5HHX4JW"
+        strategy="afterInteractive"
+      ></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-43P5HHX4JW');
+          `}
+      </Script>
     </html>
   );
 }

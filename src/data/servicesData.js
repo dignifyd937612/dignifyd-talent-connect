@@ -1,5 +1,4 @@
-import globalRecruitment from "../assets/images/home/globalPresence/presence-frame.png";
-import light_globalRecruitment from "../assets/images/home/globalPresence/presence-frame-light.png";
+import globalRecruitment from "../assets/images/home/globalPresence/presence-frame.jpg";
 import rpo_solution from "../assets/images/services/banner/rpo-solutions/rpoSolutions.jpg";
 import employer_branding from "../assets/images/services/banner/employer-branding/employer-branding.jpg";
 import hr_Consulting from "../assets/images/services/banner/hr-consulting/hr-consulting.jpg";
@@ -25,7 +24,7 @@ export const servicesData = [
     badge: "Global Hiring Experts",
     title: "Global Recruitment",
     heroImage: globalRecruitment,
-    lightHeroImage: light_globalRecruitment,
+    lightHeroImage: globalRecruitment,
 
     highlightTitle1: "Global Recruitment Excellence.",
     highlightDes1: `Our programs help organizations cultivate agile, competent, and resilient teams. Through structured development frameworks, targeted performance strategies, and cross-functional collaboration initiatives, we ensure employees are aligned with corporate objectives and empowered to contribute meaningfully. Continuous learning support and strategic guidance enable teams to thrive in an ever-evolving global business environment.`,

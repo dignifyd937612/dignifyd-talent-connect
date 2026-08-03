@@ -1,3 +1,4 @@
+"use client";
 import SectionHeader from "@/components/common/SectionHeader";
 
 const data = [
@@ -21,7 +22,7 @@ const data = [
 
 export default function Industry() {
   return (
-    <section className="w-full bg-white py-24 dark:bg-black">
+    <section className="w-full mb-10 bg-white dark:bg-black">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           badge={"Depth Across Sectors"}
@@ -51,7 +52,7 @@ export default function Industry() {
 
         <div className="mt-12 flex justify-center">
           <button className="cursor-pointer rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white transition-transform duration-300 hover:scale-105">
-            Swipe For All →
+            + Swipe →
           </button>
         </div>
       </div>

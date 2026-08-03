@@ -25,12 +25,12 @@ export default function Navbar() {
     document.documentElement.style.setProperty("--y", `${y}px`);
 
     if (!document.startViewTransition) {
-      setTheme(resolvedTheme === "dark" ? "light" : "dark");
+      setTheme(resolvedTheme === "light" ? "dark" : "light");
       return;
     }
 
     document.startViewTransition(() => {
-      setTheme(resolvedTheme === "dark" ? "light" : "dark");
+      setTheme(resolvedTheme === "light" ? "dark" : "light");
     });
   };
 

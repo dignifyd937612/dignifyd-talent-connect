@@ -1,7 +1,7 @@
-import ContactInfoSection from "@/components/contact/ContactInfoSection";
 import ContactSection from "@/components/contact/ContactSection";
 import Newsletter from "@/components/contact/NewsLetter";
 import OurPresence from "@/components/contact/OurPresence";
+import GlobeSection from "@/components/contact/ContactBanner";
 
 export const metadata = {
   title: "Dignifyd Talent Connect | AI Recruitment Platform",
@@ -12,8 +12,8 @@ export const metadata = {
 const ContactUs = () => {
   return (
     <>
+      <GlobeSection />
       <ContactSection />
-      {/* <ContactInfoSection /> */}
       <OurPresence />
       <Newsletter />
     </>

@@ -26,8 +26,7 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical:
-      "https://www.dignifyd.com/global-talent-sourcing-payrolling",
+    canonical: "https://www.dignifyd.com/global-talent-sourcing-payrolling",
   },
 
   openGraph: {

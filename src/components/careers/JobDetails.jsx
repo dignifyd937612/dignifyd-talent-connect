@@ -1,17 +1,20 @@
 import { Check } from "lucide-react";
 import SectionHeader from "../common/SectionHeader";
+import { jobs } from "@/data/jobs/jobs";
 
-export default function JobDetails() {
+export default function JobDetails({ params }) {
+  console.log(Number(params?.Id), "params");
+
+  const job = jobs.find((job) => job.id === Number(params?.Id));
+
   return (
     <section className="mt-10 w-full bg-white py-24 dark:bg-black">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-16 lg:grid-cols-2">
         <div>
           <SectionHeader
-            badge={"PCI Infra Services"}
-            title={"PCI Infra"}
-            description={
-              "PCI Infra is a leading provider of electrical products, specializing in high-quality Wires & Cables and Modular Switches. With a strong dealer and distributor network across multiple states, the company focuses on innovation, product reliability, and building long-term customer relationships in the electrical industry."
-            }
+            badge={job?.badge}
+            title={job?.title}
+            description={job?.description}
             center={false}
           />
 
@@ -20,14 +23,7 @@ export default function JobDetails() {
           </h3>
 
           <ul className="space-y-5">
-            {[
-              "Appoint, manage, and monitor dealers and distributors",
-              "Drive channel & retail sales for Wires, Cables, Modular Switches & Accessories",
-              "Achieve monthly and quarterly sales & revenue targets",
-              "Conduct product promotions across assigned territories",
-              "Perform competition mapping and market analysis",
-              "Build strong relationships with dealers, distributors & retailers",
-            ].map((item, i) => (
+            {job?.responsibilities?.map((item, i) => (
               <li key={i} className="flex items-start gap-4">
                 <div className="flex h-[28px] min-w-[28px] items-center justify-center rounded-full border border-purple-300 bg-purple-50 dark:border-purple-500 dark:bg-transparent">
                   <Check
@@ -48,8 +44,7 @@ export default function JobDetails() {
           </h3>
 
           <p className="mb-8 text-gray-600 dark:text-gray-400">
-            Overall, the goal is to enhance user satisfaction by making products
-            intuitive, efficient, and enjoyable to interact with.
+            {job?.overview}
           </p>
 
           <div className="mb-8 grid grid-cols-2 gap-4">
@@ -59,7 +54,7 @@ export default function JobDetails() {
               </p>
 
               <p className="text-3xl font-semibold text-gray-900 dark:text-white">
-                2–4 Years
+                {job?.experience}
               </p>
             </div>
 
@@ -69,7 +64,7 @@ export default function JobDetails() {
               </p>
 
               <p className="text-3xl font-semibold text-gray-900 dark:text-white">
-                22
+                {job?.openings}
               </p>
             </div>
           </div>
@@ -81,8 +76,7 @@ export default function JobDetails() {
               </p>
 
               <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-                Balaghat, Indore, Itarsi, Gwalior, Ashok Nagar, Bhopal,
-                Shajapur, Dewas, Hoshangabad, Tikamgarh, Jhansi, Chhatarpur
+                {job?.locations?.primary?.join(", ")}
               </p>
             </div>
 
@@ -92,8 +86,7 @@ export default function JobDetails() {
               </p>
 
               <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-                Shahjahanpur, Gorakhpur, Deoria, Gonda, Basti, Bareilly,
-                Kannauj, Hamirpur, Bahraich, Mahoba
+                {job?.locations?.secondary?.join(", ")}
               </p>
             </div>
           </div>
