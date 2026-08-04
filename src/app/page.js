@@ -31,7 +31,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "logo",
+        url: "/OG_Image.png",
         width: 1200,
         height: 630,
         alt: "Dignifyd Talent Connect",
@@ -45,7 +45,14 @@ export const metadata = {
     title: "Dignifyd Talent Connect | AI Recruitment Platform",
     description:
       "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
-    images: [""],
+     images: [
+      {
+        url: "/OG_Image.png",
+        width: 1200,
+        height: 630,
+        alt: "Dignifyd Talent Connect",
+      },
+    ]
   },
 };
 export default function Home() {
