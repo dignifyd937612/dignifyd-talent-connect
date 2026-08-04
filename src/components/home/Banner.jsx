@@ -2,6 +2,7 @@ import Image from "next/image";
 import banner_img from "../../assets/images/aboutUs/banner/banner-bg.png";
 import banner_light from "../../assets/images/aboutUs/banner/banner_light.png";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const Magnetic = dynamic(() => import("../common/Magnetic"));
 
@@ -13,6 +14,7 @@ export default function Banner({
   supporting_text,
   description,
   btn_text,
+  btn_link = "#",
 }) {
   return (
     <section className="relative mt-15 flex w-full items-center justify-center overflow-hidden py-20">
@@ -60,9 +62,12 @@ export default function Banner({
         {btn_text && (
           <Magnetic>
             <div className="mt-8">
-              <button className="cursor-pointer rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(168,85,247,0.25)] transition hover:shadow-[0_0_30px_rgba(168,85,247,0.45)]">
+              <Link
+                href={btn_link}
+                className="cursor-pointer rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(168,85,247,0.25)] transition hover:shadow-[0_0_30px_rgba(168,85,247,0.45)]"
+              >
                 {btn_text}
-              </button>
+              </Link>
             </div>
           </Magnetic>
         )}

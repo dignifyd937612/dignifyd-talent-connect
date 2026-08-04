@@ -54,7 +54,7 @@ export default function Collaboration() {
         <div className="mt-12 flex justify-center md:mt-16">
           <Magnetic>
             <Link
-              href="/contact"
+              href="/contact#contact_form"
               className="cursor-pointer rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(236,72,153,0.7)] md:px-10 md:py-4"
             >
               Let’s Collaborate →

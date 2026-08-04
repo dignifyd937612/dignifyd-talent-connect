@@ -50,11 +50,11 @@ export default function Industry() {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        {/* <div className="mt-12 flex justify-center">
           <button className="cursor-pointer rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white transition-transform duration-300 hover:scale-105">
             + Swipe →
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

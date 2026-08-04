@@ -45,14 +45,14 @@ export const metadata = {
     title: "Dignifyd Talent Connect | AI Recruitment Platform",
     description:
       "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
-     images: [
+    images: [
       {
         url: "/OG_Image.png",
         width: 1200,
         height: 630,
         alt: "Dignifyd Talent Connect",
       },
-    ]
+    ],
   },
 };
 export default function Home() {
@@ -80,6 +80,7 @@ export default function Home() {
           "Discover a hiring experience built for modern businesses. From recruitment to employee growth, we help you attract the right talent, nurture strong teams, and drive long-term success."
         }
         btn_text={"Hire a Talent"}
+        btn_link="/contact#contact_form"
       />
       <Partners />
       <Stats />

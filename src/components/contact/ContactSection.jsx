@@ -10,7 +10,7 @@ export default function ContactSection() {
   const { register } = useForm();
 
   return (
-    <section className="w-full bg-white py-28 dark:bg-black">
+    <section className="w-full bg-white py-28 dark:bg-black" id="contact_form">
       <SectionHeader
         badge={"Driven By Innovation"}
         title={"Let’s Build Something Great Together"}

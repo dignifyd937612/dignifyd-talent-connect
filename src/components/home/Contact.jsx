@@ -79,7 +79,7 @@ export default function Contact() {
 
             <div>
               <label className="mb-2 block text-xs text-gray-700 dark:text-gray-300">
-                Mobile Number*
+                Mobile Number
               </label>
 
               <input
@@ -89,7 +89,6 @@ export default function Contact() {
                 maxLength={10}
                 className={styles.input}
                 {...register("phone", {
-                  required: "Phone number required",
                   pattern: {
                     value: /^[6-9]\d{9}$/,
                     message: "Enter valid 10 digit number",

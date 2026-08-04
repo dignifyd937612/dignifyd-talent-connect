@@ -16,7 +16,7 @@ const organizationSchema = {
   name: "Dignifyd Talent Connect",
   alternateName: "Recruitment Platform",
   url: "https://dignifydtalentconnect.com/",
-  logo: "https://dignifydtalentconnect.com/logo.png",
+  logo: "https://dignifydtalentconnect.com/logo.webp",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+1-877-735-0397",
@@ -32,41 +32,4 @@ const organizationSchema = {
   ],
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org/",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Global Recruitment",
-      item: "https://dignifydtalentconnect.com/services/global-recruitment/",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "RPO Solutions",
-      item: "https://dignifydtalentconnect.com/services/rpo-solutions/",
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: "HR Consulting",
-      item: "https://dignifydtalentconnect.com/services/hr-consulting/",
-    },
-    {
-      "@type": "ListItem",
-      position: 4,
-      name: "Onboarding Support",
-      item: "https://dignifydtalentconnect.com/services/onboarding-support/",
-    },
-    {
-      "@type": "ListItem",
-      position: 5,
-      name: "Employer Branding",
-      item: "https://dignifydtalentconnect.com/services/employer-branding/",
-    },
-  ],
-};
-
-export const homeSchema = [websiteSchema, organizationSchema, breadcrumbSchema];
+export const homeSchema = [websiteSchema, organizationSchema];

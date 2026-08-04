@@ -43,7 +43,7 @@ export default function Footer() {
               talent, nurture strong teams, and drive long-term success.
             </p>
 
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               {[
                 {
                   dark: x_logo,
@@ -81,7 +81,7 @@ export default function Footer() {
                   </>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           <div>

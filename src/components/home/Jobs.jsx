@@ -72,7 +72,7 @@ function JobCard({ job }) {
 
         <div className="mt-6 flex justify-end">
           <Link
-            href={`/careers/${job.id}`}
+            href={`/careers/${job.id}#ApplicationForm`}
             className="text-sm text-purple-500 transition hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-300"
           >
             Apply Now →
