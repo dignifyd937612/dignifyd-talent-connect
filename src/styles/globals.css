@@ -164,3 +164,38 @@ body {
     @apply font-sans;
   }
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeReverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  width: max-content;
+  animation: marquee 80s linear infinite;
+}
+
+.animate-marquee-reverse {
+  width: max-content;
+  animation: marqueeReverse 80s linear infinite;
+}
+
+.group:hover .animate-marquee,
+.group:hover .animate-marquee-reverse {
+  animation-play-state: paused;
+}

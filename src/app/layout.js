@@ -6,7 +6,6 @@ import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import { Figtree } from "next/font/google";
 import Script from "next/script";
-import ServiceWorkerRegister from "@/components/common/ServiceWorkerRegister";
 
 export const figtree = Figtree({
   subsets: ["latin"],
@@ -24,7 +23,6 @@ export default function RootLayout({ children }) {
         >
           <Navbar />
           <SmoothFollower />
-          <ServiceWorkerRegister />
 
           <main className="px-6 md:px-10 lg:px-16">{children}</main>
 

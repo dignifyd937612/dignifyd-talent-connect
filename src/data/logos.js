@@ -42,7 +42,7 @@ import light_indigo from "../assets/images/home/light_logo/indigo.png";
 import light_radical_minds from "../assets/images/home/light_logo/radical_minds.png";
 import light_collabera from "../assets/images/home/light_logo/collabera.png";
 import light_cognizant from "../assets/images/home/light_logo/cognizant.png";
-import light_radius from "../assets/images/home/light_logo/radius.webp";
+import light_radius from "../assets/images/home/light_logo/radius.png";
 import light_imz_2 from "../assets/images/home/light_logo/imz.png";
 import light_intense from "../assets/images/home/light_logo/intense.png";
 import light_igt_2 from "../assets/images/home/light_logo/igt_2.png";

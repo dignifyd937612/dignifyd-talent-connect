@@ -36,7 +36,7 @@ export default function Industry() {
           {data.map((item, index) => (
             <div
               key={index}
-              className="relative flex min-h-[260px] flex-col justify-between rounded-2xl border border-gray-200 bg-gradient-to-b from-gray-50 to-white p-6 backdrop-blur-xl transition-all duration-300 hover:border-purple-500/30 dark:border-white/10 dark:from-white/5 dark:to-white/0 md:p-8"
+              className="relative flex min-h-[260px] flex-col justify-between rounded-2xl border border-gray-200 bg-gradient-to-b from-gray-50 to-white p-6 backdrop-blur-xl transition-all duration-300 hover:border-purple-500/30 dark:border-white/10 dark:from-white/5 dark:to-white/0 md:p-8 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(168,85,247,0.25)]"
             >
               <div className="inline-flex w-fit items-center gap-2 rounded-full border border-gray-200 bg-gray-100 px-3 py-1 text-xs text-gray-700 dark:border-white/10 dark:bg-white/5 dark:text-gray-300">
                 <span className="h-2 w-2 rounded-full bg-purple-500"></span>

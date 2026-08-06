@@ -1,4 +1,3 @@
-"use client";
 import SectionHeader from "@/components/common/SectionHeader";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,39 +16,81 @@ export default function Collaboration() {
           title={"Collaboration For Excellence: Partners In Every Endeavor"}
         />
 
-        <div className="relative mt-14 rounded-[28px] bg-gradient-to-r from-purple-500/30 via-pink-500/20 to-purple-500/30 p-[1px] md:mt-20 md:rounded-[32px]">
-          <div className="overflow-hidden rounded-[28px] border border-gray-200 bg-white/80 backdrop-blur-2xl md:rounded-[32px] dark:border-white/10 dark:bg-black/80">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
-              {lightLogos.map((logo, i) => (
-                <div
-                  key={i}
-                  className="group flex h-[100px] items-center justify-center border border-gray-100 sm:h-[110px] md:h-[140px] dark:border-white/5"
-                >
-                  <div className="relative flex h-16 w-28 items-center justify-center rounded-xl bg-gradient-to-b sm:h-20 sm:w-32 sm:p-3 md:h-24 md:w-44 md:rounded-2xl md:group-hover:scale-110">
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/0 via-purple-500/20 to-pink-500/0 opacity-0 blur-xl transition duration-500 group-hover:opacity-100 md:rounded-2xl" />
+        <section className="overflow-hidden py-10">
+          <div className="block dark:hidden">
+            <div className="group relative flex overflow-hidden">
+              <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-28 bg-gradient-to-r from-white via-white/80 to-transparent dark:from-black dark:via-black/80" />
 
-                    <div className="relative flex h-17 w-25 items-center justify-center">
-                      <Image
-                        src={logo?.src}
-                        alt={logo?.alt}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
-                        className="scale-110 object-contain transition duration-500 sm:scale-125 md:scale-150 dark:grayscale dark:group-hover:grayscale-0 block dark:hidden"
-                      />
-                      <Image
-                        src={collaborations[i]?.src}
-                        alt={collaborations[i]?.alt}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
-                        className="scale-110 object-contain transition duration-500 sm:scale-125 md:scale-150 dark:grayscale dark:group-hover:grayscale-0 hidden dark:block"
-                      />
-                    </div>
-                  </div>
-                </div>
-              ))}
+              <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-28 bg-gradient-to-l from-white via-white/80 to-transparent dark:from-black dark:via-black/80" />
+              <div className="animate-marquee flex shrink-0 items-center gap-24">
+                {[...lightLogos, ...lightLogos].map((logo, i) => (
+                  <Image
+                    key={i}
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={180}
+                    height={90}
+                    className="h-16 w-auto shrink-0 object-contain opacity-80 transition-all duration-300 group-hover:opacity-100 md:h-16"
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div className="my-20" />
+
+            <div className="group relative flex overflow-hidden">
+              <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-28 bg-gradient-to-r from-white via-white/80 to-transparent dark:from-black dark:via-black/80" />
+
+              <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-28 bg-gradient-to-l from-white via-white/80 to-transparent dark:from-black dark:via-black/80" />
+              <div className="animate-marquee-reverse flex shrink-0 items-center gap-24">
+                {[...lightLogos, ...lightLogos].map((logo, i) => (
+                  <Image
+                    key={i}
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={180}
+                    height={90}
+                    className="h-16 w-auto shrink-0 object-contain opacity-80 transition-all duration-300 group-hover:opacity-100 md:h-16"
+                  />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+
+          <div className="hidden dark:block">
+            <div className="group relative flex overflow-hidden">
+              <div className="animate-marquee flex shrink-0 items-center gap-24">
+                {[...collaborations, ...collaborations].map((logo, i) => (
+                  <Image
+                    key={i}
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={180}
+                    height={90}
+                    className="h-16 w-auto shrink-0 object-contain opacity-80 transition-all duration-300 group-hover:opacity-100 md:h-16"
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div className="my-17" />
+
+            <div className="group relative flex overflow-hidden">
+              <div className="animate-marquee-reverse flex shrink-0 items-center gap-24">
+                {[...collaborations, ...collaborations].map((logo, i) => (
+                  <Image
+                    key={i}
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={180}
+                    height={90}
+                    className="h-16 w-auto shrink-0 object-contain opacity-80 transition-all duration-300 group-hover:opacity-100 md:h-16"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         <div className="mt-12 flex justify-center md:mt-16">
           <Magnetic>

@@ -85,9 +85,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-5 text-sm tracking-wider text-gray-700 uppercase dark:text-gray-300">
+            <div className="mb-5 text-sm uppercase tracking-wider text-gray-700 dark:text-gray-300">
               Quick Links
-            </h3>
+            </div>
+
             <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
               {NAV_LINKS.map((item, i) => (
                 <li key={i}>
@@ -100,9 +101,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-5 text-sm tracking-wider text-gray-700 uppercase dark:text-gray-300">
+            <div className="mb-5 text-sm uppercase tracking-wider text-gray-700 dark:text-gray-300">
               Services
-            </h3>
+            </div>
             <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
               {tabs.map((item, i) => (
                 <li key={i}>
@@ -115,9 +116,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-5 text-sm tracking-wider text-gray-700 uppercase dark:text-gray-300">
+            <div className="mb-5 text-sm uppercase tracking-wider text-gray-700 dark:text-gray-300">
               Recruitment
-            </h3>
+            </div>
             <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
               {recruitmentLinks.map((item, i) => (
                 <li key={i}>

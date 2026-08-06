@@ -2,23 +2,35 @@ import Image from "next/image";
 import global_recruitment from "../../assets/images/services/global-recruitment.jpg";
 import employer_branding from "../../assets/images/services/employer-branding.jpg";
 import hr_consulting from "../../assets/images/services/hr-consulting.jpg";
+import recruitment_process_automation from "../../assets/images/services/recruitment_process_automation.jpg";
+import onBoarding_Support from "../../assets/images/services/onboarding_Support.jpg";
 import SectionHeader from "../common/SectionHeader";
 
 const services = [
   {
     title: "Global Recruitment",
-    desc: "Executive search, permanent, and contract staffing solutions.",
+    desc: "Access top talent worldwide with our global recruitment solutions.",
     img: global_recruitment,
   },
   {
+    title: "Recruitment Process Automation",
+    desc: "Streamline your hiring process with our automation solutions.",
+    img: recruitment_process_automation,
+  },
+  {
     title: "HR Consulting",
-    desc: "Executive search, permanent, and contract staffing solutions.",
+    desc: "Strategic HR advice and solutions for modern organizations.",
     img: hr_consulting,
   },
   {
     title: "Employer Branding",
-    desc: "Strategies for employer branding and employee value proposition.",
+    desc: "Enhance your employer brand to attract and retain top talent.",
     img: employer_branding,
+  },
+  {
+    title: "Onboarding Support",
+    desc: "Ensure a smooth transition for new hires with our comprehensive onboarding programs.",
+    img: onBoarding_Support,
   },
 ];
 
@@ -32,11 +44,11 @@ export default function ServicesGrid() {
           badge={"Our Expertise"}
           title={"Comprehensive Talent & Workforce Capabilities"}
         />
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-8">
           {services.map((item, i) => (
             <div
               key={i}
-              className="group rounded-2xl border border-purple-500/20 bg-gradient-to-b from-white/[0.04] to-transparent p-5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(168,85,247,0.25)] dark:border-purple-500/30 dark:from-black/[0.04] dark:to-transparent"
+              className="group w-full md:w-[31%] rounded-2xl border border-purple-500/20 bg-gradient-to-b from-white/[0.04] to-transparent p-5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(168,85,247,0.25)] dark:border-purple-500/30 dark:from-black/[0.04] dark:to-transparent"
             >
               <Image
                 src={item.img}
