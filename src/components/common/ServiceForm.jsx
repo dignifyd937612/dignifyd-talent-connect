@@ -25,9 +25,9 @@ const ServiceForm = () => {
           <span className="mt-4 block text-gray-500">
             <Link
               href="#"
-              className="font-medium text-gray-900 transition duration-200 hover:text-purple-600 hover:underline dark:text-white"
+              className="font-medium text-purple-600 underline hover:text-purple-500 dark:text-white"
             >
-              Click here to see if you're a good fit.
+              See if Global Recruitment is right for your team
             </Link>
           </span>
         </p>
@@ -119,8 +119,8 @@ const ServiceForm = () => {
               htmlFor="link-checkbox"
               className="ms-2 text-sm text-gray-600 select-none dark:text-gray-500"
             >
-              I agree to Fundamento using my contact information for marketing
-              purposes.
+              I agree to Dignifyd Talent Connect using my contact information
+              for marketing purposes.
             </label>
           </div>
 

@@ -90,41 +90,6 @@ export default function Banner({
                   ))}
                 </nav>
               </div>
-              <div className="mt-5 flex justify-center lg:hidden">
-                <div className="scrollbar-hide max-w-full overflow-x-auto">
-                  <nav className="flex min-w-max items-center">
-                    {[
-                      { label: "Home", href: "/" },
-                      ...pathname
-                        .split("/")
-                        .filter(Boolean)
-                        .map((item, index, arr) => ({
-                          label: item.replace(/-/g, " "),
-                          href: "/" + arr.slice(0, index + 1).join("/"),
-                        })),
-                    ].map((item, index, arr) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className={`relative flex h-9 items-center px-4 text-xs font-medium transition-all duration-300 ${index === arr.length - 1 ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white" : "bg-[#181122] text-gray-300"} ${index !== 0 ? "-ml-2" : ""} `}
-                        style={{
-                          clipPath:
-                            "polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%)",
-                        }}
-                      >
-                        {item.label
-                          .split(" ")
-                          .map(
-                            (word) =>
-                              word.charAt(0).toUpperCase() +
-                              word.slice(1).toLowerCase(),
-                          )
-                          .join(" ")}
-                      </Link>
-                    ))}
-                  </nav>
-                </div>
-              </div>
             </>
           )}
         </div>

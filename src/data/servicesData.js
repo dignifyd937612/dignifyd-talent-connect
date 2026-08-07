@@ -30,7 +30,7 @@ export const servicesData = [
     highlightDes1: `Our programs help organizations cultivate agile, competent, and resilient teams. Through structured development frameworks, targeted performance strategies, and cross-functional collaboration initiatives, we ensure employees are aligned with corporate objectives and empowered to contribute meaningfully. Continuous learning support and strategic guidance enable teams to thrive in an ever-evolving global business environment.`,
 
     highlightTitle2: "Building a Future-Ready Global Workforce",
-    highlightDes2: `Our programs help organizations cultivate agile, competent, and resilient teams. Through structured development frameworks, targeted performance strategies, and cross-functional collaboration initiatives, we ensure employees are aligned with corporate objectives and empowered to contribute meaningfully. Continuous learning support and strategic guidance enable teams to thrive in an ever-evolving global business environment.`,
+    highlightDes2: `Building a future-ready global workforce starts with a recruitment process that scales across borders without losing precision. Our global recruitment specialists combine cross-border talent acquisition expertise with region-specific labor market knowledge, giving you access to vetted, industry-ready candidates in the markets that matter most. From executive search to high-volume contract staffing, every engagement is built for compliance, speed, and long-term workforce planning, not just filling today's vacancy.`,
 
     features: [
       "Access to a Diverse Global Talent Pool",
