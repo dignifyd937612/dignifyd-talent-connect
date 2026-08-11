@@ -1,5 +1,3 @@
-"use client";
-
 import { Globe3D } from "@/components/ui/3d-globe";
 import ind from "../../assets/images/home/globalPresence/india.webp";
 import uk from "../../assets/images/home/globalPresence/united-kingdom.jpg";
@@ -17,54 +15,104 @@ const sampleMarkers = [
     lng: -0.1278,
     src: uk.src,
     label: "United Kingdom",
+    description:
+      "Step into a world of opportunity, culture, and innovation in the beautiful United Kingdom.",
+    address: "4 Winsley Street, London W1W 8HF",
+    phone: "+44-738-030-7979",
+    lifestyle: "Experience the UK Lifestyle",
   },
+
   {
     lat: 38.9072,
     lng: -77.0369,
     src: usa.src,
     label: "USA",
+    description:
+      "Step into a world of opportunity, culture, and innovation in the beautiful USA.",
+    address: "2501 Chatham Rd, Ste R, Springfield, IL 62704",
+    phone: "+1-877-735-0397",
+    lifestyle: "Experience the USA Lifestyle",
   },
+
   {
     lat: 56.1304,
     lng: -106.3468,
     src: canada.src,
     label: "Canada",
+    description:
+      "Step into a world of opportunity, culture, and innovation in the beautiful Canada.",
+    address:
+      "ON, Toronto - First Canadian Place, 100 King Street West Suite 5600, Toronto Ontario M5X 1C9",
+    phone: "+14374765631",
+    lifestyle: "Experience the CAN Lifestyle",
   },
+
   {
     lat: 25.2048,
     lng: 55.2708,
     src: uae.src,
     label: "UAE",
+    description:
+      "Step into a world of opportunity, culture, and innovation in the beautiful UAE.",
+    address: "Level 3, Convention Tower, World Trade Center",
+    phone: "+971-501-599-266",
+    lifestyle: "Experience the UAE Lifestyle",
   },
-  {
-    lat: 1.3521,
-    lng: 103.8198,
-    src: singapore.src,
-    label: "Singapore",
-  },
+
   {
     lat: 28.6139,
     lng: 77.209,
     src: ind.src,
     label: "India",
+    description:
+      "Step into a world of opportunity, culture, and innovation in the beautiful India.",
+    address: "C-64, Upper Ground Floor, Sector-2, Noida",
+    phone: "+91-120-450-6748",
+    lifestyle: "Experience the IND Lifestyle",
   },
+
+  {
+    lat: 1.3521,
+    lng: 103.8198,
+    src: singapore.src,
+    label: "Singapore",
+    description: "",
+    address: "",
+    phone: "",
+    lifestyle: "",
+  },
+
   {
     lat: 12.8797,
     lng: 121.774,
     src: philippines.src,
     label: "Philippines",
+    description: "",
+    address: "",
+    phone: "",
+    lifestyle: "",
   },
+
   {
     lat: 4.2105,
     lng: 101.9758,
     src: malaysia.src,
     label: "Malaysia",
+    description: "",
+    address: "",
+    phone: "",
+    lifestyle: "",
   },
+
   {
     lat: -25.2744,
     lng: 133.7751,
     src: australia.src,
     label: "Australia",
+    description: "",
+    address: "",
+    phone: "",
+    lifestyle: "",
   },
 ];
 

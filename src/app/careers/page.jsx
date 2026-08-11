@@ -8,7 +8,35 @@ import { hrFAQs } from "@/data/faqs";
 export const metadata = {
   title: "Careers | Dignifyd Talent Connect",
   description:
-    "Join our team at Dignifyd Talent Connect and be part of a dynamic, innovative company that's shaping the future of recruitment. Explore our career opportunities and discover how you can make an impact with us.",
+    "Explore open roles at Dignifyd Talent Connect and discover how you can make an impact building the future of recruitment.",
+  alternates: {
+    canonical: "https://dignifydtalentconnect.com/careers",
+  },
+    openGraph: {
+    title: "Careers | Dignifyd Talent Connect",
+    description:
+      "Discover a smarter approach to hiring designed for modern organizations. From talent acquisition to workforce growth, we help businesses find the right people, build stronger teams, and achieve sustainable success.",
+    url: "https://dignifydtalentconnect.com/about",
+    siteName: "Dignifyd Talent Connect",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://dignifydtalentconnect.com/OG_Image.png",
+        width: 1200,
+        height: 630,
+        alt: "About Us | Dignifyd Talent Connect",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Careers | Dignifyd Talent Connect",
+    description:
+      "Discover a smarter approach to hiring designed for modern organizations. From talent acquisition to workforce growth, we help businesses find the right people, build stronger teams, and achieve sustainable success.",
+    images: ["https://dignifydtalentconnect.com/OG_Image.png"],
+  },
 };
 const Careers = async () => {
   return (
@@ -22,7 +50,7 @@ const Careers = async () => {
       />
       <WhyWorkWithUs />
       <CTASection
-        leading_title={"Everything Need"}
+        leading_title={"Everything You Need to"}
         supporting_title={"Know Before You Start"}
         description={
           "Streamline your work and grow your business with our all-in-one platform."

@@ -74,6 +74,7 @@ const ServiceDetails = () => {
       <FeaturesAndList
         features={activeService?.features}
         featuredImages={activeService?.galleryImages}
+        whychooseUs={activeService?.whychooseus}
       />
       <DetailSection subSection={activeService?.subSection} />
       {activeService?.stepSection && (

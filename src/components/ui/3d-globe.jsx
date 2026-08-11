@@ -4,23 +4,13 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Html, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import { cn } from "@/lib/utils";
-
-// ============================================================================
-// Constants - Earth Texture URLs (NASA Blue Marble)
-// ============================================================================
+import { Location, LocationIcon } from "@hugeicons/core-free-icons";
 
 const DEFAULT_EARTH_TEXTURE =
   "https://unpkg.com/three-globe@2.31.0/example/img/earth-blue-marble.jpg";
 const DEFAULT_BUMP_TEXTURE =
   "https://unpkg.com/three-globe@2.31.0/example/img/earth-topology.png";
 
-// ============================================================================
-// Utility Functions
-// ============================================================================
-
-/**
- * Convert latitude/longitude to 3D cartesian coordinates
- */
 function latLngToVector3(lat, lng, radius) {
   const phi = (90 - lat) * (Math.PI / 180);
   const theta = (lng + 180) * (Math.PI / 180);
@@ -35,42 +25,71 @@ function latLngToVector3(lat, lng, radius) {
 function Marker({ marker, radius, defaultSize, onClick, onHover }) {
   const [hovered, setHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const groupRef = useRef(null);
+
   const imageGroupRef = useRef(null);
+  const lastVisibilityRef = useRef(true);
+
   const { camera } = useThree();
 
-  // Surface position (where the line starts)
+  // =========================================
+  // Marker surface position
+  // =========================================
+
   const surfacePosition = useMemo(() => {
     return latLngToVector3(marker.lat, marker.lng, radius * 1.001);
   }, [marker.lat, marker.lng, radius]);
 
-  // Top of the line (where the image is) - positioned further out to prevent going inside globe
+  // =========================================
+  // Marker top position
+  // =========================================
+
   const topPosition = useMemo(() => {
     return latLngToVector3(marker.lat, marker.lng, radius * 1.18);
   }, [marker.lat, marker.lng, radius]);
 
-  const lineHeight = topPosition.distanceTo(surfacePosition);
+  // =========================================
+  // Marker line height
+  // =========================================
 
-  // Check if marker is facing the camera
+  const lineHeight = useMemo(() => {
+    return topPosition.distanceTo(surfacePosition);
+  }, [topPosition, surfacePosition]);
+
+  // =========================================
+  // Check marker visibility
+  // =========================================
+
   useFrame(() => {
     if (!imageGroupRef.current) return;
 
-    // Get the world position of the image (the positioned element)
     const worldPos = new THREE.Vector3();
+
     imageGroupRef.current.getWorldPosition(worldPos);
 
-    // Direction from globe center (0,0,0) to marker
     const markerDirection = worldPos.clone().normalize();
-
-    // Direction from globe center to camera
     const cameraDirection = camera.position.clone().normalize();
 
-    // Dot product: positive means facing camera, negative means behind
     const dot = markerDirection.dot(cameraDirection);
 
-    // Show marker only if it's facing the camera (stricter threshold)
-    setIsVisible(dot > 0.1);
+    const visible = dot > 0.1;
+
+    // Only update state when visibility changes
+    if (visible !== lastVisibilityRef.current) {
+      lastVisibilityRef.current = visible;
+
+      setIsVisible(visible);
+
+      // Close card if marker goes behind globe
+      if (!visible && hovered) {
+        setHovered(false);
+        onHover?.(null);
+      }
+    }
   });
+
+  // =========================================
+  // Hover
+  // =========================================
 
   const handlePointerEnter = useCallback(() => {
     setHovered(true);
@@ -82,63 +101,82 @@ function Marker({ marker, radius, defaultSize, onClick, onHover }) {
     onHover?.(null);
   }, [onHover]);
 
+  // =========================================
+  // Click
+  // =========================================
+
   const handleClick = useCallback(() => {
     onClick?.(marker);
   }, [marker, onClick]);
 
-  // Calculate line center and orientation
+  // =========================================
+  // Line position + rotation
+  // =========================================
+
   const { lineCenter, lineQuaternion } = useMemo(() => {
     const center = surfacePosition.clone().lerp(topPosition, 0.5);
 
-    // Calculate rotation to align cylinder with the direction from surface to top
     const direction = topPosition.clone().sub(surfacePosition).normalize();
+
     const quaternion = new THREE.Quaternion();
+
     quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), direction);
 
-    return { lineCenter: center, lineQuaternion: quaternion };
+    return {
+      lineCenter: center,
+      lineQuaternion: quaternion,
+    };
   }, [surfacePosition, topPosition]);
 
   return (
-    <group ref={groupRef} visible={isVisible}>
-      {/* Pin line from surface to image - properly oriented */}
+    <group>
       <mesh position={lineCenter} quaternion={lineQuaternion}>
         <cylinderGeometry args={[0.003, 0.003, lineHeight, 8]} />
+
         <meshBasicMaterial
           color={hovered ? "#ffffff" : "#94a3b8"}
           transparent
           opacity={hovered ? 0.9 : 0.6}
         />
       </mesh>
-      {/* Pin point at the surface */}
+
       <mesh position={surfacePosition} quaternion={lineQuaternion}>
         <coneGeometry args={[0.015, 0.04, 8]} />
-        <meshBasicMaterial color={hovered ? "#f97316" : "#ef4444"} />
+
+        <meshBasicMaterial color={hovered ? "#a855f7" : "#ef4444"} />
       </mesh>
-      {/* Circular image at the top */}
+
       <group ref={imageGroupRef} position={topPosition}>
         <Html
           transform
           center
           sprite
-          distanceFactor={10}
+          distanceFactor={8}
+          zIndexRange={[100, 0]}
           style={{
             pointerEvents: isVisible ? "auto" : "none",
+
             opacity: isVisible ? 1 : 0,
+
             transition: "opacity 0.15s ease-out",
           }}
         >
           <div
-            className={cn(
-              "cursor-pointer overflow-hidden rounded-full bg-neutral-900 shadow-lg transition-transform duration-200",
-              hovered && "scale-125 shadow-xl ring-1 ring-white/50",
-            )}
-            style={{
-              width: "8px",
-              height: "8px",
-            }}
             onMouseEnter={handlePointerEnter}
             onMouseLeave={handlePointerLeave}
             onClick={handleClick}
+            className={cn(
+              "cursor-pointer overflow-hidden rounded-full",
+              "bg-neutral-900",
+              "shadow-lg",
+              "transition-all duration-200",
+              hovered &&
+                "scale-125 shadow-[0_0_20px_rgba(168,85,247,0.8)] ring-2 ring-purple-400",
+            )}
+            style={{
+              width: "12px",
+              height: "12px",
+            }}
           >
             <img
               src={marker.src}
@@ -146,6 +184,120 @@ function Marker({ marker, radius, defaultSize, onClick, onHover }) {
               className="h-full w-full object-cover"
               draggable={false}
             />
+          </div>
+        </Html>
+
+        <Html
+          center
+          zIndexRange={[10000, 5000]}
+          style={{
+            pointerEvents: hovered ? "auto" : "none",
+
+            opacity: isVisible && hovered ? 1 : 0,
+
+            transition: "opacity 0.2s ease",
+          }}
+        >
+          <div
+            onMouseEnter={handlePointerEnter}
+            onMouseLeave={handlePointerLeave}
+            className={cn(
+              "pointer-events-auto absolute",
+              "bottom-7 left-1/2",
+              "-translate-x-1/2",
+
+              "w-[240px]",
+              "max-w-[240px]",
+
+              "rounded-2xl",
+              "border border-purple-500/30",
+              "bg-black/95",
+              "p-4",
+              "text-left",
+
+              "shadow-[0_15px_50px_rgba(0,0,0,0.5)]",
+
+              "backdrop-blur-xl",
+
+              "transition-all duration-300",
+
+              hovered
+                ? "visible translate-y-0 scale-100 opacity-100"
+                : "invisible translate-y-2 scale-95 opacity-0",
+            )}
+          >
+            <div className="absolute inset-x-8 -top-px h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+
+            <div className="mb-3 flex items-center gap-2">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple-500/15">
+                {marker.src ? (
+                  <img
+                    src={marker.src}
+                    alt=""
+                    className="h-6 w-6 rounded-full object-cover"
+                    draggable={false}
+                  />
+                ) : (
+                  <span className="text-sm">
+                    <LocationIcon />
+                  </span>
+                )}
+              </div>
+
+              <div className="min-w-0">
+                <p className="text-[10px] tracking-wider text-purple-400 uppercase">
+                  Location
+                </p>
+
+                <p className="truncate text-sm font-semibold text-white">
+                  {marker.label || "Global Location"}
+                </p>
+              </div>
+            </div>
+
+            {marker.description && (
+              <p className="mb-3 text-xs leading-5 text-gray-400">
+                {marker.description}
+              </p>
+            )}
+
+            {(marker.address || marker.phone || marker.lifestyle) && (
+              <div className="space-y-3 border-t border-white/10 pt-3">
+                {marker.address && (
+                  <div className="border-l border-purple-500 pl-2">
+                    <p className="text-[10px] tracking-wider text-purple-400 uppercase">
+                      Address
+                    </p>
+
+                    <p className="mt-1 text-xs leading-4 text-gray-400">
+                      {marker.address}
+                    </p>
+                  </div>
+                )}
+
+                {marker.phone && (
+                  <div className="border-l border-purple-500 pl-2">
+                    <p className="text-[10px] tracking-wider text-purple-400 uppercase">
+                      Phone
+                    </p>
+
+                    <p className="mt-1 text-xs text-gray-400">{marker.phone}</p>
+                  </div>
+                )}
+
+                {marker.lifestyle && (
+                  <div className="border-l border-purple-500 pl-2">
+                    <p className="text-[10px] tracking-wider text-purple-400 uppercase">
+                      Local Experience
+                    </p>
+
+                    <p className="mt-1 text-xs leading-4 text-gray-400">
+                      {marker.lifestyle}
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </Html>
       </group>
@@ -156,13 +308,11 @@ function Marker({ marker, radius, defaultSize, onClick, onHover }) {
 function RotatingGlobe({ config, markers, onMarkerClick, onMarkerHover }) {
   const groupRef = useRef(null);
 
-  // Load Earth textures
   const [earthTexture, bumpTexture] = useTexture([
     config.textureUrl,
     config.bumpMapUrl,
   ]);
 
-  // Configure textures
   useMemo(() => {
     if (earthTexture) {
       earthTexture.colorSpace = THREE.SRGBColorSpace;
@@ -173,7 +323,6 @@ function RotatingGlobe({ config, markers, onMarkerClick, onMarkerHover }) {
     }
   }, [earthTexture, bumpTexture]);
 
-  // Create geometries
   const geometry = useMemo(() => {
     return new THREE.SphereGeometry(config.radius, 64, 64);
   }, [config.radius]);
@@ -184,7 +333,6 @@ function RotatingGlobe({ config, markers, onMarkerClick, onMarkerHover }) {
 
   return (
     <group ref={groupRef}>
-      {/* Main globe mesh with Earth texture */}
       <mesh geometry={geometry}>
         <meshStandardMaterial
           map={earthTexture}
@@ -194,7 +342,6 @@ function RotatingGlobe({ config, markers, onMarkerClick, onMarkerHover }) {
           metalness={0.0}
         />
       </mesh>
-      {/* Wireframe overlay */}
       {config.showWireframe && (
         <mesh geometry={wireframeGeometry}>
           <meshBasicMaterial
@@ -205,7 +352,6 @@ function RotatingGlobe({ config, markers, onMarkerClick, onMarkerHover }) {
           />
         </mesh>
       )}
-      {/* Markers - now inside the rotating group */}
       {markers.map((marker, index) => (
         <Marker
           key={`marker-${index}-${marker.lat}-${marker.lng}`}

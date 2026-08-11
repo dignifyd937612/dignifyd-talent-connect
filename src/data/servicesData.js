@@ -18,11 +18,15 @@ import serviveimg_4 from "../assets/images/services/global-talent-sourcing-payro
 import serviveimg_5 from "../assets/images/services/global-talent-sourcing-payrolling/service-5.jpg";
 import {
   BadgeCheck,
+  BarChart3,
   ClipboardList,
   Globe,
   Handshake,
+  Palette,
+  RefreshCw,
   Rocket,
   Search,
+  Target,
   Users,
 } from "lucide-react";
 
@@ -34,13 +38,10 @@ export const servicesData = [
     title: "Global Recruitment",
     heroImage: globalRecruitment,
     lightHeroImage: globalRecruitment,
-
     highlightTitle1: "Global Recruitment Excellence.",
     highlightDes1: `Our programs help organizations cultivate agile, competent, and resilient teams. Through structured development frameworks, targeted performance strategies, and cross-functional collaboration initiatives, we ensure employees are aligned with corporate objectives and empowered to contribute meaningfully. Continuous learning support and strategic guidance enable teams to thrive in an ever-evolving global business environment.`,
-
     highlightTitle2: "Building a Future-Ready Global Workforce",
     highlightDes2: `Building a future-ready global workforce starts with a recruitment process that scales across borders without losing precision. Our global recruitment specialists combine cross-border talent acquisition expertise with region-specific labor market knowledge, giving you access to vetted, industry-ready candidates in the markets that matter most. From executive search to high-volume contract staffing, every engagement is built for compliance, speed, and long-term workforce planning, not just filling today's vacancy.`,
-
     features: [
       "Access to a Diverse Global Talent Pool",
       "Faster Hiring With Targeted Recruitment Strategies",
@@ -48,7 +49,8 @@ export const servicesData = [
       "Scalable Hiring Solutions for Growing Teams",
       "End-to-End Support From Screening to Onboarding",
     ],
-
+    whychooseus:
+      "We don't start with a template.  We start by talking to your people. Structured employee interviews surface what's actually true about working at your company, so the employee value proposition we build reflects reality, not aspiration. Whether you're a founder-led startup competing for talent against bigger names, or an established company refining how HR tells your story, the process starts the same way: understanding what your own team would tell a friend",
     subSection: {
       title: "Global Hiring Made Seamless and Effective",
       para1:
@@ -87,8 +89,17 @@ export const servicesData = [
         },
       ],
     },
-
     galleryImages: [global_recruitment1, global_recruitment2],
+    metadata: {
+      title: "Global Recruitment | Dignifyd Talent Connect",
+      description:
+        "Our global recruitment specialists combine cross-border talent acquisition expertise with region-specific labor market knowledge, giving you access to vetted, industry-ready candidates in the markets that matter most.",
+    },
+    twitter: {
+      title: "Global Recruitment | Dignifyd Talent Connect",
+      description:
+        "Our global recruitment specialists combine cross-border talent acquisition expertise with region-specific labor market knowledge, giving you access to vetted, industry-ready candidates in the markets that matter most.",
+    },
   },
   {
     id: 1,
@@ -164,8 +175,20 @@ export const servicesData = [
         },
       ],
     },
+    whychooseus:
+      "We build HR frameworks around how your organization actually operates and diagnosing real gaps in your people processes first, then designing policies and systems tailored to your business rather than applying a generic template.",
 
     galleryImages: [rpo_solutions1, rpo_solutions2],
+    metadata: {
+      title: "RPO Solutions | Dignifyd Talent Connect",
+      description:
+        "RPO solutions from Dignifyd Talent Connect. We provide comprehensive recruitment process outsourcing services to help you streamline your hiring and build a stronger workforce.",
+    },
+    twitter: {
+      title: "RPO Solutions | Dignifyd Talent Connect",
+      description:
+        "RPO solutions from Dignifyd Talent Connect. We provide comprehensive recruitment process outsourcing services to help you streamline your hiring and build a stronger workforce.",
+    },
   },
   {
     id: 2,
@@ -197,8 +220,55 @@ export const servicesData = [
       para2:
         "We ensure your brand message remains clear and impactful across all communication touchpoints. Our strategic frameworks help align leadership, HR, and marketing teams around a unified voice. Ultimately, we empower your organization to stand out in a competitive market and build deeper connections with top-tier talent.",
     },
+    stepSection: {
+      title: "How Our Employer Branding Process Works",
 
+      description:
+        "A structured approach to building a brand talent actually wants to work for.",
+
+      steps: [
+        {
+          step: "01",
+          icon: Users,
+          title: "Structured Employee Interviews",
+          desc: "We interview a representative cross-section of your team through structured, one-on-one conversations designed to surface what people actually say about working with you.",
+        },
+
+        {
+          step: "02",
+          icon: Target,
+          title: "Define the Employee Value Proposition",
+          desc: "We synthesize interview findings into clear value pillars, benchmark them against your industry, and validate the resulting EVP with your leadership team.",
+        },
+
+        {
+          step: "03",
+          icon: Palette,
+          title: "Build the Brand Narrative and Assets",
+          desc: "We translate the EVP into careers page messaging, job description templates, social content, and onboarding materials built for your existing channels.",
+        },
+
+        {
+          step: "04",
+          icon: BarChart3,
+          title: "Launch, Measure, and Refine",
+          desc: "We track application volume, offer-acceptance rate, and time-to-fill, alongside qualitative signals, then refine the narrative as your talent market evolves.",
+        },
+      ],
+    },
+    whychooseus:
+      "We don't start with a template.  We start by talking to your people. Structured employee interviews surface what's actually true about working at your company, so the employee value proposition we build reflects reality, not aspiration. Whether you're a founder-led startup competing for talent against bigger names, or an established company refining how HR tells your story, the process starts the same way: understanding what your own team would tell a friend",
     galleryImages: [employer_branding1, onboarding_support],
+    metadata: {
+      title: "Employer Branding | Dignifyd Talent Connect",
+      description:
+        "Employer branding and EVP consulting from Dignifyd Talent Connect. We run structured employee interviews to build an employee value proposition grounded in what your team actually says.",
+    },
+    twitter: {
+      title: "Employer Branding | Dignifyd Talent Connect",
+      description:
+        "Employer branding and EVP consulting from Dignifyd Talent Connect. We run structured employee interviews to build an employee value proposition grounded in what your team actually says",
+    },
   },
   {
     id: 3,
@@ -209,7 +279,7 @@ export const servicesData = [
     lightHeroImage: hr_Consulting,
     highlightTitle1: "HR Consulting",
     highlightDes1:
-      "A strong people strategy is the foundation of a thriving organization. Our HR Consulting services are designed to help businesses build scalable, compliant, and people-centric HR frameworks that support growth, improve employee experience, and strengthen organizational culture. We work closely with leadership teams to identify gaps, streamline HR processes, and design custom solutions tailored to your unique business needs.From talent management to compliance, performance optimization, and culture development, we provide the expertise that enables organizations to attract the right talent, engage employees effectively, and operate with clarity and confidence.",
+      "A strong people strategy is the foundation of a thriving organization. Our HR Consulting services are designed to help businesses build scalable, compliant, and people-centric HR frameworks that support growth, improve employee experience, and strengthen organizational culture. We work closely with leadership teams to identify gaps, streamline HR processes, and design custom solutions tailored to your unique business needs. From talent management to compliance, performance optimization, and culture development, we provide the expertise that enables organizations to attract the right talent, engage employees effectively, and operate with clarity and confidence.",
 
     highlightTitle2: "Empowering Organizations Through Strategic HR Solutions",
     highlightDes2:
@@ -226,11 +296,59 @@ export const servicesData = [
     subSection: {
       title: "Strategic HR Solutions That Drive Organizational Success",
       para1:
-        "teams, and foster a culture of continuous improvement. Our experts analyze existing HR structures, identify operational gaps, and implement tailored solutions that enhance performance, employee satisfaction, and organizational efficiency. From refining HR policies and managing employee relations to improving recruitment practices and aligning workforce planning with business goals, we ensure every aspect of your HR function is optimized for long-term success.",
+        "We help organizations build high performing teams, and foster a culture of continuous improvement. Our experts analyze existing HR structures, identify operational gaps, and implement tailored solutions that enhance performance, employee satisfaction, and organizational efficiency. From refining HR policies and managing employee relations to improving recruitment practices and aligning workforce planning with business goals, we ensure every aspect of your HR function is optimized for long-term success.",
       para2:
         "With the right strategy and support, businesses can improve productivity, reduce risks, and create a workplace where people and performance thrive together.",
     },
+    whychooseus:
+      "We build HR frameworks around how your organization actually operates and diagnosing real gaps in your people processes first, then designing policies and systems tailored to your business rather than applying a generic template.",
+    stepSection: {
+      title: "How Our HR Consulting Process Works",
+
+      description:
+        "A structured approach to strengthening your HR frameworks, improving compliance, and building processes that support your organization as it grows.",
+
+      steps: [
+        {
+          step: "01",
+          icon: Search,
+          title: "Diagnose Your HR Gaps",
+          desc: "We review your current policies, workflows, and employee lifecycle touchpoints to identify where structure, compliance, or clarity is missing before recommending anything.",
+        },
+
+        {
+          step: "02",
+          icon: ClipboardList,
+          title: "Design Custom Frameworks",
+          desc: "We build HR policies and processes scoped to your organization's size and industry, covering the areas that matter most to you, whether that's performance management, compensation structure, or compliance.",
+        },
+
+        {
+          step: "03",
+          icon: Users,
+          title: "Implement and Train",
+          desc: "We work with your leadership and HR team to roll out new frameworks, including training so the systems are actually used correctly, not just documented and shelved.",
+        },
+
+        {
+          step: "04",
+          icon: RefreshCw,
+          title: "Monitor and Refine",
+          desc: "We check in on how the new frameworks are performing against real outcomes, retention, engagement, and compliance incidents, and adjust them as your organization changes.",
+        },
+      ],
+    },
     galleryImages: [hr_consulting1, hr_consulting2],
+    metadata: {
+      title: "HR Consulting | Dignifyd Talent Connect",
+      description:
+        "HR consulting from Dignifyd Talent Connect, scalable, compliant people frameworks covering the full employee lifecycle, from hiring and onboarding to performance management and compensation design.",
+    },
+    twitter: {
+      title: "HR Consulting | Dignifyd Talent Connect",
+      description:
+        "HR consulting from Dignifyd Talent Connect, scalable, compliant people frameworks covering the full employee lifecycle, from hiring and onboarding to performance management and compensation design.",
+    },
   },
   {
     id: 4,
@@ -262,13 +380,25 @@ export const servicesData = [
     ],
 
     subSection: {
-      title: "Global Hiring Made Seamless and Effective",
+      title: "A Confident Start From Day One",
       para1:
         "Our onboarding support is designed to make the employee’s first steps effortless and impactful. By taking care of documentation, policy briefings, system access, team introductions, and initial training coordination, we ensure new hires feel welcomed and equipped from the very beginning. Through consistent guidance and well-structured onboarding stages, employees quickly understand their responsibilities, adapt to the work environment, and start contributing with confidence.",
       para2:
         "This streamlined approach helps organizations strengthen engagement, reduce turnover, and build a productive workforce from day one.",
     },
+    whychooseus:
+      "We treat onboarding as the first real test of everything you promised a candidate during hiring, so we manage the practical details, documentation, compliance, IT setup, and introductions, precisely enough that new hires spend their first weeks learning the role, not chasing paperwork.",
     galleryImages: [hr_consulting1, onboarding_support1],
+    metadata: {
+      title: "Onboarding Support | Dignifyd Talent Connect",
+      description:
+        "Onboarding support from Dignifyd Talent Connect. We manage documentation, compliance, IT setup, and structured orientation so every new hire starts confident and productive from day one.",
+    },
+    twitter: {
+      title: "Onboarding Support | Dignifyd Talent Connect",
+      description:
+        "Onboarding support from Dignifyd Talent Connect. We manage documentation, compliance, IT setup, and structured orientation so every new hire starts confident and productive from day one.",
+    },
   },
 ];
 

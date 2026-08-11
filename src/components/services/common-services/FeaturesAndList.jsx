@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
 
-export default function FeaturesAndList({ features, featuredImages }) {
+export default function FeaturesAndList({
+  features,
+  featuredImages,
+  whychooseUs,
+}) {
   return (
     <section className="w-full bg-white dark:bg-black">
       <div className="mx-auto grid max-w-7xl items-start gap-12 md:grid-cols-2">
@@ -12,9 +16,7 @@ export default function FeaturesAndList({ features, featuredImages }) {
             </h4>
 
             <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-              We combine industry expertise, global reach, and technology-driven
-              solutions to help organizations scale faster, build stronger
-              teams, and achieve sustainable growth.
+              {whychooseUs}
             </p>
           </div>
 

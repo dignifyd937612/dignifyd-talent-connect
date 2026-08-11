@@ -1,9 +1,9 @@
 import Schema from "@/components/common/seo/Schema";
 import ServiceDetails from "@/components/services/ServiceDetails";
-import { serviceDetailSchema } from "@/data/schemas/serviceDetail";
+import { getServiceDetailSchema } from "@/data/schemas/serviceDetail";
 import { servicesData } from "@/data/servicesData";
 
-export const generateMetadata = async ({ params }) => {
+export async function generateMetadata({ params }) {
   const { service } = await params;
 
   const activeService =
@@ -13,6 +13,7 @@ export const generateMetadata = async ({ params }) => {
 
   return {
     title: `${activeService.title} | Dignifyd Talent Connect`,
+
     description: activeService.description,
 
     alternates: {
@@ -20,8 +21,8 @@ export const generateMetadata = async ({ params }) => {
     },
 
     openGraph: {
-      title: `${activeService.title} | Dignifyd Talent Connect`,
-      description: activeService.description,
+      title: activeService.metadata?.title,
+      description: activeService.metadata?.description,
       url,
       type: "website",
       images: [
@@ -29,20 +30,28 @@ export const generateMetadata = async ({ params }) => {
           url: "https://dignifydtalentconnect.com/OG_Image.png",
           width: 1200,
           height: 630,
-          alt: activeService.title,
+          alt: activeService.metadata?.title,
         },
       ],
     },
 
     twitter: {
       card: "summary_large_image",
-      title: `${activeService.title} | Dignifyd Talent Connect`,
-      description: activeService.description,
+      title: activeService.twitter?.title,
+      description: activeService.twitter?.description,
       images: ["https://dignifydtalentconnect.com/OG_Image.png"],
     },
   };
-};
-const ServiceDetailsPage = () => {
+}
+
+const ServiceDetailsPage = async ({ params }) => {
+  const { service } = await params;
+
+  const activeService =
+    servicesData.find((item) => item.slug === service) || servicesData[0];
+
+  const serviceDetailSchema = getServiceDetailSchema(activeService);
+
   return (
     <>
       {serviceDetailSchema.map((schema, index) => (
@@ -52,6 +61,7 @@ const ServiceDetailsPage = () => {
           data={schema}
         />
       ))}
+
       <ServiceDetails />
     </>
   );

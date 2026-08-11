@@ -22,14 +22,14 @@ const ServiceForm = () => {
           Tell us a bit about yourself, then schedule time with one of our
           experts who will show you exactly how you can power up your results.
           <br />
-          <span className="mt-4 block text-gray-500">
+          {/* <span className="mt-4 block text-gray-500">
             <Link
               href="#"
               className="font-medium text-purple-600 underline hover:text-purple-500 dark:text-white"
             >
               See if Global Recruitment is right for your team
             </Link>
-          </span>
+          </span> */}
         </p>
 
         <form className="space-y-6 rounded-3xl border border-purple-200/60 bg-white/90 p-8 shadow-[0_15px_50px_rgba(168,85,247,0.08)] backdrop-blur-xl dark:border-white/10 dark:bg-[#0f0a18] dark:shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
