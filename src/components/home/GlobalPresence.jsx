@@ -51,8 +51,8 @@ export function GlobalPresence() {
             label: "USA",
           },
           {
-            lat: 44.8,
-            lng: -82.5,
+            lat: 23.8,
+            lng: -111.5,
             src: canada.src,
             label: "Canada",
           },
@@ -93,7 +93,7 @@ export function GlobalPresence() {
             label: "Malaysia",
           },
           {
-            lat: -26,
+            lat: -46,
             lng: 148,
             src: australia.src,
             label: "Australia",
@@ -101,7 +101,7 @@ export function GlobalPresence() {
         ]}
         dots={[
           {
-            start: { lat: 44.8, lng: -82.5 },
+            start: { lat: 23.8, lng: -111.5 },
             end: { lat: 36.5, lng: -76.5 },
           },
 
@@ -142,7 +142,7 @@ export function GlobalPresence() {
 
           {
             start: { lat: 16.8, lng: 123.5 },
-            end: { lat: -26, lng: 148 },
+            end: { lat: -46, lng: 148 },
           },
         ]}
       />

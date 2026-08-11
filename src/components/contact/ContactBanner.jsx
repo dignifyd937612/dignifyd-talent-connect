@@ -6,6 +6,11 @@ import uk from "../../assets/images/home/globalPresence/united-kingdom.jpg";
 import usa from "@/assets/images/home/globalPresence/USA.png";
 import canada from "@/assets/images/home/globalPresence/canada.png";
 import uae from "@/assets/images/home/globalPresence/UAE.jpg";
+import singapore from "@/assets/images/home/globalPresence/singapore.png";
+import philippines from "@/assets/images/home/globalPresence/philippines.webp";
+import malaysia from "@/assets/images/home/globalPresence/malaysia.png";
+import australia from "@/assets/images/home/globalPresence/australia.webp";
+
 const sampleMarkers = [
   {
     lat: 51.5074,
@@ -20,8 +25,8 @@ const sampleMarkers = [
     label: "USA",
   },
   {
-    lat: 43.6532,
-    lng: -79.3832,
+    lat: 56.1304,
+    lng: -106.3468,
     src: canada.src,
     label: "Canada",
   },
@@ -32,10 +37,34 @@ const sampleMarkers = [
     label: "UAE",
   },
   {
+    lat: 1.3521,
+    lng: 103.8198,
+    src: singapore.src,
+    label: "Singapore",
+  },
+  {
     lat: 28.6139,
     lng: 77.209,
     src: ind.src,
     label: "India",
+  },
+  {
+    lat: 12.8797,
+    lng: 121.774,
+    src: philippines.src,
+    label: "Philippines",
+  },
+  {
+    lat: 4.2105,
+    lng: 101.9758,
+    src: malaysia.src,
+    label: "Malaysia",
+  },
+  {
+    lat: -25.2744,
+    lng: 133.7751,
+    src: australia.src,
+    label: "Australia",
   },
 ];
 
@@ -87,7 +116,6 @@ export default function GlobeSection() {
                 bumpScale: 5,
                 autoRotateSpeed: 0.35,
               }}
-              onMarkerClick={(marker) => console.log(marker.label)}
             />
           </div>
         </div>

@@ -1,5 +1,3 @@
-"use client";
-
 export default function ProcessCard({ data, index }) {
   const Icon = data.icon;
 

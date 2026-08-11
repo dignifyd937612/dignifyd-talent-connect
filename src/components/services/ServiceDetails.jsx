@@ -76,7 +76,9 @@ const ServiceDetails = () => {
         featuredImages={activeService?.galleryImages}
       />
       <DetailSection subSection={activeService?.subSection} />
-      <RecruitmentProcess />
+      {activeService?.stepSection && (
+        <RecruitmentProcess stepSection={activeService?.stepSection} />
+      )}
     </>
   );
 };

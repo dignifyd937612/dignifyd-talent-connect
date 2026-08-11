@@ -16,6 +16,15 @@ import serviveimg_2 from "../assets/images/services/global-talent-sourcing-payro
 import serviveimg_3 from "../assets/images/services/global-talent-sourcing-payrolling/service-3.jpg";
 import serviveimg_4 from "../assets/images/services/global-talent-sourcing-payrolling/service-4.jpg";
 import serviveimg_5 from "../assets/images/services/global-talent-sourcing-payrolling/service-5.jpg";
+import {
+  BadgeCheck,
+  ClipboardList,
+  Globe,
+  Handshake,
+  Rocket,
+  Search,
+  Users,
+} from "lucide-react";
 
 export const servicesData = [
   {
@@ -47,6 +56,37 @@ export const servicesData = [
       para2:
         "We prioritize quality, reliability, and long-term value, ensuring every hire contributes meaningfully to your organization’s success. By combining global reach with localized expertise, we help companies navigate talent shortages and build high-performing international teams.",
     },
+    stepSection: {
+      title: "How Our Global Recruitment Process Works",
+      description:
+        "A structured four-step hiring process that delivers consistent recruitment outcomes across every market.",
+      steps: [
+        {
+          step: "01",
+          icon: Search,
+          title: "Understand Your Workforce Needs",
+          desc: "We begin by understanding your hiring goals, workforce structure, and business objectives to build an effective recruitment strategy tailored to your organization.",
+        },
+        {
+          step: "02",
+          icon: Globe,
+          title: "Source & Screen Global Talent",
+          desc: "Our recruiters source qualified professionals across international talent networks while conducting technical, cultural, and background screening.",
+        },
+        {
+          step: "03",
+          icon: Handshake,
+          title: "Interview and Select",
+          desc: "We coordinate interviews, streamline evaluations, assist negotiations, and ensure hiring decisions remain consistent across every region.",
+        },
+        {
+          step: "04",
+          icon: Rocket,
+          title: "Onboard & Integrate",
+          desc: "After hiring, we support onboarding, documentation, compliance, and employee integration for a smooth transition.",
+        },
+      ],
+    },
 
     galleryImages: [global_recruitment1, global_recruitment2],
   },
@@ -57,13 +97,13 @@ export const servicesData = [
     title: "RPO Solutions",
     heroImage: rpo_solution,
     lightHeroImage: rpo_solution,
-    highlightTitle1: "Leadership Development",
+    highlightTitle1: "Recruiters Who Works As Your Team",
     highlightDes1:
-      "At Dignifyd Talent Connect, our RPO Solutions go beyond hiring — we help organizations build future-ready leaders who can drive business transformation. Our leadership development framework strengthens core competencies, enhances decision-making abilities, and empowers teams to perform at their highest potential. Through customized training pathways and strategic talent guidance, we ensure your leaders are equipped to inspire, innovate, and achieve sustainable growth.",
+      "Our RPO Solutions place dedicated recruiters directly inside your HR function — not as an outside vendor running occasional searches, but as a standing extension of your team who understand your roles, culture, and hiring bar as well as you do. This model gives you the consistency of an internal recruiting function with the flexibility to scale up or down as hiring needs change.",
 
-    highlightTitle2: "Empowering High-Performance Teams",
+    highlightTitle2: "Built to Scale With Your Hiring Needs",
     highlightDes2:
-      "We develop programs that enhance collaboration, strategic thinking, and organizational agility. Our approach blends industry insights with practical learning to help leaders navigate real-world challenges with confidence. Through coaching, role-based skill enhancement, and continuous performance evaluation, we support companies in building resilient teams that thrive in a competitive global environment.Our solutions foster a culture of ownership, accountability, and innovation — ensuring your workforce remains aligned with long-term business goals while adapting effortlessly to evolving market demands.",
+      "Whether you need full-cycle recruitment support, a project-based surge for a single hiring push, or a partial RPO covering specific roles, our model adjusts to fit — without the overhead of building and unwinding an internal team each time volume shifts. Transparent reporting on cost-per-hire and time-to-fill keeps performance accountable at every stage of the engagement",
 
     features: [
       "End-to-end talent acquisition support tailored to your hiring goals.",
@@ -75,10 +115,54 @@ export const servicesData = [
 
     subSection: {
       title: "Flexible RPO Models That Grow With Your Business",
-      para1:
-        "Dignifyd Talent Connect delivers recruitment solutions designed to support long-term workforce stability and organizational growth. Our RPO models help businesses reduce recruitment costs, improve hiring efficiency, and access specialized talent pipelines with ease. Through strategic sourcing, in-depth screening, and seamless onboarding, we ensure every hire adds measurable value to your organization.",
+      points: [
+        {
+          title: "Full RPO",
+          text: "We handle all hiring for your company.",
+        },
+        {
+          title: "Partial RPO",
+          text: "We handle hiring for specific departments or role types.",
+        },
+        {
+          title: "Project RPO",
+          text: "We handle a fixed number of hires for a set period, such as a product launch or seasonal hiring campaign.",
+        },
+      ],
       para2:
-        "Our expert recruiters work as an extension of your HR team, bringing industry insights and performance-driven methodologies that enhance both speed and quality of hiring.",
+        "Every model includes the same core work: sourcing, screening, and coordinating interviews. The difference is how much of your hiring we take on and for how long. Most businesses start with project RPO to test the partnership, then move to partial or full RPO as hiring volume grows.",
+    },
+
+    stepSection: {
+      title: "How Our Global Recruitment Process Works",
+      description:
+        "A structured four-step hiring process that delivers consistent recruitment outcomes across every market.",
+      steps: [
+        {
+          step: "01",
+          icon: ClipboardList,
+          title: "Understand Your Hiring Needs",
+          desc: "We start by learning what roles you're hiring for, how many, and by when. This includes reviewing your job requirements, past hiring data, and current bottlenecks so the recruitment plan matches your actual business needs, not a generic template.",
+        },
+        {
+          step: "02",
+          icon: Users,
+          title: "Find and Screen Candidates",
+          desc: "Our recruiters search for qualified candidates and screen them for skills, experience, and fit before you ever see a resume. Every candidate is checked against your specific job requirements, so you only review people who are genuinely qualified.",
+        },
+        {
+          step: "03",
+          icon: Handshake,
+          title: "Interview and Select",
+          desc: "We schedule interviews, coordinate feedback between your hiring team, and help you compare candidates side by side. This keeps the hiring decision fast and consistent, even when multiple people are involved in choosing.",
+        },
+        {
+          step: "04",
+          icon: BadgeCheck,
+          title: "Onboard the New Hire",
+          desc: "Once a candidate accepts, we help with paperwork, background checks, and first-day preparation so the new hire is ready to start on time. This reduces the risk of delays or dropouts between offer and start date.",
+        },
+      ],
     },
 
     galleryImages: [rpo_solutions1, rpo_solutions2],
