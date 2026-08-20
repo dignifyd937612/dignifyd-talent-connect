@@ -63,6 +63,7 @@ const AboutUs = () => {
           "Discover a smarter approach to hiring designed for modern organizations. From talent acquisition to workforce growth, we help businesses find the right people, build stronger teams, and achieve sustainable success."
         }
         btn_text={"Get Started Now"}
+        btn_link="/contact#contact_form"
         showBreadcrumb={true}
       />
       <Journey />

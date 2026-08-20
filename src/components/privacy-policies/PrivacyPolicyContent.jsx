@@ -62,11 +62,11 @@ export default function PrivacyPolicyContent() {
   const [active, setActive] = useState("who-we-are");
 
   return (
-    <section className="relative bg-black py-24 text-white">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-4">
+    <section className="relative bg-white py-24 text-gray-900 transition-colors dark:bg-black dark:text-white">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-5 lg:grid-cols-4">
         <aside className="lg:col-span-1">
-          <div className="sticky top-28 rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-xl">
-            <h3 className="mb-4 text-sm font-semibold text-gray-300">
+          <div className="sticky top-28 rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none">
+            <h3 className="mb-4 text-sm font-semibold text-gray-700 dark:text-gray-300">
               Privacy Contents
             </h3>
 
@@ -76,11 +76,7 @@ export default function PrivacyPolicyContent() {
                   <a
                     href={`#${item.id}`}
                     onClick={() => setActive(item.id)}
-                    className={`block text-sm transition ${
-                      active === item.id
-                        ? "text-purple-400"
-                        : "text-gray-400 hover:text-white"
-                    }`}
+                    className={`block text-sm transition ${active === item.id ? "text-purple-600 dark:text-purple-400" : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"}`}
                   >
                     {item.title}
                   </a>
@@ -95,17 +91,19 @@ export default function PrivacyPolicyContent() {
             <div
               key={section.id}
               id={section.id}
-              className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent p-8 backdrop-blur-xl"
+              className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-white via-[#f8f9fb] to-[#eef1f5] p-8 shadow-sm transition-all duration-300 dark:border-white/10 dark:from-[#111111] dark:via-[#0d0d0f] dark:to-[#09090b] dark:shadow-none"
             >
-              <h2 className="mb-4 text-2xl font-semibold">
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                  {section.title}
-                </span>
-              </h2>
+              <div className="relative z-10">
+                <h2 className="mb-4 text-2xl font-semibold">
+                  <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent dark:from-purple-400 dark:to-pink-500">
+                    {section.title}
+                  </span>
+                </h2>
 
-              <p className="text-sm leading-relaxed text-gray-400">
-                {section.content}
-              </p>
+                <p className="max-w-[900px] text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                  {section.content}
+                </p>
+              </div>
             </div>
           ))}
         </div>

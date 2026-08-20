@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Magnetic from "./Magnetic";
 
 export default function CTASection({
@@ -30,9 +31,12 @@ export default function CTASection({
 
         <div className="mt-10">
           <Magnetic>
-            <button className="cursor-pointer rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white shadow-[0_0_25px_rgba(168,85,247,0.25)] transition hover:shadow-[0_0_40px_rgba(168,85,247,0.45)]">
+            <Link
+              href={"/contact#contact_form"}
+              className="cursor-pointer rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white shadow-[0_0_25px_rgba(168,85,247,0.25)] transition hover:shadow-[0_0_40px_rgba(168,85,247,0.45)]"
+            >
               Get started now →
-            </button>
+            </Link>
           </Magnetic>
         </div>
 

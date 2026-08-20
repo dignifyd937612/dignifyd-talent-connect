@@ -16,13 +16,13 @@ export default function SectionHeader({
         </div>
       )}
 
-      <h1
+      <h2
         className={`max-w-3xl text-2xl font-semibold leading-tight text-gray-900 dark:text-white md:text-4xl ${
           center ? "mx-auto text-center" : "text-left"
         }`}
       >
         {title}
-      </h1>
+      </h2>
 
       {description && (
         <p

@@ -1,14 +1,14 @@
 export const hrFAQs = [
-  {
-    question: "What Types Of Hr Services Do You Offer?",
-    answer:
-      "We provide end-to-end HR solutions including recruitment, onboarding, payroll support, compliance management, employee relations, performance management, and strategic HR consulting.",
-  },
-  {
-    question: "How Can Hr Services Benefit My Organization?",
-    answer: 
-      "Professional HR support improves efficiency, reduces compliance risks, enhances employee experience, and ensures your organization has the right talent to grow.",
-  },
+  // {
+  //   question: "What Types Of Hr Services Do You Offer?",
+  //   answer:
+  //     "We provide end-to-end HR solutions including recruitment, onboarding, payroll support, compliance management, employee relations, performance management, and strategic HR consulting.",
+  // },
+  // {
+  //   question: "How Can Hr Services Benefit My Organization?",
+  //   answer: 
+  //     "Professional HR support improves efficiency, reduces compliance risks, enhances employee experience, and ensures your organization has the right talent to grow.",
+  // },
   {
     question: "How Do You Support Talent Acquisition?",
     answer:

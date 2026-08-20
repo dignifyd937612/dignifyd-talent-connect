@@ -9,13 +9,19 @@ import dark_logo from "../../assets/images/home/footer/dignifyd-logo.svg";
 import light_logo from "../../assets/images/home/footer/light-logo.png";
 import Link from "next/link";
 import styles from "../common/Footer.module.scss";
-import { NAV_LINKS, recruitmentLinks, tabs } from "@/data/navigation";
+import {
+  getInTouchLinks,
+  NAV_LINKS,
+  policies,
+  recruitmentLinks,
+  tabs,
+} from "@/data/navigation";
 
 export default function Footer() {
   return (
     <footer className="relative z-10 w-full border-t border-purple-100 bg-white px-6 pt-20 text-gray-900 dark:border-white/5 dark:bg-black dark:text-white">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-30 md:grid-cols-4">
+        <div className="grid gap-23 md:grid-cols-5">
           <div className="space-y-6">
             <Link href="/" className="relative block h-15 w-[170px]">
               <Image
@@ -166,6 +172,25 @@ export default function Footer() {
               ))}
             </ul>
           </div> */}
+          <div>
+            <h3 className="mb-5 text-sm tracking-wider text-gray-700 dark:text-gray-300 uppercase">
+              Policies
+            </h3>
+
+            <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+              {policies.map((item, i) => (
+                <li key={i}>
+                  <Link
+                    href={item.href}
+                    target="_blank"
+                    className={styles?.footerLink}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-purple-100 pt-5 pb-10 md:flex-row dark:border-white/10">

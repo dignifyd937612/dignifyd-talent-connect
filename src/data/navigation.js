@@ -1,12 +1,9 @@
 import {
-  Globe,
-  Users,
-  Briefcase,
-  GraduationCap,
-  Building2,
-  Factory,
-  Network,
-  ShieldCheck,
+  Globe2,
+  UserRoundCheck,
+  Megaphone,
+  ClipboardCheck,
+  UserPlus,
 } from "lucide-react";
 
 export const NAV_LINKS = [
@@ -21,52 +18,52 @@ export const NAV_LINKS = [
         title: "Global Talent",
         items: [
           {
-            label: "Global Talent Sourcing & Payrolling",
-            icon: Globe,
-            link: "/global-talent-sourcing-payrolling",
+            label: "Global Recruitment",
+            icon: Globe2,
+            link: "/services/global-recruitment",
           },
           {
-            label: "Vendor Management & Operations",
-            icon: Users,
-            link: "/vendor-management-operations",
+            label: "RPO Solutions",
+            icon: UserRoundCheck,
+            link: "/services/rpo-solutions",
           },
           {
-            label: "Recruitment Process Outsourcing",
-            icon: Briefcase,
-            link: "/recruitment-process-outsourcing",
+            label: "Employer Branding",
+            icon: Megaphone,
+            link: "/services/employer-branding",
           },
           {
-            label: "Upskilling Academy",
-            icon: GraduationCap,
-            link: "/upskilling-academy",
+            label: "HR Consulting",
+            icon: ClipboardCheck,
+            link: "/services/hr-consulting",
           },
           {
-            label: "BPO (Business Process Outsourcing)",
-            icon: Building2,
-            link: "/bpo-business-process-outsourcing",
+            label: "Onboarding Support",
+            icon: UserPlus,
+            link: "/services/onboarding-support",
           },
         ],
       },
-      {
-        title: "Engagement Model",
-        items: [
-          {
-            label: "BOT/BOOT",
-            icon: Factory,
-            link: "/build-operate-transfer",
-          },
-          {
-            label: "GCC Services",
-            icon: Network,
-            link: "/gcc-services",
-          },
-          {
-            label: "Managed Service Provider",
-            icon: ShieldCheck,
-            link: "/managed-service-provider",
-          },
-        ],
-      },
+      // {
+      //   title: "Engagement Model",
+      //   items: [
+      //     {
+      //       label: "BOT/BOOT",
+      //       icon: Factory,
+      //       link: "/build-operate-transfer",
+      //     },
+      //     {
+      //       label: "GCC Services",
+      //       icon: Network,
+      //       link: "/gcc-services",
+      //     },
+      //     {
+      //       label: "Managed Service Provider",
+      //       icon: ShieldCheck,
+      //       link: "/managed-service-provider",
+      //     },
+      //   ],
+      // },
     ],
   },
   { label: "Contact", path: "/contact" },
@@ -119,6 +116,10 @@ export const tabs = [
 export const recruitmentLinks = [
   { name: "Help Desk", href: "/helpdesk" },
   { name: "Job Openings", href: "/careers", hash: "#jobs" },
+];
+
+export const policies = [
+  { name: "Privacy and Policy", href: "/privacy-policy" },
 ];
 
 export const getInTouchLinks = [

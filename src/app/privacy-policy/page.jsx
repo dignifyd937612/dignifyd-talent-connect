@@ -4,7 +4,14 @@ import PrivacyPolicyContent from "@/components/privacy-policies/PrivacyPolicyCon
 const PrivacyPolicy = () => {
   return (
     <>
-      <Banner banner_bg={null} badge={"Privacy Policy"} leading_text={"Privacy Policy"} description={"We are committed to protecting your personal information and your right to privacy. If you have any questions about how we collect, use, or share your personal information, please contact us."} />
+      <Banner
+        badge={"Privacy Policy"}
+        leading_text={"Privacy Policy"}
+        description={
+          "We are committed to protecting your personal information and your right to privacy. If you have any questions about how we collect, use, or share your personal information, please contact us."
+        }
+      />
+
       <PrivacyPolicyContent />
     </>
   );

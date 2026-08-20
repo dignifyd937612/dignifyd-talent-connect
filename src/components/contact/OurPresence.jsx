@@ -11,7 +11,7 @@ export default function OurPresence() {
           badge={"Our Expertise Spans Over 35+ Countries"}
           title={"Global Presence & Service Reach"}
           description={
-            "Operating in  regions across the UK, Europe, USA, Canada, SEA, and APAC, we deliver localized hiring with global best practices."
+            "Operating across the UK, Europe, USA, Canada, SEA, and APAC, we deliver localized hiring with global best practices."
           }
         />
 

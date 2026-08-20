@@ -8,6 +8,7 @@ import singapore from "@/assets/images/home/globalPresence/singapore.png";
 import philippines from "@/assets/images/home/globalPresence/philippines.webp";
 import malaysia from "@/assets/images/home/globalPresence/malaysia.png";
 import australia from "@/assets/images/home/globalPresence/australia.webp";
+import Link from "next/link";
 
 const sampleMarkers = [
   {
@@ -123,18 +124,18 @@ export default function GlobeSection() {
 
       <div className="absolute top-1/2 left-1/2 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(59,130,246,.08),transparent_70%)] blur-[70px] md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px]" />
 
-      <div className="relative markert pe click kru to  z-10 flex min-h-[950px] flex-col items-center lg:min-h-[720px] lg:flex-row">
+      <div className="markert pe click kru to relative z-10 flex min-h-[830px] flex-col items-center lg:min-h-[720px] lg:flex-row">
         <div className="order-2 w-full px-6 pb-10 text-center md:px-10 lg:order-1 lg:w-1/2 lg:px-16 lg:pb-0 lg:text-left">
           <span className="inline-flex items-center rounded-full border border-purple-500/30 bg-gradient-to-r from-purple-500/15 to-pink-500/15 px-4 py-2 text-xs font-semibold text-purple-600 backdrop-blur-sm md:text-sm dark:text-purple-300">
             Global Talent Network
           </span>
 
-          <h2 className="mt-6 text-4xl leading-[1.05] font-black tracking-[-0.04em] text-neutral-900 md:text-5xl lg:mt-8 lg:text-7xl dark:text-white">
+          <h1 className="mt-6 text-4xl leading-[1.05] font-black tracking-[-0.04em] text-neutral-900 md:text-5xl lg:mt-8 lg:text-7xl dark:text-white">
             Global Talent
             <span className="block bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
               Without Borders.
             </span>
-          </h2>
+          </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-neutral-600 md:text-lg lg:mx-0 lg:mt-8 lg:leading-9 dark:text-neutral-400">
             Connect businesses with exceptional professionals across continents.
@@ -143,13 +144,16 @@ export default function GlobeSection() {
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:mt-12 lg:justify-start">
-            <button className="w-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-7 py-3 text-sm font-semibold text-white shadow-xl shadow-violet-500/30 transition duration-300 hover:scale-105 sm:w-auto">
+            <Link href={"#contact_form"} className="w-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-7 py-3 text-sm font-semibold text-white shadow-xl shadow-violet-500/30 transition duration-300 hover:scale-105 sm:w-auto">
               Get Started
-            </button>
+            </Link>
 
-            <button className="w-full rounded-full border border-violet-500/25 bg-white/70 px-8 py-3 font-semibold text-violet-700 backdrop-blur transition-all duration-300 hover:border-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white sm:w-auto dark:bg-white/5 dark:text-white">
+            <Link
+              href={"/about"}
+              className="w-full rounded-full border border-violet-500/25 bg-white/70 px-8 py-3 font-semibold text-violet-700 backdrop-blur transition-all duration-300 hover:border-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white sm:w-auto dark:bg-white/5 dark:text-white"
+            >
               Learn More
-            </button>
+            </Link>
           </div>
         </div>
 

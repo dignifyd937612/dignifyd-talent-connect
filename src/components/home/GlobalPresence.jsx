@@ -45,32 +45,32 @@ export function GlobalPresence() {
             label: "United Kingdom",
           },
           {
-            lat: 36.5,
-            lng: -76.5,
+            lat: 23.8,
+            lng: -111.5,
             src: usa.src,
             label: "USA",
           },
           {
-            lat: 23.8,
-            lng: -111.5,
+            lat: 65.8,
+            lng: -120.5,
             src: canada.src,
             label: "Canada",
           },
           {
-            lat: 24.2,
-            lng: 54.5,
+            lat: 10.2,
+            lng: 58.5,
             src: uae.src,
             label: "UAE",
           },
           {
-            lat: 26.8,
-            lng: 80.5,
+            lat: 11.8,
+            lng: 83.5,
             src: ind.src,
             label: "India",
           },
           {
-            lat: 55.5,
-            lng: 14.5,
+            lat: 43.5,
+            lng: 18.5,
             src: eu.src,
             label: "European Union",
           },
@@ -101,32 +101,32 @@ export function GlobalPresence() {
         ]}
         dots={[
           {
-            start: { lat: 23.8, lng: -111.5 },
-            end: { lat: 36.5, lng: -76.5 },
+            start: { lat: 65.8, lng: -120.5 },
+            end: { lat: 23.8, lng: -111.5 },
           },
 
           {
-            start: { lat: 36.5, lng: -76.5 },
+            start: { lat: 23.8, lng: -111.5 },
             end: { lat: 52.8, lng: -2.5 },
           },
 
           {
             start: { lat: 52.8, lng: -2.5 },
-            end: { lat: 55.5, lng: 14.5 },
+            end: { lat: 43.5, lng: 18.5 },
           },
 
           {
-            start: { lat: 55.5, lng: 14.5 },
-            end: { lat: 24.2, lng: 54.5 },
+            start: { lat: 43.5, lng: 18.5 },
+            end: { lat: 10.2, lng: 58.5 },
           },
 
           {
-            start: { lat: 24.2, lng: 54.5 },
-            end: { lat: 26.8, lng: 80.5 },
+            start: { lat: 10.2, lng: 58.5 },
+            end: { lat: 11.8, lng: 83.5 },
           },
 
           {
-            start: { lat: 26.8, lng: 80.5 },
+            start: { lat: 11.8, lng: 83.5 },
             end: { lat: 2.8, lng: 101.8 },
           },
 

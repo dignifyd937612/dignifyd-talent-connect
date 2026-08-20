@@ -12,11 +12,11 @@ export const metadata = {
   alternates: {
     canonical: "https://dignifydtalentconnect.com/careers",
   },
-    openGraph: {
+  openGraph: {
     title: "Careers | Dignifyd Talent Connect",
     description:
       "Discover a smarter approach to hiring designed for modern organizations. From talent acquisition to workforce growth, we help businesses find the right people, build stronger teams, and achieve sustainable success.",
-    url: "https://dignifydtalentconnect.com/about",
+    url: "https://dignifydtalentconnect.com/careers",
     siteName: "Dignifyd Talent Connect",
     type: "website",
     locale: "en_US",
@@ -25,7 +25,7 @@ export const metadata = {
         url: "https://dignifydtalentconnect.com/OG_Image.png",
         width: 1200,
         height: 630,
-        alt: "About Us | Dignifyd Talent Connect",
+        alt: "Careers | Dignifyd Talent Connect",
       },
     ],
   },
@@ -47,19 +47,20 @@ const Careers = async () => {
         supporting_text={"Work with Innovation"}
         description={"Accelerate delivery, and drive measurable results."}
         btn_text={"Get Started Now"}
+        btn_link="/contact#contact_form"
       />
       <WhyWorkWithUs />
-      <CTASection
+      {/* <CTASection
         leading_title={"Everything You Need to"}
         supporting_title={"Know Before You Start"}
         description={
           "Streamline your work and grow your business with our all-in-one platform."
         }
-      />
+      /> */}
       <FAQs
         FAQs={hrFAQs}
         badge={"Your FAQ Hub"}
-        title={"Explore Our HR Service FAQs"}
+        title={"Frequently Asked Questions"}
       />
       {/* <Testimonials /> */}
     </>

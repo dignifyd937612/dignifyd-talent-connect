@@ -17,7 +17,7 @@ import { GlobalPresence } from "@/components/home/GlobalPresence";
 export const metadata = {
   title: "Dignifyd Talent Connect | AI Recruitment Platform",
   description:
-    "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
+    "We have placed 4,000+ people across global markets and 92% of our clients hire with us again. Send us a role to fill, or see the jobs open this week.",
 
   alternates: {
     canonical: "https://dignifydtalentconnect.com/",
@@ -31,7 +31,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/OG_Image.png",
+        url: "https://dignifydtalentconnect.com/OG_Image.png",
         width: 1200,
         height: 630,
         alt: "Dignifyd Talent Connect",
@@ -47,7 +47,7 @@ export const metadata = {
       "Dignifyd Talent Connect is an AI recruitment platform that helps employers hire smarter and job seekers find jobs faster.",
     images: [
       {
-        url: "/OG_Image.png",
+        url: "https://dignifydtalentconnect.com/OG_Image.png",
         width: 1200,
         height: 630,
         alt: "Dignifyd Talent Connect",

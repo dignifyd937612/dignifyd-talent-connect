@@ -47,14 +47,14 @@ export default function Stats() {
                   {item.icon}
                 </div>
 
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
                   {item.value}
-                </h2>
+                </h3>
               </div>
 
-              <h3 className="mb-3 text-lg font-medium text-gray-900 dark:text-white">
+              <h4 className="mb-3 text-lg font-medium text-gray-900 dark:text-white">
                 {item.title}
-              </h3>
+              </h4>
 
               <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                 {item.desc}
