@@ -41,8 +41,8 @@ export const metadata = {
 const ContactUs = () => {
   return (
     <>
-      <GlobeSection />
-      <ContactSection />
+      {/* <GlobeSection /> */}
+      {/* <ContactSection /> */}
       <OurPresence />
       <Newsletter />
     </>
