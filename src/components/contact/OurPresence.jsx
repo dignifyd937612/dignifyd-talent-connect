@@ -42,10 +42,10 @@ export default function OurPresence() {
                     <span>{place.contact}</span>
                   </div>
 
-                  <div className="flex gap-3">
+                  {/* <div className="flex gap-3">
                     <span className="mt-1 h-4 w-[2px] bg-purple-500"></span>
                     <span>Experience the {place.shortForm} Lifestyle</span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
