@@ -36,7 +36,7 @@ const locations = [
     icon: Landmark,
   },
   {
-    city: "Springfield",
+    city: "Chicago",
     country: "United States",
     image: springfieldImage,
     icon: Landmark,
