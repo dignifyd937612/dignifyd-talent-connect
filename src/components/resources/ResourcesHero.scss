@@ -1,0 +1,43 @@
+.resources-hero__content {
+  opacity: 0;
+  animation: resourcesHeroContentIn 0.8s ease forwards;
+}
+
+.resources-hero__visual {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: resourcesHeroVisualIn 0.9s 0.15s ease forwards;
+}
+
+@keyframes resourcesHeroContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes resourcesHeroVisualIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resources-hero__content,
+  .resources-hero__visual {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}

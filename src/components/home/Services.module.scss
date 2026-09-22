@@ -61,7 +61,6 @@
 
   border-radius: 999px;
 
-  /* LIGHT MODE */
   background: #ffffff;
   border: 1px solid rgba(168, 85, 247, 0.25);
 
@@ -73,7 +72,6 @@
   transition: transform 0.3s ease;
 }
 
-/* DARK MODE */
 :global(.dark) .orbitIcon {
   background: #0f0f0f;
   border: 1px solid rgba(168, 85, 247, 0.4);

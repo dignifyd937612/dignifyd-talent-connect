@@ -3,6 +3,7 @@ import ArrowRight from "lucide-react/dist/esm/icons/arrow-right";
 import team from "../../assets/images/aboutUs/whatwedo/whatwedo.jpg";
 import SectionHeader from "../common/SectionHeader";
 import Magnetic from "../common/Magnetic";
+import Link from "next/link";
 
 export default function WhatWeDo() {
   return (
@@ -46,10 +47,13 @@ export default function WhatWeDo() {
           <p className="mb-8 max-w-xl text-sm leading-relaxed text-gray-600 dark:text-gray-400"></p>
 
           <Magnetic>
-            <button className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(168,85,247,0.25)] transition hover:shadow-[0_0_35px_rgba(168,85,247,0.45)]">
+            <Link
+              href="/contact#contact_form"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(168,85,247,0.25)] transition hover:shadow-[0_0_35px_rgba(168,85,247,0.45)]"
+            >
               Get Started
               <ArrowRight size={16} />
-            </button>
+            </Link>
           </Magnetic>
         </div>
       </div>

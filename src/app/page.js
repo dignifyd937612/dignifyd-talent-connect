@@ -6,18 +6,21 @@ import Stats from "@/components/home/Stats";
 import Services from "@/components/home/Services";
 import Contact from "@/components/home/Contact";
 import Jobs from "@/components/home/Jobs";
-import dark_banner_bg from "../assets/images/home/banner/banner-img.png";
-import light_banner_bg from "../assets/images/home/banner/light_banner_bg.png";
 import Schema from "@/components/common/seo/Schema";
 import { homeSchema } from "@/data/schemas/homeSchema";
 import { Suspense } from "react";
 import RemoveIssParam from "@/components/home/RemoveIssParam";
 import { GlobalPresence } from "@/components/home/GlobalPresence";
+import dark_banner_bg from "../assets/images/home/banner/banner-img.png";
+import light_banner_bg from "../assets/images/home/banner/light_banner_bg.png";
+import GlobeSection from "@/components/contact/ContactBanner";
+import { homePageFaqs } from "@/data/faqs";
+import FAQs from "@/components/common/FAQs";
 
 export const metadata = {
   title: "Dignifyd Talent Connect | AI Recruitment Platform",
   description:
-    "We have placed 4,000+ people across global markets and 92% of our clients hire with us again. Send us a role to fill, or see the jobs open this week.",
+    "Global Recruitment across 35+ countries. First candidate gets shortlist within 36 hours, 92% candidate retention in 90 days. Talk to us.",
 
   alternates: {
     canonical: "https://dignifydtalentconnect.com/",
@@ -74,14 +77,16 @@ export default function Home() {
         banner_bg={dark_banner_bg}
         white_banner_bg={light_banner_bg}
         badge={"Discover, Engage, Power"}
-        leading_text={"Empowering Organizations With"}
-        supporting_text={"Smarter Talent Solutions"}
+        leading_text={"Recruitment across 35+ countries,"}
+        supporting_text={"delivered in six global markets"}
         description={
-          "Discover a hiring experience built for modern businesses. From recruitment to employee growth, we help you attract the right talent, nurture strong teams, and drive long-term success."
+          "Headquartered in London. Offices in Dubai, Singapore, Springfield, Toronto, and Delhi NCR. 120+ specialists across six offices"
         }
         btn_text={"Hire a Talent"}
         btn_link="/contact#contact_form"
       />
+      {/* <GlobeSection /> */}
+
       <Partners />
       <Stats />
       <GlobalPresence />
@@ -90,12 +95,12 @@ export default function Home() {
       <Services />
       {/* <Testimonials /> */}
       <Contact />
-      {/* <FAQs
-          FAQs={hrFAQs}
-          badge={"Your FAQ Hub"}
-          title={"Explore Our HR Service FAQs"}
-        /> */}
-      <Jobs />
+      <FAQs
+        FAQs={homePageFaqs}
+        badge={"Hiring & Talent FAQs"}
+        title={"Frequently Asked Questions"}
+      />
+      {/* <Jobs /> */}
     </>
   );
 }

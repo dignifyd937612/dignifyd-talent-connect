@@ -3,17 +3,17 @@ import Journey from "@/components/about/Journey";
 import Certifications from "@/components/about/Certifications";
 import VisionMission from "@/components/about/VisionMission";
 import WhatWeDo from "@/components/about/WhatWeDo";
-import LeaderShip from "@/components/about/LeaderShip";
-import OurPeopleOurBrand from "@/components/about/OurPeopleOurBrand";
-import TechSupport from "@/components/about/TechSupport";
 import CTASection from "@/components/common/CTA";
 import Schema from "@/components/common/seo/Schema";
 import { aboutSchema } from "@/data/schemas/aboutSchema";
+import WhoRunsTalentConnect from "@/components/about/WhoRunsTalentConnect";
+import WhatWeMeasure from "@/components/about/WhatWeMeasure";
+import GroupSection from "@/components/about/TeamDignifydGroup";
 
 export const metadata = {
-  title: "About Us | Dignifyd Talent Connect",
+  title: "About Dignifyd Talent Connect | Global Talent Acquisition",
   description:
-    "Discover a smarter approach to hiring designed for modern organizations. From talent acquisition to workforce growth, we help businesses find the right people, build stronger teams, and achieve sustainable success.",
+    "Talent acquisition vertical of Dignifyd group. 120+ specialists, six global offices. Read our story, how we started and how we have expanded worldwide.",
 
   alternates: {
     canonical: "https://dignifydtalentconnect.com/about",
@@ -57,19 +57,21 @@ const AboutUs = () => {
       ))}
       <Banner
         badge={"Find, Engage, grow"}
-        leading_text={"Building Stronger Teams Through"}
-        supporting_text={"Smart Recruitment Solutions"}
+        leading_text={"About Us"}
         description={
-          "Discover a smarter approach to hiring designed for modern organizations. From talent acquisition to workforce growth, we help businesses find the right people, build stronger teams, and achieve sustainable success."
+          "The recruitment branch of Dignifyd group, started in 2018 and expanded globally across 35+ countries. Recruitment is what we do to help companies find the right talent, build teams and grow in their field."
         }
-        btn_text={"Get Started Now"}
+        btn_text={"Talk to Us"}
         btn_link="/contact#contact_form"
         showBreadcrumb={true}
       />
       <Journey />
+      <WhoRunsTalentConnect />
       <Certifications />
       <VisionMission />
+      <WhatWeMeasure />
       <WhatWeDo />
+      <GroupSection />
       {/* <LeaderShip /> */}
       {/* <OurPeopleOurBrand /> */}
       {/* <TechSupport /> */}
@@ -77,7 +79,7 @@ const AboutUs = () => {
         leading_title={"Power Up Your Workflow "}
         supporting_title={"with Smart Jobs"}
         description={
-          "Streamline your work and grow your business with our all-in-one platform."
+          "Streamline you work and grow your business with our all-in-one platform."
         }
       />
     </>

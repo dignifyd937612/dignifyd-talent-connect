@@ -46,7 +46,7 @@ const ContactUs = () => {
   return (
     <>
       {/* <GlobeSection /> */}
-      {/* <Banner
+      <Banner
         badge={"Contact & Global Presence "}
         leading_text={"Engage with the right team,"}
         supporting_text={"wherever you operate."}
@@ -55,19 +55,19 @@ const ContactUs = () => {
         }
         btn_text={"Start a Conversation"}
         btn_link="/contact#contact_form"
-      /> */}
-      {/* <EngagementFlow /> */}
-      {/* <EngagementModels /> */}
+      />
+      <EngagementFlow />
+      <EngagementModels />
       <OurPresence />
-      {/* <Newsletter /> */}
-      {/* <ContactSection /> */}
+      <Newsletter />
+      <ContactSection />
 
-      {/* <CTASection
+      <CTASection
         leading_title={"Have a requirement to discuss?"}
         description={
           "Tell us what you are looking to build, hire, or scale. Our team will connect you with the right people to discuss the requirement."
         }
-      /> */}
+      />
     </>
   );
 };

@@ -1,0 +1,167 @@
+.centres-section {
+  --centres-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.centres-header {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 800ms var(--centres-ease),
+    transform 800ms var(--centres-ease);
+}
+
+.centres-section.is-visible .centres-header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.centres-card {
+  position: relative;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(28px) scale(0.985);
+
+  transition:
+    opacity 750ms var(--card-delay) var(--centres-ease),
+    transform 750ms var(--card-delay) var(--centres-ease),
+    border-color 300ms ease,
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.centres-section.is-visible .centres-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.centres-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(168, 85, 247, 0.045),
+    transparent
+  );
+
+  transform: skewX(-18deg);
+}
+
+.centres-section.is-visible .centres-card::before {
+  animation: centresSweep 1200ms var(--card-delay) var(--centres-ease) forwards;
+}
+
+@keyframes centresSweep {
+  from {
+    left: -120%;
+  }
+
+  to {
+    left: 150%;
+  }
+}
+
+.centres-card-title {
+  opacity: 0;
+  transform: translateY(10px);
+
+  transition:
+    opacity 550ms calc(var(--card-delay) + 120ms) var(--centres-ease),
+    transform 550ms calc(var(--card-delay) + 120ms) var(--centres-ease);
+}
+
+.centres-section.is-visible .centres-card-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.centres-card-label {
+  opacity: 0;
+  transform: translateX(12px);
+
+  transition:
+    opacity 550ms calc(var(--card-delay) + 160ms) var(--centres-ease),
+    transform 550ms calc(var(--card-delay) + 160ms) var(--centres-ease);
+}
+
+.centres-section.is-visible .centres-card-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.centres-card-line {
+  transition:
+    width 650ms calc(var(--card-delay) + 230ms) var(--centres-ease),
+    box-shadow 300ms ease;
+}
+
+.centres-section.is-visible .centres-card-line {
+  width: 42px;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
+}
+
+.centres-item {
+  opacity: 0;
+  transform: translateX(-12px);
+
+  transition:
+    opacity 500ms var(--item-delay) var(--centres-ease),
+    transform 500ms var(--item-delay) var(--centres-ease);
+}
+
+.centres-section.is-visible .centres-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.centres-bullet {
+  opacity: 0;
+  transform: scale(0);
+
+  transition:
+    opacity 350ms calc(var(--item-delay) + 80ms) var(--centres-ease),
+    transform 350ms calc(var(--item-delay) + 80ms) var(--centres-ease);
+}
+
+.centres-section.is-visible .centres-bullet {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.centres-card:hover .centres-card-line {
+  width: 64px;
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.65);
+}
+
+.centres-card:hover .centres-bullet {
+  transform: scale(1.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .centres-section *,
+  .centres-header,
+  .centres-card,
+  .centres-card-title,
+  .centres-card-label,
+  .centres-card-line,
+  .centres-item,
+  .centres-bullet {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .centres-card-line {
+    width: 42px !important;
+  }
+}

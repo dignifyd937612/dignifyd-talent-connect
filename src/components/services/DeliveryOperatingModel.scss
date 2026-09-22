@@ -1,0 +1,378 @@
+.delivery-model {
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+HEADER .delivery-model__header {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.delivery-model.is-visible .delivery-model__header {
+  animation: deliveryHeaderReveal 750ms var(--ease-premium) forwards;
+}
+
+@keyframes deliveryHeaderReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+INTRO IMAGE PANEL .delivery-model__intro {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.delivery-model.is-visible .delivery-model__intro {
+  animation: introReveal 750ms 100ms var(--ease-premium) forwards;
+}
+
+.delivery-model__image {
+  isolation: isolate;
+}
+
+.delivery-model__image img {
+  transition:
+    transform 900ms var(--ease-premium),
+    filter 500ms ease;
+}
+
+.delivery-model__intro:hover .delivery-model__image img {
+  transform: scale(1.035);
+}
+
+.delivery-model__image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    transparent 45%,
+    rgba(168, 85, 247, 0.08)
+  );
+
+  pointer-events: none;
+}
+
+@keyframes introReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+MAIN COLUMNS .delivery-model__roles {
+  opacity: 0;
+  transform: translateX(-18px);
+}
+
+.delivery-model.is-visible .delivery-model__roles {
+  animation: rolesReveal 750ms 180ms var(--ease-premium) forwards;
+}
+
+@keyframes rolesReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.delivery-model__domains {
+  opacity: 0;
+  transform: translateX(18px);
+}
+
+.delivery-model.is-visible .delivery-model__domains {
+  animation: domainsReveal 750ms 240ms var(--ease-premium) forwards;
+}
+
+@keyframes domainsReveal {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+ROLE LIST .delivery-model__role-list {
+  position: relative;
+}
+
+.delivery-model__rail {
+  position: absolute;
+
+  top: 25px;
+  bottom: 25px;
+  left: 20px;
+
+  width: 1px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(168, 85, 247, 0.05),
+    rgba(168, 85, 247, 0.3),
+    rgba(168, 85, 247, 0.05)
+  );
+
+  pointer-events: none;
+}
+
+ROLE CARDS .delivery-model__role {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.delivery-model.is-visible .delivery-model__role {
+  animation: roleReveal 650ms var(--role-delay) var(--ease-premium) forwards;
+}
+
+@keyframes roleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delivery-model__role-dot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: rgba(156, 163, 175, 0.4);
+
+  transition:
+    background 300ms ease,
+    box-shadow 300ms ease,
+    transform 300ms ease;
+}
+
+.delivery-model__role:hover .delivery-model__role-dot {
+  background: rgba(168, 85, 247, 0.65);
+  transform: scale(1.2);
+}
+
+.delivery-model__role:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.45);
+  outline-offset: 3px;
+}
+
+.delivery-model__role:has(.delivery-model__number) {
+  transition:
+    transform 300ms var(--ease-premium),
+    border-color 300ms ease,
+    background-color 300ms ease;
+}
+
+NUMBER .delivery-model__number {
+  position: relative;
+  z-index: 2;
+
+  transition:
+    transform 300ms var(--ease-premium),
+    box-shadow 300ms ease;
+}
+
+.delivery-model__role:hover .delivery-model__number {
+  transform: scale(1.05);
+}
+
+.delivery-model__role:active .delivery-model__number {
+  transform: scale(0.98);
+}
+
+ACTIVE STATE .delivery-model__role.bg-purple-500\/\[0\.07\] {
+  position: relative;
+}
+
+.delivery-model__active {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.delivery-model.is-visible .delivery-model__active {
+  animation: activeReveal 600ms 700ms var(--ease-premium) forwards;
+}
+
+.delivery-model__active-dot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #a855f7;
+
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.08);
+
+  animation: activeDotPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes activeDotPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.06);
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(168, 85, 247, 0.03);
+  }
+}
+
+@keyframes activeReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+DOMAIN PODS .delivery-model__pod {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.delivery-model.is-visible .delivery-model__pod {
+  animation: podReveal 600ms var(--pod-delay) var(--ease-premium) forwards;
+}
+
+@keyframes podReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delivery-model__pod-top {
+  transition: transform 300ms var(--ease-premium);
+}
+
+.delivery-model__pod:hover .delivery-model__pod-top {
+  transform: translateX(2px);
+}
+
+SPECIALISTS .delivery-model__specialists {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.delivery-model.is-visible .delivery-model__specialists {
+  animation: specialistsReveal 650ms 1000ms var(--ease-premium) forwards;
+}
+
+.delivery-model__specialists-number {
+  transition: transform 300ms var(--ease-premium);
+}
+
+.delivery-model__specialists:hover .delivery-model__specialists-number {
+  transform: translateY(-1px);
+}
+
+@keyframes specialistsReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1023px) {
+  .delivery-model__image {
+    min-height: 240px;
+  }
+
+  .delivery-model__image::after {
+    background: linear-gradient(
+      to bottom,
+      transparent 40%,
+      rgba(0, 0, 0, 0.18)
+    );
+  }
+}
+
+@media (max-width: 640px) {
+  .delivery-model__intro {
+    border-radius: 14px;
+  }
+
+  .delivery-model__image {
+    min-height: 210px;
+  }
+
+  .delivery-model__role {
+    margin-left: 0 !important;
+  }
+
+  .delivery-model__rail {
+    left: 20px;
+  }
+
+  .delivery-model__active {
+    margin-top: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .delivery-model__header,
+  .delivery-model__intro,
+  .delivery-model__roles,
+  .delivery-model__domains,
+  .delivery-model__role,
+  .delivery-model__pod,
+  .delivery-model__active,
+  .delivery-model__specialists {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .delivery-model__image img,
+  .delivery-model__number,
+  .delivery-model__pod-top {
+    transition: none !important;
+  }
+
+  .delivery-model__active-dot {
+    animation: none !important;
+  }
+}

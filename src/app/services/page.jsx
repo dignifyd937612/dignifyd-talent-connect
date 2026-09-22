@@ -5,6 +5,13 @@ import Collaboration from "@/components/home/Collaboration";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import Schema from "@/components/common/seo/Schema";
 import { aboutSchema } from "@/data/schemas/aboutSchema";
+import DeliveryFramework from "@/components/services/DeliveryFramework";
+import TalentIntelligenceArchitecture from "@/components/services/TalentIntelligenceArchitecture";
+import DeliveryOperatingModel from "@/components/services/DeliveryOperatingModel";
+import CentresOfExcellence from "@/components/services/CentresOfExcellence";
+import Sectors from "../../components/services/Sectors";
+import Proof from "@/components/services/Proof";
+import TalentConnectInsights from "@/components/services/TalentConnectInsights";
 
 export const metadata = {
   title: "Services | Dignifyd Talent Connect",
@@ -61,6 +68,13 @@ const Services = () => {
         btn_link="/contact#contact_form"
       />
       <ServicesSection />
+      <DeliveryFramework />
+      <TalentIntelligenceArchitecture />
+      <DeliveryOperatingModel />
+      <TalentConnectInsights />
+      <CentresOfExcellence />
+      <Sectors />
+      <Proof />
       <ServicesGrid />
       <Collaboration />
       <Newsletter />

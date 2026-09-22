@@ -1,174 +1,50 @@
-import { Globe3D } from "@/components/ui/3d-globe";
-import ind from "../../assets/images/home/globalPresence/india.webp";
-import uk from "../../assets/images/home/globalPresence/united-kingdom.jpg";
-import usa from "@/assets/images/home/globalPresence/USA.png";
-import canada from "@/assets/images/home/globalPresence/canada.png";
-import uae from "@/assets/images/home/globalPresence/UAE.jpg";
-import singapore from "@/assets/images/home/globalPresence/singapore.png";
-import philippines from "@/assets/images/home/globalPresence/philippines.webp";
-import malaysia from "@/assets/images/home/globalPresence/malaysia.png";
-import australia from "@/assets/images/home/globalPresence/australia.webp";
 import Link from "next/link";
-
-const sampleMarkers = [
-  {
-    lat: 51.5074,
-    lng: -0.1278,
-    src: uk.src,
-    label: "United Kingdom",
-    description:
-      "Step into a world of opportunity, culture, and innovation in the beautiful United Kingdom.",
-    address: "4 Winsley Street, London W1W 8HF",
-    phone: "+44-738-030-7979",
-    lifestyle: "Experience the UK Lifestyle",
-  },
-
-  {
-    lat: 38.9072,
-    lng: -77.0369,
-    src: usa.src,
-    label: "USA",
-    description:
-      "Step into a world of opportunity, culture, and innovation in the beautiful USA.",
-    address: "2501 Chatham Rd, Ste R, Springfield, IL 62704",
-    phone: "+1-877-735-0397",
-    lifestyle: "Experience the USA Lifestyle",
-  },
-
-  {
-    lat: 56.1304,
-    lng: -106.3468,
-    src: canada.src,
-    label: "Canada",
-    description:
-      "Step into a world of opportunity, culture, and innovation in the beautiful Canada.",
-    address:
-      "ON, Toronto - First Canadian Place, 100 King Street West Suite 5600, Toronto Ontario M5X 1C9",
-    phone: "+14374765631",
-    lifestyle: "Experience the CAN Lifestyle",
-  },
-
-  {
-    lat: 25.2048,
-    lng: 55.2708,
-    src: uae.src,
-    label: "UAE",
-    description:
-      "Step into a world of opportunity, culture, and innovation in the beautiful UAE.",
-    address: "Level 3, Convention Tower, World Trade Center",
-    phone: "+971-501-599-266",
-    lifestyle: "Experience the UAE Lifestyle",
-  },
-
-  {
-    lat: 28.6139,
-    lng: 77.209,
-    src: ind.src,
-    label: "India",
-    description:
-      "Step into a world of opportunity, culture, and innovation in the beautiful India.",
-    address: "C-64, Upper Ground Floor, Sector-2, Noida",
-    phone: "+91-120-450-6748",
-    lifestyle: "Experience the IND Lifestyle",
-  },
-
-  {
-    lat: 1.3521,
-    lng: 103.8198,
-    src: singapore.src,
-    label: "Singapore",
-    description: "",
-    address: "",
-    phone: "",
-    lifestyle: "",
-  },
-
-  {
-    lat: 12.8797,
-    lng: 121.774,
-    src: philippines.src,
-    label: "Philippines",
-    description: "",
-    address: "",
-    phone: "",
-    lifestyle: "",
-  },
-
-  {
-    lat: 4.2105,
-    lng: 101.9758,
-    src: malaysia.src,
-    label: "Malaysia",
-    description: "",
-    address: "",
-    phone: "",
-    lifestyle: "",
-  },
-
-  {
-    lat: -25.2744,
-    lng: 133.7751,
-    src: australia.src,
-    label: "Australia",
-    description: "",
-    address: "",
-    phone: "",
-    lifestyle: "",
-  },
-];
+import { Global } from "../home/Global";
+import { Globe3DDemo } from "../home/LightGlobe";
 
 export default function GlobeSection() {
   return (
-    <section className="relative mt-20 overflow-hidden rounded-[32px] bg-white dark:bg-[#09090B]">
-      <div className="absolute top-1/2 right-[-120px] h-[450px] w-[450px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(37,99,235,.18),rgba(99,102,241,.12),transparent_72%)] blur-[90px] md:h-[650px] md:w-[650px] lg:right-[-180px] lg:h-[900px] lg:w-[900px]" />
-
-      <div className="absolute top-1/2 left-1/2 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(59,130,246,.08),transparent_70%)] blur-[70px] md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px]" />
-
-      <div className="markert pe click kru to relative z-10 flex min-h-[830px] flex-col items-center lg:min-h-[720px] lg:flex-row">
-        <div className="order-2 w-full px-6 pb-10 text-center md:px-10 lg:order-1 lg:w-1/2 lg:px-16 lg:pb-0 lg:text-left">
+    <section className="relative min-h-[760px] overflow-hidden rounded-[32px]">
+      <div className="relative z-10 mx-auto min-h-[760px] w-full max-w-[1240px] lg:min-h-[820px]">
+        <div className="relative z-30 w-full px-6 text-left md:px-10 lg:absolute lg:top-1/2 lg:left-0 lg:w-[58%] lg:-translate-y-1/2 lg:px-0 xl:w-[55%]">
           <span className="inline-flex items-center rounded-full border border-purple-500/30 bg-gradient-to-r from-purple-500/15 to-pink-500/15 px-4 py-2 text-xs font-semibold text-purple-600 backdrop-blur-sm md:text-sm dark:text-purple-300">
-            Global Talent Network
+            Global Recruitment · Six Markets
           </span>
 
-          <h1 className="mt-6 text-4xl leading-[1.05] font-black tracking-[-0.04em] text-neutral-900 md:text-5xl lg:mt-8 lg:text-7xl dark:text-white">
-            Global Talent
+          <h1 className="mt-6 max-w-[760px] text-4xl leading-[1.05] font-black tracking-[-0.04em] text-neutral-900 md:text-5xl lg:mt-8 lg:text-7xl dark:text-white">
+            Recruitment across 35+ countries,
             <span className="block bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Without Borders.
+              delivered in six global markets
             </span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-neutral-600 md:text-lg lg:mx-0 lg:mt-8 lg:leading-9 dark:text-neutral-400">
-            Connect businesses with exceptional professionals across continents.
-            Hire faster, collaborate globally, and build distributed teams
-            through one intelligent recruitment platform.
+          <p className="mt-6 max-w-[680px] text-base leading-8 text-neutral-600 md:text-lg lg:mt-8 lg:leading-9 dark:text-neutral-400">
+            Headquartered in London. Offices in Dubai, Singapore, Chicago,
+            Toronto, and Delhi NCR. 120+ specialists across six offices.
           </p>
 
-          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:mt-12 lg:justify-start">
-            <Link href={"#contact_form"} className="w-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-7 py-3 text-sm font-semibold text-white shadow-xl shadow-violet-500/30 transition duration-300 hover:scale-105 sm:w-auto">
-              Get Started
+          <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row lg:mt-12">
+            <Link
+              href="#contact_form"
+              className="w-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-7 py-3 text-center text-sm font-semibold text-white shadow-xl shadow-violet-500/30 transition duration-300 hover:scale-105 sm:w-auto"
+            >
+              Get a Call Back
             </Link>
 
             <Link
-              href={"/about"}
-              className="w-full rounded-full border border-violet-500/25 bg-white/70 px-8 py-3 font-semibold text-violet-700 backdrop-blur transition-all duration-300 hover:border-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white sm:w-auto dark:bg-white/5 dark:text-white"
+              href="/about"
+              className="w-full rounded-full border border-violet-500/25 bg-white/70 px-8 py-3 text-center font-semibold text-violet-700 backdrop-blur transition-all duration-300 hover:border-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white sm:w-auto dark:bg-white/5 dark:text-white"
             >
-              Learn More
+              See what we do
             </Link>
           </div>
         </div>
 
-        <div className="order-1 flex w-full items-center justify-center lg:order-2 lg:w-1/2 lg:justify-end">
-          <div className="relative h-[340px] w-[340px] md:h-[500px] md:w-[500px] lg:absolute lg:top-1/2 lg:right-[-40px] lg:h-[760px] lg:w-[760px] lg:-translate-y-[48%]">
-            <Globe3D
-              className="h-full w-full"
-              markers={sampleMarkers}
-              config={{
-                atmosphereColor: "#3B82F6",
-                atmosphereIntensity: 18,
-                bumpScale: 5,
-                autoRotateSpeed: 0.35,
-              }}
-            />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 flex items-center">
+          <div className="relative h-[480px] w-[480px] shrink-0 md:h-[540px] md:w-[540px] lg:mr-[-20px] lg:h-[600px] lg:w-[600px] xl:mr-[-10px] xl:h-[650px] xl:w-[650px] 2xl:mr-0 2xl:h-[700px] 2xl:w-[700px]">
+            <Globe3DDemo />
+
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-20 hidden w-32 bg-gradient-to-r from-black/80 via-black/30 to-transparent dark:block" />
           </div>
         </div>
       </div>

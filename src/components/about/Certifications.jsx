@@ -25,15 +25,15 @@ export default function Certifications() {
           title={"Custom Workforce Solutions That Accelerate Global Growth"}
         />
 
-        <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-6">
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
           {certificatesLogos.map((item, i) => (
             <div
               key={i}
-              className="group relative flex h-40 items-center justify-center rounded-2xl border border-purple-100 bg-gradient-to-b from-white to-purple-50/40 shadow-lg shadow-purple-500/5 backdrop-blur-xl transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_0_35px_rgba(168,85,247,0.15)] dark:border-white/10 dark:bg-[#0b0615] dark:from-transparent dark:to-transparent dark:shadow-none dark:hover:border-purple-500/40 dark:hover:shadow-[0_0_35px_rgba(168,85,247,0.25)]"
+              className="group relative flex h-32 items-center justify-center rounded-2xl border border-purple-100 bg-gradient-to-b from-white to-purple-50/40 shadow-lg shadow-purple-500/5 backdrop-blur-xl transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_0_35px_rgba(168,85,247,0.15)] dark:border-white/10 dark:bg-[#0b0615] dark:from-transparent dark:to-transparent dark:shadow-none dark:hover:border-purple-500/40 dark:hover:shadow-[0_0_35px_rgba(168,85,247,0.25)]"
             >
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:hidden" />
 
-              <div className="relative h-24 w-24 overflow-hidden rounded-full md:h-32 md:w-32">
+              <div className="relative h-20 w-20 overflow-hidden rounded-full md:h-24 md:w-24">
                 <Image
                   src={item.logo}
                   alt={item.name}

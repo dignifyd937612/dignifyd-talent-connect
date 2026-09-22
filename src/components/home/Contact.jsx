@@ -18,10 +18,8 @@ export default function Contact() {
     <section className="w-full bg-white py-24 dark:bg-black">
       <div className="mx-auto grid max-w-7xl items-center gap-16 md:grid-cols-2">
         <SectionHeader
-          title={"Let’s Connect"}
-          description={
-            "No delays, no vague replies — we respond within 24 hours to schedule your personalized discovery call."
-          }
+          title={"Tell us the role needs to be filled"}
+          description={"Fill the form and we will call you back in 24 hours."}
         />
         <div className={`rounded-3xl p-8 ${styles.formCard}`}>
           <form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
@@ -121,12 +119,10 @@ export default function Contact() {
                   })}
                   aria-label="services"
                 >
-                  <option>Type of service</option>
-                  <option>Global Recruitment</option>
-                  <option>RPO Solutions</option>
-                  <option>Employer Branding</option>
-                  <option>HR Consulting</option>
-                  <option>Onboarding Support</option>
+                  <option>Talent Acquisition</option>
+                  <option>Workforce Advisory</option>
+                  <option>GCC & Capability Building</option>
+                  <option>Talent Intelligence</option>
                 </select>
 
                 <span className={styles.arrow}></span>
@@ -155,7 +151,7 @@ export default function Contact() {
               type="submit"
               className={`w-full rounded-full py-3 text-sm font-medium text-white ${styles.button}`}
             >
-              Send Inquiry
+              Get a Call Back!
             </button>
           </form>
         </div>

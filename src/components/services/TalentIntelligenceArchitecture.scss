@@ -1,0 +1,272 @@
+.architecture-section {
+  --architecture-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  .architecture-header {
+    opacity: 0;
+    transform: translateY(25px);
+    filter: blur(5px);
+  }
+
+  .architecture-visual {
+    opacity: 0;
+    transform: translateX(-25px) scale(0.98);
+  }
+
+  .architecture-layers {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+
+  .architecture-layer {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  .architecture-footer {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  &.is-visible {
+    .architecture-header {
+      animation: architectureHeaderIn 800ms var(--architecture-ease) forwards;
+    }
+
+    .architecture-visual {
+      animation: architectureVisualIn 900ms 150ms var(--architecture-ease)
+        forwards;
+    }
+
+    .architecture-layers {
+      animation: architectureLayersIn 850ms 220ms var(--architecture-ease)
+        forwards;
+    }
+
+    .architecture-layer {
+      animation: architectureLayerIn 650ms var(--layer-delay)
+        var(--architecture-ease) forwards;
+    }
+
+    .architecture-footer {
+      animation: architectureFooterIn 700ms 950ms var(--architecture-ease)
+        forwards;
+    }
+  }
+
+  .architecture-image {
+    animation: architectureImageReveal 700ms var(--architecture-ease) forwards;
+  }
+
+  @keyframes architectureImageReveal {
+    from {
+      opacity: 0;
+      transform: scale(1.06);
+      filter: blur(4px);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(0);
+    }
+  }
+
+  .architecture-scan-line {
+    top: 0;
+    opacity: 0;
+    animation: scanLine 4s 1.2s ease-in-out infinite;
+  }
+
+  @keyframes scanLine {
+    0% {
+      top: 0;
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 0.8;
+    }
+
+    85% {
+      opacity: 0.35;
+    }
+
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+
+  .architecture-layer {
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      opacity: 0;
+      background: linear-gradient(
+        115deg,
+        transparent 20%,
+        rgba(168, 85, 247, 0.08),
+        transparent 75%
+      );
+      transform: translateX(-100%);
+    }
+
+    &:hover::before {
+      opacity: 1;
+      animation: layerSweep 900ms ease forwards;
+    }
+  }
+
+  @keyframes layerSweep {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  .architecture-active-glow {
+    opacity: 0.8;
+    background: radial-gradient(
+      circle at 0% 50%,
+      rgba(168, 85, 247, 0.09),
+      transparent 55%
+    );
+    animation: activeGlow 3s ease-in-out infinite;
+  }
+
+  @keyframes activeGlow {
+    0%,
+    100% {
+      opacity: 0.45;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .architecture-layer {
+    &:hover {
+      transform: translateY(-2px);
+
+      .architecture-number {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @keyframes architectureHeaderIn {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+      filter: blur(5px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes architectureVisualIn {
+    from {
+      opacity: 0;
+      transform: translateX(-25px) scale(0.98);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  @keyframes architectureLayersIn {
+    from {
+      opacity: 0;
+      transform: translateX(25px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes architectureLayerIn {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    70% {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes architectureFooterIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .architecture-visual {
+      min-height: 520px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .architecture-visual {
+      min-height: 480px;
+    }
+
+    .architecture-layer {
+      &:hover {
+        transform: none;
+      }
+    }
+
+    .architecture-scan-line {
+      animation-duration: 5s;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .architecture-header,
+    .architecture-visual,
+    .architecture-layers,
+    .architecture-layer,
+    .architecture-footer {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+      filter: none !important;
+    }
+
+    .architecture-image,
+    .architecture-scan-line,
+    .architecture-active-glow {
+      animation: none !important;
+    }
+  }
+}

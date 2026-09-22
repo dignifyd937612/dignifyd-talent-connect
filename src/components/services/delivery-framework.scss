@@ -1,0 +1,264 @@
+.delivery-framework {
+  // Initial section state
+  .delivery-step,
+  .delivery-left,
+  .delivery-deliverable,
+  .delivery-engine {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  &.is-visible {
+    .delivery-step {
+      animation: deliveryStepIn 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: var(--step-delay);
+    }
+
+    .delivery-left {
+      animation: deliveryContentIn 700ms 350ms cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+    }
+
+    .delivery-deliverable {
+      animation: deliveryContentIn 700ms 450ms cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+    }
+
+    .delivery-engine {
+      animation: deliveryContentIn 700ms 600ms cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+    }
+  }
+
+  // Step button
+  .delivery-step-button {
+    transition:
+      transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 300ms ease,
+      background 300ms ease,
+      box-shadow 300ms ease;
+
+    &:hover {
+      transform: scale(1.08);
+    }
+
+    &.active {
+      box-shadow:
+        0 0 0 1px rgba(168, 85, 247, 0.15),
+        0 0 25px rgba(168, 85, 247, 0.5),
+        0 0 45px rgba(236, 72, 153, 0.2);
+
+      animation: activeStepPulse 2.4s ease-in-out infinite;
+    }
+
+    &.completed {
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35);
+    }
+  }
+
+  // Connector
+  .delivery-line {
+    overflow: hidden;
+  }
+
+  .delivery-line-base {
+    position: absolute;
+    inset: 0;
+    background: rgba(168, 85, 247, 0.15);
+  }
+
+  .delivery-line-progress {
+    position: absolute;
+    inset: 0;
+    transform-origin: left center;
+    background: linear-gradient(
+      90deg,
+      #a855f7 0%,
+      rgba(168, 85, 247, 0.7) 60%,
+      transparent 100%
+    );
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.7);
+
+    animation: lineProgress 650ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  // Left items
+  .delivery-item {
+    opacity: 0;
+    transform: translateX(-15px);
+
+    animation: deliveryItemIn 500ms var(--item-delay)
+      cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+    transition:
+      border-color 300ms ease,
+      background-color 300ms ease,
+      transform 300ms ease,
+      box-shadow 300ms ease;
+
+    &:hover {
+      transform: translateX(5px);
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.08);
+    }
+  }
+
+  // Deliverable content
+  .delivery-deliverable-inner {
+    animation: deliverableFloat 4s ease-in-out infinite;
+  }
+
+  .delivery-deliverable-line {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      transform: translateX(-100%);
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(236, 72, 153, 0.9),
+        transparent
+      );
+      animation: deliverableShine 2.8s ease-in-out 1.2s infinite;
+    }
+  }
+
+  // Intelligence cards
+  .delivery-intelligence-card {
+    opacity: 0;
+    transform: translateY(18px);
+
+    animation: intelligenceCardIn 600ms var(--card-delay)
+      cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+    transition:
+      transform 300ms ease,
+      border-color 300ms ease,
+      box-shadow 300ms ease;
+
+    &:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 10px 30px rgba(168, 85, 247, 0.08),
+        0 0 20px rgba(168, 85, 247, 0.04);
+    }
+  }
+}
+
+@keyframes deliveryStepIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes deliveryContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes deliveryItemIn {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes lineProgress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes activeStepPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px rgba(168, 85, 247, 0.15),
+      0 0 20px rgba(168, 85, 247, 0.4);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(168, 85, 247, 0.25),
+      0 0 32px rgba(168, 85, 247, 0.65),
+      0 0 50px rgba(236, 72, 153, 0.15);
+  }
+}
+
+@keyframes deliverableFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes deliverableShine {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  35%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes intelligenceCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .delivery-framework,
+  .delivery-framework * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .delivery-framework .delivery-step,
+  .delivery-framework .delivery-left,
+  .delivery-framework .delivery-deliverable,
+  .delivery-framework .delivery-engine,
+  .delivery-framework .delivery-item,
+  .delivery-framework .delivery-intelligence-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -12,8 +12,8 @@ export default function Collaboration() {
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <SectionHeader
-          badge={"Together, We Achieve More"}
-          title={"Collaboration For Excellence: Partners In Every Endeavor"}
+          badge={"Our Clients"}
+          title={"Companies we have recruited for"}
         />
 
         <section className="overflow-hidden py-10">

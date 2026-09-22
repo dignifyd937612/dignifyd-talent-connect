@@ -94,7 +94,7 @@ export default function Banner({
           )}
         </div>
 
-        <h1 className="text-4xl leading-tight font-semibold text-gray-900 md:text-6xl dark:text-white">
+        <h1 className="text-5xl leading-tight font-semibold text-gray-900 md:text-6xl dark:text-white">
           {leading_text}{" "}
           <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
             {supporting_text}

@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import WorldMap from "@/components/ui/world-map";
 import { motion } from "motion/react";
 import ind from "../../assets/images/home/globalPresence/india.webp";
@@ -14,12 +15,12 @@ import australia from "@/assets/images/home/globalPresence/australia.webp";
 
 export function GlobalPresence() {
   return (
-    <div className=" py-10 dark:bg-black bg-white w-full">
+    <div className="py-10 mt-20 dark:bg-black bg-white w-full">
       <div className="max-w-7xl mx-auto text-center">
         <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
-          Global{" "}
+          Where we{" "}
           <span className="text-neutral-400">
-            {"Presence".split("").map((word, idx) => (
+            {"Work".split("").map((word, idx) => (
               <motion.span
                 key={idx}
                 className="inline-block"
@@ -33,7 +34,8 @@ export function GlobalPresence() {
           </span>
         </p>
         <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
-          Scaling Businesses Across Continents
+          Six offices and 35+ countries served with the help of our experts.
+          24/5 timezone coverage.
         </p>
       </div>
       <WorldMap
@@ -146,6 +148,98 @@ export function GlobalPresence() {
           },
         ]}
       />
+      <OfficeTimes />
     </div>
   );
 }
+
+const OfficeTimes = () => {
+  const offices = [
+    {
+      city: "London",
+      timezone: "Europe/London",
+      region: "HQ",
+    },
+    {
+      city: "Dubai",
+      timezone: "Asia/Dubai",
+      region: "Middle East",
+    },
+    {
+      city: "Delhi NCR",
+      timezone: "Asia/Kolkata",
+      region: "India",
+    },
+    {
+      city: "Singapore",
+      timezone: "Asia/Singapore",
+      region: "APAC",
+    },
+    {
+      city: "Toronto",
+      timezone: "America/Toronto",
+      region: "Canada",
+    },
+    {
+      city: "Springfield",
+      timezone: "America/Chicago",
+      region: "Illinois, USA",
+    },
+  ];
+
+  const getTime = (timezone) => {
+    return new Intl.DateTimeFormat("en-US", {
+      timeZone: timezone,
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    }).format(new Date());
+  };
+
+  const [times, setTimes] = useState(() =>
+    offices.reduce((acc, office) => {
+      acc[office.city] = getTime(office.timezone);
+      return acc;
+    }, {}),
+  );
+
+  useEffect(() => {
+    const updateTimes = () => {
+      setTimes(
+        offices.reduce((acc, office) => {
+          acc[office.city] = getTime(office.timezone);
+          return acc;
+        }, {}),
+      );
+    };
+
+    updateTimes();
+
+    const interval = setInterval(updateTimes, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="mx-auto mt-6 mb-15 grid w-full max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+      {offices.map((office) => (
+        <div
+          key={office.city}
+          className="group rounded-2xl border border-gray-200 bg-gray-50/80 px-5 py-5 text-left transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 dark:border-white/10 dark:bg-white/[0.03]"
+        >
+          <h3 className="text-base font-bold text-neutral-900 dark:text-white">
+            {office.city}
+          </h3>
+
+          <p className="mt-3 text-2xl font-bold tracking-tight text-purple-500 dark:text-purple-400">
+            {times[office.city]}
+          </p>
+
+          <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">
+            {office.region}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+};

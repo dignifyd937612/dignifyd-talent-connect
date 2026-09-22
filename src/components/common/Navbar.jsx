@@ -42,8 +42,12 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full transition ${open ? "bg-white dark:bg-black" : "bg-white md:bg-white/70 md:backdrop-blur-xl dark:bg-black dark:md:bg-black/70"}`}
+      className={`fixed top-0 left-0 z-[100] w-full ${open ? "bg-white dark:bg-black" : "bg-transparent"}`}
     >
+      {!open && (
+        <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[145px] bg-gradient-to-b from-white via-white/95 to-transparent dark:from-black dark:via-black/95 dark:to-transparent" />
+      )}
+
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <Link href="/" className="relative block h-15 w-[150px]">
           <Image
@@ -64,6 +68,7 @@ export default function Navbar() {
             className="hidden object-contain dark:block"
           />
         </Link>
+
         <nav className="hidden items-center gap-10 lg:flex">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.path;
@@ -78,7 +83,7 @@ export default function Navbar() {
                 </Link>
 
                 {link.megaMenu && (
-                  <div className="invisible absolute top-full left-1/2 z-50 mt-4 w-max -translate-x-1/2 rounded-xl border border-gray-200 bg-white/95 p-8 opacity-0 shadow-2xl backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:opacity-100 dark:border-white/10 dark:bg-black/95">
+                  <div className="invisible absolute top-full left-1/2 z-[110] mt-4 w-max -translate-x-1/2 rounded-xl border border-gray-200 bg-white/95 p-8 opacity-0 shadow-2xl backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:opacity-100 dark:border-white/10 dark:bg-black/95">
                     <div className="grid auto-cols-max grid-flow-col gap-16">
                       {link.megaMenu.map((section) => (
                         <div key={section.title}>
@@ -119,11 +124,11 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link href="/contact">
             <button className="relative cursor-pointer rounded-full px-5 py-2 text-sm">
-              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></span>
-              <span className="absolute inset-[1px] rounded-full bg-white dark:bg-black"></span>
-              <span className="relative z-10 text-gray-900 dark:text-white">
-                Work With Us
-              </span>
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500" />
+
+              <span className="absolute inset-[1px] rounded-full bg-black/70" />
+
+              <span className="relative z-10 text-white">Work With Us</span>
             </button>
           </Link>
 
@@ -142,7 +147,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="text-gray-900 lg:hidden dark:text-white"
+          className="text-white lg:hidden"
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
         >
           {open ? <X size={26} /> : <Menu size={26} />}
@@ -242,6 +247,7 @@ export default function Navbar() {
                                 className="flex translate-x-0 items-center gap-2 text-sm text-gray-600 transition-all duration-300 hover:translate-x-1 hover:text-purple-500 dark:text-gray-400 dark:hover:text-purple-400"
                               >
                                 <Icon size={16} className="text-purple-500" />
+
                                 {subItem.label}
                               </Link>
                             );
@@ -256,11 +262,11 @@ export default function Navbar() {
           })}
 
           <button className="relative mt-6 cursor-pointer rounded-full px-5 py-3 text-sm">
-            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></span>
-            <span className="absolute inset-[1px] rounded-full bg-white dark:bg-black"></span>
-            <span className="relative z-10 text-gray-900 dark:text-white">
-              Work With Us
-            </span>
+            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500" />
+
+            <span className="absolute inset-[1px] rounded-full bg-black" />
+
+            <span className="relative z-10 text-white">Work With Us</span>
           </button>
 
           <button

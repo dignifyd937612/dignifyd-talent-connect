@@ -15,7 +15,7 @@ export const Ourpresence = [
   {
     index: 1,
     name: "USA",
-    location: "2501 Chatham Rd, Ste R, Springfield, IL 62704",
+    location: "245 W Roosevelt Rd, West Chicago, IL 60185, USA",
     contact: "+1-877-735-0397",
     shortForm: "USA",
     image: USA,

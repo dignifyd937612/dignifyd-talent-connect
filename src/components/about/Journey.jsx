@@ -5,20 +5,19 @@ import styles from "./Journey.module.scss";
 const timelineData = [
   {
     id: "01",
-    title: "Launch (2018)",
-    desc: "The foundation of Dignifyd Digital marked the beginning of our mission. During this phase, we focused on building strong consulting capabilities, delivering tailored HR and digital solutions that quickly earned industry trust and long-term partnerships.",
-    align: "right",
+    title: "2018: Founded",
+    desc: "Dignifyd Digital launched in India as a technology and digital services company. Over the next 5 years it grew into a group of nine verticals expanding in technology, fintech, enterprise service and talent recruitment.",
   },
   {
     id: "02",
-    title: "Global Expansion (2023)",
-    desc: "With the launch of Dignifyd Talent Connect, we expanded our global footprint and strengthened our service portfolio. This year highlighted rapid growth, onboarding clients across multiple continents and establishing ourselves as a reliable provider of scalable workforce and HR technology solutions.",
+    title: "2023: Launch of Talent Connect:",
+    desc: "The group launched Dignifyd Talent Connect as a dedicated recruitment firm. Built on the infrastructure of hiring developed by its own group. Now offering as a service. Talent connect today operates from six different offices.",
     align: "left",
   },
   {
     id: "03",
-    title: "Partnership (2025)",
-    desc: "By 2025, our journey evolved into strategic collaborations with global enterprises and technology partners. These partnerships enabled us to develop deeper talent ecosystems, co-create innovative HR solutions, and deliver enhanced value for clients navigating digital transformation.",
+    title: "2025: RPO & Global Expansion:",
+    desc: "Through partnership with established firm we launched RPO (recruitment process outsourcing) as a service. Expanded to multiple cities such as London, Dubai, Singapore, Toronto, Springfield and Delhi NCR.",
     align: "right",
   },
 ];
@@ -29,7 +28,7 @@ export default function Journey() {
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           badge={"From a Vision to a Global Talent Powerhouse"}
-          title={"Our Journey"}
+          title={"How We Got Here"}
           description={
             "Launched after Dignifyd Digital’s success, Dignifyd Talent Connect connects global companies with flexible, technology-powered workforce solutions."
           }

@@ -1,0 +1,61 @@
+.engagement-models__header {
+  opacity: 0;
+  animation: engagementModelsHeader 0.8s ease forwards;
+}
+
+.engagement-models__cards {
+  opacity: 0;
+  animation: engagementModelsCards 0.8s 0.15s ease forwards;
+}
+
+.engagement-models__card {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: engagementModelCard 0.7s var(--delay) ease forwards;
+}
+
+@keyframes engagementModelsHeader {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes engagementModelsCards {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes engagementModelCard {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .engagement-models__header,
+  .engagement-models__cards,
+  .engagement-models__card {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
